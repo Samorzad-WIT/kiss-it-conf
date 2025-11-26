@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font setup – zakładamy lokalne pliki w public/fonts */
+@font-face {
+  font-family: "AvertaStd";
+  src: url("/fonts/AvertaStd-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "AvertaStd";
+  src: url("/fonts/AvertaStd-Semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jersey 10";
+  src: url("/fonts/Jersey10-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html,
+body {
+  @apply bg-kiss-bg text-white;
+  font-family: theme("fontFamily.sans");
+}
+
+body {
+  @apply antialiased;
+}
+
+.font-display {
+  font-family: theme("fontFamily.display");
+}
+
+.glass-panel {
+  @apply bg-kiss-card/40 backdrop-blur-md border border-kiss-purple/40;
+}
+
+

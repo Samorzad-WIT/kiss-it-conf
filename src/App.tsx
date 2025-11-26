@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Calendar, MapPin, ChevronRight, Hash, Monitor, Cpu, Globe, ArrowRight, Clock, Coffee, Shield, Zap, Map } from 'lucide-react';
+import { motion, type Variants } from 'framer-motion';
+import { Terminal, Calendar, MapPin, ChevronRight, Hash, Monitor, Globe, Zap, Map, Coffee, Shield } from 'lucide-react';
 
 // ==========================================
 // 1. DATA LAYER (src/content/index.ts)
@@ -106,7 +106,7 @@ function Database(props: any) {
 
 type Speaker = typeof CONTENT.speakers[0];
 
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -116,7 +116,7 @@ const containerVariants = {
   }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
   hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
@@ -398,7 +398,6 @@ const PartnersSection = () => {
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {

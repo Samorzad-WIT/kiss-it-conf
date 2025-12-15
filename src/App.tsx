@@ -2,6 +2,7 @@
 // Linter complained about unused 'React'. 
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { ParticlesBackground } from './components/ui/ParticlesBackground';
 import { HeroSection } from './sections/HeroSection';
 import { AgendaSection } from './sections/AgendaSection';
 import { SpeakersSection } from './sections/SpeakersSection';
@@ -11,6 +12,9 @@ import { PartnersSection } from './sections/PartnersSection';
 export default function App() {
   return (
     <div className="min-h-screen bg-[#000018] text-white selection:bg-[#fd00ff] selection:text-white font-sans">
+      {/* Animated particles background */}
+      <ParticlesBackground />
+      
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Inter:wght@300;400;700;900&display=swap');
         

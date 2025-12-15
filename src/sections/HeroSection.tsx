@@ -2,6 +2,7 @@ import { motion, type Variants } from 'framer-motion';
 import { Calendar, MapPin } from 'lucide-react';
 import { NeonButton } from '../components/ui/NeonButton';
 import { GlitchHeader } from '../components/ui/GlitchHeader';
+import { CountdownTimer } from '../components/ui/CountdownTimer';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -32,6 +33,7 @@ export const HeroSection = () => {
     location: "Politechnika Wrocławska, Budynek C-13",
     cta: "ZAREJESTRUJ SIĘ",
     ctaLink: "https://eventownik.solvro.pl/konferencja",
+    conferenceDate: new Date("2026-03-14T09:00:00"),
   };
 
   return (
@@ -50,10 +52,19 @@ export const HeroSection = () => {
             <h2 className="text-[#fd00ff] font-display text-4xl md:text-6xl mt-2">{content.year}</h2>
         </motion.div>
         <motion.p variants={itemVariants} className="text-gray-300 text-xl md:text-2xl font-light mb-10 font-sans max-w-2xl mx-auto">{content.subtitle}</motion.p>
-        <motion.div variants={itemVariants} className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-12 text-white font-sans">
+        <motion.div variants={itemVariants} className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-8 text-white font-sans">
           <div className="flex items-center gap-3"><Calendar className="text-[#fd00ff] w-6 h-6" /><span className="text-lg">{content.date}</span></div>
           <div className="flex items-center gap-3"><MapPin className="text-[#24ff54] w-6 h-6" /><span className="text-lg">{content.location}</span></div>
         </motion.div>
+        
+        {/* Countdown Timer */}
+        <motion.div variants={itemVariants} className="mb-12">
+          <p className="font-display text-xs uppercase tracking-[0.3em] text-white/50 mb-4">
+            Do startu pozostało
+          </p>
+          <CountdownTimer targetDate={content.conferenceDate} />
+        </motion.div>
+        
         <motion.div variants={itemVariants}><NeonButton href={content.ctaLink}>{content.cta}</NeonButton></motion.div>
       </motion.div>
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#000018] to-transparent" />

@@ -20,7 +20,7 @@ export const ParticlesBackground: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<Particle[]>([]);
   const mouseRef = useRef({ x: -1000, y: -1000 });
-  const animationFrameRef = useRef<number>();
+  const animationFrameRef = useRef<number | null>(null);
 
   const initParticles = useCallback((width: number, height: number) => {
     particlesRef.current = Array.from({ length: PARTICLE_COUNT }, () => ({

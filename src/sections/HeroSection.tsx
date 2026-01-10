@@ -61,7 +61,7 @@ export const HeroSection = () => {
         
         {/* Countdown Timer */}
         <motion.div variants={itemVariants} className="mb-12">
-          <p className="font-display text-xs uppercase tracking-[0.3em] text-white/50 mb-4">
+          <p className="font-display text-s uppercase tracking-[0.3em] text-white/50 mb-4">
             Do startu pozostało
           </p>
           <CountdownTimer targetDate={content.conferenceDate} />

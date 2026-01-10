@@ -6,7 +6,7 @@ export const Badge = ({ children, color = "purple" }: { children: React.ReactNod
     : "bg-[#6715ff]/20 text-white border-[#6715ff]/50";
 
   return (
-    <span className={`px-3 py-1 rounded-sm border ${styles} text-xs font-display tracking-widest uppercase flex items-center gap-1`}>
+    <span className={`px-3 py-1 rounded-sm border ${styles} text-s font-display tracking-widest uppercase flex items-center gap-1`}>
       <Hash className="w-3 h-3" />
       {children}
     </span>

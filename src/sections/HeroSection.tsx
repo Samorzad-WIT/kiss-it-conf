@@ -29,7 +29,7 @@ export const HeroSection = () => {
     systemStatus: ">>> SYSTEM READY",
     title: "KISS IT",
     year: "2026",
-    subtitle: "Keep It Simple, Stupid. The Architecture Conference.",
+    subtitle: "Konferencja KISS IT",
     date: "14.03.2026",
     location: "Politechnika Wrocławska, Budynek C-13",
     cta: "ZAREJESTRUJ SIĘ",

@@ -9,7 +9,7 @@ export const Footer = () => (
           <span>KISS IT 2026 ARCHITECTURE CONF.</span>
         </div>
         <div className="font-display text-[#24ff54] text-lg tracking-widest">
-          KEEP_IT_SIMPLE_STUPID
+          KISS IT
         </div>
         <div className="text-white/30 text-xs">
           © 2026 POLITECHNIKA WROCŁAWSKA. ALL SYSTEMS OPERATIONAL.

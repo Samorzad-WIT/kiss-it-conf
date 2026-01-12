@@ -55,9 +55,9 @@ export default function App() {
       <main>
         <HeroSection />
         <WhyAttendSection />
-        <AgendaSection />
-        <SpeakersSection />
-        <VenueSection />
+        {/* <AgendaSection /> */}
+        {/* <SpeakersSection /> */}
+        {/* <VenueSection /> */}
         <PartnersSection />
       </main>
 

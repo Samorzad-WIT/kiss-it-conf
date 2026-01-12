@@ -3,6 +3,7 @@ import { Calendar, MapPin } from 'lucide-react';
 import { NeonButton } from '../components/ui/NeonButton';
 import { GlitchHeader } from '../components/ui/GlitchHeader';
 import { CountdownTimer } from '../components/ui/CountdownTimer';
+import { RetroShapes } from '../components/ui/RetroShapes';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -28,7 +29,7 @@ export const HeroSection = () => {
     systemStatus: ">>> SYSTEM READY",
     title: "KISS IT",
     year: "2026",
-    subtitle: "Keep It Simple, Stupid. The Architecture Conference.",
+    subtitle: "Konferencja KISS IT",
     date: "14.03.2026",
     location: "Politechnika Wrocławska, Budynek C-13",
     cta: "ZAREJESTRUJ SIĘ",
@@ -39,6 +40,7 @@ export const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#000018]">
       <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#24ff54 1px, transparent 1px), linear-gradient(90deg, #24ff54 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+      <RetroShapes />
       <div className="absolute inset-0 bg-radial-gradient from-[#6715ff]/20 to-transparent pointer-events-none" />
       <motion.div initial="hidden" animate="visible" variants={containerVariants} className="relative z-10 max-w-7xl mx-auto px-6 text-center">
         <motion.div variants={itemVariants} className="mb-4 inline-block">
@@ -59,7 +61,7 @@ export const HeroSection = () => {
         
         {/* Countdown Timer */}
         <motion.div variants={itemVariants} className="mb-12">
-          <p className="font-display text-xs uppercase tracking-[0.3em] text-white/50 mb-4">
+          <p className="font-display text-s uppercase tracking-[0.3em] text-white/50 mb-4">
             Do startu pozostało
           </p>
           <CountdownTimer targetDate={content.conferenceDate} />

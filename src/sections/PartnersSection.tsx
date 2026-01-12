@@ -34,7 +34,7 @@ export const PartnersSection = () => {
           <h3 className="text-xl text-white font-bold mb-2">Chcesz zostać partnerem?</h3>
           <p className="text-gray-400 mb-4">Wspieraj lokalną społeczność IT i pokaż się setkom inżynierów.</p>
           <button className="text-[#24ff54] font-display hover:underline tracking-widest">
-            {'>>>'} POBIERZ OFERTĘ SPONSORSKĄ
+            {'>>>'} POBIERZ OFERTĘ PARTNERSKĄ
           </button>
         </div>
       </div>

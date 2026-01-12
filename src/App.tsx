@@ -4,18 +4,23 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ParticlesBackground } from './components/ui/ParticlesBackground';
 import { HeroSection } from './sections/HeroSection';
-import { AgendaSection } from './sections/AgendaSection';
-import { SpeakersSection } from './sections/SpeakersSection';
-import { VenueSection } from './sections/VenueSection';
+import { AgendaSection as _AgendaSection } from './sections/AgendaSection';
+import { SpeakersSection as _SpeakersSection } from './sections/SpeakersSection';
+import { VenueSection as _VenueSection } from './sections/VenueSection';
+
+// Temporary: sections hidden until content is ready
+void _AgendaSection;
+void _SpeakersSection;
+void _VenueSection;
 import { PartnersSection } from './sections/PartnersSection';
-import {WhyAttendSection} from "./sections/WhyAttendSection.tsx";
+import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";
 
 export default function App() {
   return (
     <div className="min-h-screen bg-[#000018] text-white selection:bg-[#fd00ff] selection:text-white font-sans">
       {/* Animated particles background */}
       <ParticlesBackground />
-      
+
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Inter:wght@300;400;700;900&display=swap');
         
@@ -49,9 +54,9 @@ export default function App() {
           border-radius: 4px;
         }
       `}</style>
-      
+
       <Navbar />
-      
+
       <main>
         <HeroSection />
         <WhyAttendSection />

@@ -5,6 +5,8 @@ import { GlitchHeader } from '../components/ui/GlitchHeader';
 import { CountdownTimer } from '../components/ui/CountdownTimer';
 import { RetroShapes } from '../components/ui/RetroShapes';
 
+void NeonButton;
+
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
@@ -29,12 +31,12 @@ export const HeroSection = () => {
     systemStatus: ">>> SYSTEM READY",
     title: "KISS IT",
     year: "2026",
-    subtitle: "Konferencja KISS IT",
-    date: "14.03.2026",
-    location: "Politechnika Wrocławska, Budynek C-13",
+    subtitle: "Konferencja Informatyczna Samorządu Studenckiego",
+    date: "17.03.2026",
+    location: "Politechnika Wrocławska, Budynek D-20",
     cta: "ZAREJESTRUJ SIĘ",
     ctaLink: "https://eventownik.solvro.pl/konferencja",
-    conferenceDate: new Date("2026-03-14T09:00:00"),
+    conferenceDate: new Date("2026-03-17T09:00:00"),
   };
 
   return (
@@ -67,7 +69,7 @@ export const HeroSection = () => {
           <CountdownTimer targetDate={content.conferenceDate} />
         </motion.div>
         
-        <motion.div variants={itemVariants}><NeonButton href={content.ctaLink}>{content.cta}</NeonButton></motion.div>
+        {/* <motion.div variants={itemVariants}><NeonButton href={content.ctaLink}>{content.cta}</NeonButton></motion.div> */}
       </motion.div>
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#000018] to-transparent" />
     </section>

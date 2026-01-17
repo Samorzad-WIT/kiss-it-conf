@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { Terminal } from 'lucide-react';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -13,24 +12,25 @@ export const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { label: "AGENDA", href: "#agenda" },
-    { label: "PRELEGENCI", href: "#speakers" },
-    { label: "LOKALIZACJA", href: "#location" },
-    { label: "PARTNERZY", href: "#partners" }
+    // { label: "AGENDA", href: "#agenda" },
+    // { label: "PRELEGENCI", href: "#speakers" },
+    // { label: "LOKALIZACJA", href: "#location" },
+    // { label: "PARTNERZY", href: "#partners" },
+    { label: "OFERTA PARTNERSKA", href: "#partners" },
+    // { label: "PATRONI", href: "#patroni" }
   ];
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#000018]/90 backdrop-blur-md border-b border-[#24ff54]/20' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        <div className="flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
-          <Terminal className="w-8 h-8 text-[#24ff54]" />
-          <span className="font-bold text-white text-xl tracking-wider">KISS<span className="text-[#24ff54]">IT</span></span>
+        <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
+          <img src="/logo.svg" alt="KISS IT" className="h-10" />
         </div>
-        
+
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((item) => (
-            <a 
-              key={item.label} 
+            <a
+              key={item.label}
               href={item.href}
               className="text-sm font-display tracking-widest text-gray-300 hover:text-[#24ff54] transition-colors relative group"
             >

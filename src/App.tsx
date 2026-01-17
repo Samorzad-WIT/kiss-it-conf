@@ -8,6 +8,8 @@ import { AgendaSection } from './sections/AgendaSection';
 import { SpeakersSection } from './sections/SpeakersSection';
 import { VenueSection } from './sections/VenueSection';
 
+<link rel="icon" href="/wrss_logo.png" sizes="any" />
+
 // Temporary: sections hidden until content is ready
 void AgendaSection;
 void SpeakersSection;
@@ -17,6 +19,8 @@ import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";
 
 export default function App() {
   return (
+
+    
     <div className="min-h-screen bg-[#000018] text-white selection:bg-[#fd00ff] selection:text-white font-sans">
       {/* Animated particles background */}
       <ParticlesBackground />

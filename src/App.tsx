@@ -4,14 +4,14 @@ import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { ParticlesBackground } from './components/ui/ParticlesBackground';
 import { HeroSection } from './sections/HeroSection';
-import { AgendaSection as _AgendaSection } from './sections/AgendaSection';
-import { SpeakersSection as _SpeakersSection } from './sections/SpeakersSection';
-import { VenueSection as _VenueSection } from './sections/VenueSection';
+import { AgendaSection } from './sections/AgendaSection';
+import { SpeakersSection } from './sections/SpeakersSection';
+import { VenueSection } from './sections/VenueSection';
 
 // Temporary: sections hidden until content is ready
-void _AgendaSection;
-void _SpeakersSection;
-void _VenueSection;
+void AgendaSection;
+void SpeakersSection;
+void VenueSection;
 import { PartnersSection } from './sections/PartnersSection';
 import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";
 

@@ -1,28 +1,14 @@
-# (1) Build Stage
 FROM node:22-alpine AS build
-WORKDIR /app
+# single command build:
+# - mount the build context into /app, allowing temporary writes
+# - clean install packages (remove inherited node_modules, use package-lock.json)
+# - build app
+# - copy result out of the bind mount, into the image
+RUN --mount=type=bind,dst=/app,rw cd /app && npm ci && npm run build && cp -r /app/dist /dist
 
-# Copy package files
-COPY package*.json ./
-RUN npm install
-
-# Copy all source code
-COPY . .
-
-# Build the production bundle (Vite will output to /app/dist)
-RUN npm run build
-
-# (2) Production Stage
 FROM nginx:alpine
 
-# Remove default static files
-RUN rm -rf /usr/share/nginx/html/*
+# copy build artifacts from build stage
+COPY --from=build /dist /usr/share/nginx/html
 
-# Copy the built files from the first stage
-COPY --from=build /app/dist /usr/share/nginx/html
-
-# Expose port 80 only
-EXPOSE 80
-
-# Use the default Nginx start command
-CMD ["nginx", "-g", "daemon off;"]
+# inherit other options from the base image

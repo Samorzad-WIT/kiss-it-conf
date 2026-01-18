@@ -17,7 +17,7 @@ export const Navbar = () => {
     // { label: "PRELEGENCI", href: "#speakers" },
     // { label: "LOKALIZACJA", href: "#location" },
     { label: "Dlaczego KISS IT?", href: "#why-attend" },
-    { label: "PARTNERZY", href: "#partners" },
+    // { label: "PARTNERZY", href: "#partners" },
     // { label: "OFERTA PARTNERSKA", href: "#partners" },
     { label: "PATRONI", href: "#patrons" }
   ];

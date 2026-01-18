@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 // Import oryginalnych plików SVG z Figmy
 import sphere1 from '../../assets/sphere 1.svg';
 import sphere2 from '../../assets/sphere2 1.svg';
-import sphere3 from '../../assets/sphere3 1.svg';
 import square1 from '../../assets/square 1.svg';
 import square2 from '../../assets/square 2.svg';
 import square3 from '../../assets/square 3.svg';
@@ -19,6 +18,7 @@ interface Shape {
   delay: number;
   moveX: number;
   moveY: number;
+  variant?: 'blue' | 'green';
 }
 
 
@@ -26,39 +26,25 @@ interface Shape {
 // Unikają centralnej strefy (30-70% x, 35-65% y) gdzie jest tekst
 const SHAPES: Shape[] = [
   // Górna strefa (y: 0-30%)
-  { id: 1, image: sphere1, x: 5, y: 5, size: 55, opacity: 0.6, duration: 20, delay: 0, moveX: 80, moveY: 40 },
-  { id: 2, image: square1, x: 25, y: 10, size: 40, opacity: 0.5, duration: 25, delay: -3, moveX: -60, moveY: 35 },
-  { id: 3, image: sphere2, x: 50, y: 3, size: 35, opacity: 0.45, duration: 18, delay: -6, moveX: 70, moveY: 45 },
-  { id: 4, image: square2, x: 75, y: 8, size: 45, opacity: 0.5, duration: 22, delay: -2, moveX: -55, moveY: 38 },
-  { id: 5, image: sphere3, x: 90, y: 12, size: 50, opacity: 0.55, duration: 24, delay: -5, moveX: -75, moveY: 42 },
+  { id: 1, image: sphere1, x: 5, y: 15, size: 80, opacity: 0.6, duration: 20, delay: 0, moveX: 80, moveY: 40 },
+  { id: 2, image: square1, x: 25, y: 10, size: 60, opacity: 0.5, duration: 25, delay: -3, moveX: -60, moveY: 35, variant: 'green' },
+  { id: 3, image: square2, x: 75, y: 8, size: 55, opacity: 0.5, duration: 22, delay: -2, moveX: -55, moveY: 38 },
 
   // Lewa strefa (x: 0-25%)
-  { id: 6, image: square3, x: 3, y: 35, size: 45, opacity: 0.5, duration: 26, delay: -4, moveX: 50, moveY: -60 },
-  { id: 7, image: sphere1, x: 8, y: 50, size: 40, opacity: 0.45, duration: 19, delay: -7, moveX: 45, moveY: 70 },
-  { id: 8, image: square1, x: 2, y: 65, size: 35, opacity: 0.4, duration: 23, delay: -1, moveX: 55, moveY: -50 },
+  { id: 4, image: square1, x: 10, y: 55, size: 35, opacity: 0.4, duration: 23, delay: -1, moveX: 55, moveY: -50, variant: 'green' },
 
   // Prawa strefa (x: 75-100%)
-  { id: 9, image: sphere2, x: 88, y: 38, size: 50, opacity: 0.5, duration: 21, delay: -8, moveX: -50, moveY: 65 },
-  { id: 10, image: square2, x: 92, y: 52, size: 38, opacity: 0.45, duration: 27, delay: -3, moveX: -60, moveY: -55 },
-  { id: 11, image: sphere3, x: 85, y: 68, size: 42, opacity: 0.4, duration: 20, delay: -6, moveX: -45, moveY: 50 },
+  { id: 5, image: square2, x: 85, y: 52, size: 230, opacity: 0.45, duration: 27, delay: -3, moveX: 65, moveY: -55 },
 
   // Dolna strefa (y: 70-100%)
-  { id: 12, image: square3, x: 8, y: 78, size: 48, opacity: 0.55, duration: 24, delay: -2, moveX: 75, moveY: -45 },
-  { id: 13, image: sphere1, x: 30, y: 85, size: 40, opacity: 0.45, duration: 22, delay: -5, moveX: -65, moveY: -40 },
-  { id: 14, image: square1, x: 55, y: 82, size: 35, opacity: 0.4, duration: 19, delay: -8, moveX: 55, moveY: -50 },
-  { id: 15, image: sphere2, x: 78, y: 88, size: 45, opacity: 0.5, duration: 25, delay: -1, moveX: -70, moveY: -42 },
-  { id: 16, image: square2, x: 92, y: 80, size: 38, opacity: 0.45, duration: 21, delay: -4, moveX: -60, moveY: -55 },
-
-  // Dodatkowe małe kształty w rogach
-  { id: 17, image: sphere3, x: 15, y: 20, size: 30, opacity: 0.35, duration: 28, delay: -9, moveX: 50, moveY: 45 },
-  { id: 18, image: square3, x: 82, y: 22, size: 28, opacity: 0.35, duration: 23, delay: -11, moveX: -55, moveY: 50 },
-  { id: 19, image: sphere1, x: 12, y: 72, size: 32, opacity: 0.35, duration: 26, delay: -7, moveX: 60, moveY: -48 },
-  { id: 20, image: square1, x: 85, y: 75, size: 30, opacity: 0.35, duration: 20, delay: -10, moveX: -52, moveY: -52 },
+  { id: 6, image: square3, x: -10, y: 70, size: 300, opacity: 0.55, duration: 24, delay: -2, moveX: -40, moveY: -35, variant: 'blue' },
+  { id: 7, image: square1, x: 55, y: 90, size: 45, opacity: 0.4, duration: 19, delay: -8, moveX: 55, moveY: -50, variant: 'green' },
+  { id: 8, image: sphere2, x: 78, y: 88, size: 55, opacity: 0.5, duration: 25, delay: -1, moveX: -70, moveY: -42, variant: 'blue' },
 ];
 
 export const RetroShapes = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none z-[2]">
+    <div className="absolute inset-0 pointer-events-none z-[2]">
       {SHAPES.map((shape) => (
         <motion.div
           key={shape.id}
@@ -69,7 +55,7 @@ export const RetroShapes = () => {
           }}
           initial={{ opacity: 0 }}
           animate={{
-            opacity: shape.opacity,
+            opacity: 0.9,
             x: [
               0,
               shape.moveX * 0.3,
@@ -130,6 +116,8 @@ export const RetroShapes = () => {
               width: shape.size,
               height: shape.size,
               objectFit: 'contain',
+              // dont judge
+              filter: shape.variant === 'blue' ? 'hue-rotate(-120deg)' : shape.variant === 'green' ? 'hue-rotate(-240deg)' : undefined,
             }}
           />
         </motion.div>

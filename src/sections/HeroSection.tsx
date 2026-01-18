@@ -49,8 +49,8 @@ export const HeroSection = () => {
           style={{
             backgroundImage: 'linear-gradient(#F6ECFF 1px, transparent 1px), linear-gradient(90deg, #F6ECFF 1px, transparent 1px)',
             backgroundSize: '50px 50px',
-            maskImage: 'linear-gradient(to bottom right, black 0%, black 38%, transparent 45%, transparent 55%, black 62%, black 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom right, black 0%, black 38%, transparent 45%, transparent 55%, black 62%, black 100%)'
+            maskImage: 'linear-gradient(to bottom right, black 0%, black 20%, transparent 45%, transparent 55%, black 80%, black 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom right, black 0%, black 20%, transparent 45%, transparent 55%, black 80%, black 100%)'
           }}
         />
         {/* Rozmyta siatka - tylko wąski pas wzdłuż przekątnej */}
@@ -60,8 +60,8 @@ export const HeroSection = () => {
             backgroundImage: 'linear-gradient(#F6ECFF 1px, transparent 1px), linear-gradient(90deg, #F6ECFF 1px, transparent 1px)',
             backgroundSize: '50px 50px',
             filter: 'blur(12px)',
-            maskImage: 'linear-gradient(to bottom right, transparent 0%, transparent 38%, black 45%, black 55%, transparent 62%, transparent 100%)',
-            WebkitMaskImage: 'linear-gradient(to bottom right, transparent 0%, transparent 38%, black 45%, black 55%, transparent 62%, transparent 100%)'
+            maskImage: 'linear-gradient(to bottom right, transparent 0%, transparent 20%, black 45%, black 55%, transparent 80%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom right, transparent 0%, transparent 20%, black 45%, black 55%, transparent 80%, transparent 100%)'
           }}
         />
       </div>

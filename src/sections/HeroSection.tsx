@@ -39,7 +39,30 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#000018]">
-      <div className="absolute inset-0 opacity-20 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#24ff54 1px, transparent 1px), linear-gradient(90deg, #24ff54 1px, transparent 1px)', backgroundSize: '50px 50px' }} />
+      {/* Siatka z przekątnym rozmyciem przez całą siatkę */}
+      <div className="absolute inset-0 pointer-events-none z-0">
+        {/* Ostra siatka - poza pasem przekątnej */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: 'linear-gradient(#24ff54 1px, transparent 1px), linear-gradient(90deg, #24ff54 1px, transparent 1px)',
+            backgroundSize: '50px 50px',
+            maskImage: 'linear-gradient(to bottom right, black 0%, black 38%, transparent 45%, transparent 55%, black 62%, black 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom right, black 0%, black 38%, transparent 45%, transparent 55%, black 62%, black 100%)'
+          }}
+        />
+        {/* Rozmyta siatka - tylko wąski pas wzdłuż przekątnej */}
+        <div
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: 'linear-gradient(#24ff54 1px, transparent 1px), linear-gradient(90deg, #24ff54 1px, transparent 1px)',
+            backgroundSize: '50px 50px',
+            filter: 'blur(12px)',
+            maskImage: 'linear-gradient(to bottom right, transparent 0%, transparent 38%, black 45%, black 55%, transparent 62%, transparent 100%)',
+            WebkitMaskImage: 'linear-gradient(to bottom right, transparent 0%, transparent 38%, black 45%, black 55%, transparent 62%, transparent 100%)'
+          }}
+        />
+      </div>
       <RetroShapes />
       <div className="absolute inset-0 bg-radial-gradient from-[#6715ff]/20 to-transparent pointer-events-none" />
       <motion.div initial="hidden" animate="visible" variants={containerVariants} className="relative z-10 max-w-7xl mx-auto px-6 text-center">

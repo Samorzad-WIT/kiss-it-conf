@@ -1,14 +1,14 @@
 export const PatronsSection = () => {
   const patrons = [
     {
-      name: "Patronat Honorowy Marszałka Województwa Dolnośląskiego",
-      url: "https://www.duw.pl",
-      image: "/patrons/dolny-slask.png",
-    },
-    {
       name: "Patronat Honorowy Rektora PWr",
       url: "https://pwr.edu.pl/",
       image: "/patrons/pwr-rektor.png",
+    },
+    {
+      name: "Patronat Honorowy Marszałka Województwa Dolnośląskiego",
+      url: "https://www.duw.pl",
+      image: "/patrons/dolny-slask.png",
     },
     {
       name: "Patronat Honorowy Wojewody Dolnośląskiego",

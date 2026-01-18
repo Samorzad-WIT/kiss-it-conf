@@ -8,6 +8,7 @@ import { AgendaSection } from './sections/AgendaSection';
 import { SpeakersSection } from './sections/SpeakersSection';
 import { VenueSection } from './sections/VenueSection';
 import { PartnersSection } from './sections/PartnersSection';
+import { OfficialPartnersSection } from './sections/OfficialPartnersSection';
 import {WhyAttendSection} from "./sections/WhyAttendSection.tsx";
 
 export default function App() {
@@ -58,6 +59,7 @@ export default function App() {
         {/* <AgendaSection /> */}
         {/* <SpeakersSection /> */}
         {/* <VenueSection /> */}
+        <OfficialPartnersSection />
         <PartnersSection />
       </main>
 

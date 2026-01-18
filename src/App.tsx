@@ -10,10 +10,11 @@ import { VenueSection } from "./sections/VenueSection";
 
 <link rel="icon" href="/wrss_logo.png" sizes="any" />;
 
-// Temporary: sections hidden until content is ready
+//TODO  Temporary: sections hidden until content is ready
 void AgendaSection;
 void SpeakersSection;
 void VenueSection;
+
 import { PartnersSection } from "./sections/PartnersSection";
 import { PatronsSection } from "./sections/PatronsSection";
 import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";

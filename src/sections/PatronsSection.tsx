@@ -37,19 +37,19 @@ export const PatronsSection = () => {
           PATRONI
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-stretch">
           {patrons.map((patron, i) => (
             <a
               key={i}
               href={patron.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="block"
+              className="block h-full"
             >
               <div
                 className="p-4 border border-white/5 bg-white/5 rounded-lg backdrop-blur-sm 
                            opacity-70 hover:opacity-100 hover:scale-110 hover:border-[#fd00ff]/30 
-                           transition-all duration-300 cursor-pointer flex flex-col items-center gap-4 group h-full justify-between"
+                           transition-all duration-300 cursor-pointer flex flex-col items-center gap-4 group h-full justify-start"
               >
                 <div className="w-full flex items-center justify-center p-2">
                   <img
@@ -59,7 +59,7 @@ export const PatronsSection = () => {
                   />
                 </div>
 
-                <div className="h-12 flex items-center justify-center font-display text-sm md:text-base text-white tracking-widest leading-tight">
+                <div className="min-h-12 flex items-center justify-center font-display text-xs md:text-sm text-white tracking-wide leading-tight text-center overflow-hidden">
                   {patron.name}
                 </div>
               </div>

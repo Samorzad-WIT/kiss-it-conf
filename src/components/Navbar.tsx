@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,10 +16,15 @@ export const Navbar = () => {
     // { label: "AGENDA", href: "#agenda" },
     // { label: "PRELEGENCI", href: "#speakers" },
     // { label: "LOKALIZACJA", href: "#location" },
-    // { label: "PARTNERZY", href: "#partners" },
-    { label: "OFERTA PARTNERSKA", href: "#partners" },
-    // { label: "PATRONI", href: "#patroni" }
+    { label: "Dlaczego KISS IT?", href: "#why-attend" },
+    { label: "PARTNERZY", href: "#partners" },
+    // { label: "OFERTA PARTNERSKA", href: "#partners" },
+    { label: "PATRONI", href: "#patrons" }
   ];
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#000018]/90 backdrop-blur-md border-b border-[#24ff54]/20' : 'bg-transparent'}`}>
@@ -40,10 +46,34 @@ export const Navbar = () => {
           ))}
         </div>
 
-        <div className="md:hidden">
-          <div className="w-8 h-0.5 bg-[#24ff54] mb-1.5" />
-          <div className="w-6 h-0.5 bg-[#24ff54] ml-auto mb-1.5" />
-          <div className="w-8 h-0.5 bg-[#24ff54]" />
+        {/* Mobile hamburger button */}
+        <button
+          className="md:hidden flex flex-col justify-center items-end gap-1.5 p-2"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <div className={`w-8 h-0.5 bg-[#24ff54] transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <div className={`w-6 h-0.5 bg-[#24ff54] transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`} />
+          <div className={`w-8 h-0.5 bg-[#24ff54] transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+        </button>
+      </div>
+
+      {/* Mobile menu dropdown */}
+      <div
+        className={`md:hidden absolute top-20 left-0 w-full bg-[#000018]/95 backdrop-blur-md border-b border-[#24ff54]/20 transition-all duration-300 overflow-hidden ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+      >
+        <div className="flex flex-col px-6 py-4 gap-4">
+          {navLinks.map((item) => (
+            <a
+              key={item.label}
+              href={item.href}
+              onClick={handleLinkClick}
+              className="text-sm font-display tracking-widest text-gray-300 hover:text-[#24ff54] transition-colors py-2 border-b border-white/10"
+            >
+              {item.label}
+            </a>
+          ))}
         </div>
       </div>
     </nav>

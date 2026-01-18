@@ -1,5 +1,3 @@
-import { motion } from "framer-motion";
-
 export const PartnersSection = () => {
   const partners = [
     { name: "TechCorp", tier: "Platinum" },
@@ -19,17 +17,16 @@ export const PartnersSection = () => {
           PARTNERZY WYDARZENIA
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center opacity-70">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
           {partners.map((partner, i) => (
-            <motion.div
+            <div
               key={i}
-              whileHover={{ scale: 1.1, opacity: 1, filter: "brightness(1.2)" }}
-              className="p-6 border border-white/5 bg-white/5 rounded-lg backdrop-blur-sm hover:border-[#fd00ff]/30 transition-all cursor-pointer"
+              className="p-6 border border-white/5 bg-white/5 rounded-lg backdrop-blur-sm opacity-70 hover:opacity-100 hover:scale-110 hover:brightness-125 hover:border-[#fd00ff]/30 transition-all duration-300 cursor-pointer"
             >
               <div className="h-12 flex items-center justify-center font-display text-xl text-white tracking-widest">
                 {partner.name}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 

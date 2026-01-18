@@ -66,7 +66,7 @@ export const GlitchHeader = ({ text, subtext }: GlitchHeaderProps) => {
       >
         {/* Main text with 3D depth */}
         <h1
-          className="text-7xl md:text-9xl font-black text-white tracking-tighter relative z-10 font-sans"
+          className="text-5xl sm:text-7xl md:text-9xl font-black text-white tracking-tighter relative z-10 font-sans"
           style={{
             textShadow: `
               0 1px 0 #ccc,
@@ -90,12 +90,10 @@ export const GlitchHeader = ({ text, subtext }: GlitchHeaderProps) => {
           <span className="relative inline-block ml-2">
             {/* Outlined shadow - offset left and down */}
             <span
-              className="absolute text-transparent font-black"
+              className="absolute text-transparent font-black left-[-4px] top-[6px] md:left-[-10px] md:top-[12px]"
               style={{
-                WebkitTextStroke: '4px #24ff54',
+                WebkitTextStroke: '3px #24ff53d1',
                 textShadow: 'none',
-                left: '-10px',
-                top: '12px',
               }}
               aria-hidden="true"
             >
@@ -113,7 +111,7 @@ export const GlitchHeader = ({ text, subtext }: GlitchHeaderProps) => {
 
         {/* Glitch layer 1 - Purple */}
         <motion.span
-          className="absolute top-0 left-0 text-7xl md:text-9xl font-black text-[#6715ff] opacity-0 group-hover:opacity-70 select-none pointer-events-none z-0"
+          className="absolute top-0 left-0 text-5xl sm:text-7xl md:text-9xl font-black text-[#6715ff] opacity-0 group-hover:opacity-70 select-none pointer-events-none z-0"
           style={{
             clipPath: 'polygon(0 0, 100% 0, 100% 45%, 0 45%)',
             x: glitchX1,
@@ -126,7 +124,7 @@ export const GlitchHeader = ({ text, subtext }: GlitchHeaderProps) => {
 
         {/* Glitch layer 2 - Green */}
         <motion.span
-          className="absolute top-0 left-0 text-7xl md:text-9xl font-black text-[#24ff54] opacity-0 group-hover:opacity-70 select-none pointer-events-none z-0"
+          className="absolute top-0 left-0 text-5xl sm:text-7xl md:text-9xl font-black text-[#24ff54] opacity-0 group-hover:opacity-70 select-none pointer-events-none z-0"
           style={{
             clipPath: 'polygon(0 55%, 100% 55%, 100% 100%, 0 100%)',
             x: glitchX2,
@@ -139,7 +137,7 @@ export const GlitchHeader = ({ text, subtext }: GlitchHeaderProps) => {
 
         {/* Glitch layer 3 - Pink (middle slice) */}
         <motion.span
-          className="absolute top-0 left-0 text-7xl md:text-9xl font-black text-[#fd00ff] opacity-0 group-hover:opacity-50 select-none pointer-events-none z-0"
+          className="absolute top-0 left-0 text-5xl sm:text-7xl md:text-9xl font-black text-[#fd00ff] opacity-0 group-hover:opacity-50 select-none pointer-events-none z-0"
           style={{
             clipPath: 'polygon(0 45%, 100% 45%, 100% 55%, 0 55%)',
             x: glitchX2,

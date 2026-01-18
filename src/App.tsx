@@ -21,7 +21,7 @@ import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#000018] text-white selection:bg-[#fd00ff] selection:text-white font-sans">
+    <div className="min-h-screen bg-[#100c1d] text-white selection:bg-[#fd00ff] selection:text-white font-sans">
       {/* Animated particles background */}
       <ParticlesBackground />
 

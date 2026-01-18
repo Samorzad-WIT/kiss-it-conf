@@ -7,6 +7,9 @@ export const PartnersSection = () => {
     { name: "CodeHouse", tier: "Silver" },
   ];
 
+  // TODO: Add partners
+  void partners;
+
   return (
     <section
       id="partners"
@@ -17,7 +20,7 @@ export const PartnersSection = () => {
           PARTNERZY WYDARZENIA
         </h2>
 
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+        {/* <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
           {partners.map((partner, i) => (
             <div
               key={i}
@@ -28,7 +31,7 @@ export const PartnersSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="my-12">
           <a href="https://solvro.pwr.edu.pl" target="_blank">

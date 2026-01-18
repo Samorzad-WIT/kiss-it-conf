@@ -90,12 +90,10 @@ export const GlitchHeader = ({ text, subtext }: GlitchHeaderProps) => {
           <span className="relative inline-block ml-2">
             {/* Outlined shadow - offset left and down */}
             <span
-              className="absolute text-transparent font-black"
+              className="absolute text-transparent font-black left-[-4px] top-[6px] md:left-[-10px] md:top-[12px]"
               style={{
-                WebkitTextStroke: '4px #24ff54',
+                WebkitTextStroke: '3px #24ff53d1',
                 textShadow: 'none',
-                left: '-10px',
-                top: '12px',
               }}
               aria-hidden="true"
             >

@@ -26,18 +26,18 @@ interface Shape {
 // Unikają centralnej strefy (30-70% x, 35-65% y) gdzie jest tekst
 const SHAPES: Shape[] = [
   // Górna strefa (y: 0-30%)
-  { id: 1, image: sphere1, x: 5, y: 15, size: 80, opacity: 0.6, duration: 20, delay: 0, moveX: 80, moveY: 40 },
+  { id: 1, image: sphere1, x: 5, y: 20, size: 80, opacity: 0.6, duration: 20, delay: 0, moveX: 80, moveY: 40 },
   { id: 2, image: square1, x: 25, y: 10, size: 60, opacity: 0.5, duration: 25, delay: -3, moveX: -60, moveY: 35, variant: 'green' },
-  { id: 3, image: square2, x: 75, y: 8, size: 55, opacity: 0.5, duration: 22, delay: -2, moveX: -55, moveY: 38 },
+  { id: 3, image: square2, x: 75, y: 15, size: 55, opacity: 0.5, duration: 22, delay: -2, moveX: -55, moveY: 38 },
 
   // Lewa strefa (x: 0-25%)
   { id: 4, image: square1, x: 10, y: 55, size: 35, opacity: 0.4, duration: 23, delay: -1, moveX: 55, moveY: -50, variant: 'green' },
 
   // Prawa strefa (x: 75-100%)
-  { id: 5, image: square2, x: 85, y: 52, size: 230, opacity: 0.45, duration: 27, delay: -3, moveX: 65, moveY: -55 },
+  { id: 5, image: square2, x: 95, y: 52, size: 200, opacity: 0.45, duration: 27, delay: -3, moveX: 45, moveY: -55 },
 
   // Dolna strefa (y: 70-100%)
-  { id: 6, image: square3, x: -10, y: 70, size: 300, opacity: 0.55, duration: 24, delay: -2, moveX: -40, moveY: -35, variant: 'blue' },
+  { id: 6, image: square3, x: 5, y: 80, size: 300, opacity: 0.55, duration: 24, delay: -2, moveX: -40, moveY: -35, variant: 'blue' },
   { id: 7, image: square1, x: 55, y: 90, size: 45, opacity: 0.4, duration: 19, delay: -8, moveX: 55, moveY: -50, variant: 'green' },
   { id: 8, image: sphere2, x: 78, y: 88, size: 55, opacity: 0.5, duration: 25, delay: -1, moveX: -70, moveY: -42, variant: 'blue' },
 ];
@@ -50,8 +50,8 @@ export const RetroShapes = () => {
           key={shape.id}
           className="absolute"
           style={{
-            left: `${shape.x}%`,
-            top: `${shape.y}%`,
+            left: `calc(${shape.x}vw - ${shape.size / 2}px)`,
+            top: `calc(${shape.y}vh - ${shape.size / 2}px)`,
           }}
           initial={{ opacity: 0 }}
           animate={{
@@ -113,9 +113,10 @@ export const RetroShapes = () => {
             src={shape.image}
             alt=""
             style={{
-              width: shape.size,
-              height: shape.size,
-              objectFit: 'contain',
+              width: `${shape.size}px`,
+              height: `${shape.size}px`,
+              maxWidth: 'none',
+              maxHeight: 'none',
               // dont judge
               filter: shape.variant === 'blue' ? 'hue-rotate(-120deg)' : shape.variant === 'green' ? 'hue-rotate(-240deg)' : undefined,
             }}

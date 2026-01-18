@@ -15,9 +15,10 @@ export const Navbar = () => {
     // { label: "AGENDA", href: "#agenda" },
     // { label: "PRELEGENCI", href: "#speakers" },
     // { label: "LOKALIZACJA", href: "#location" },
-    // { label: "PARTNERZY", href: "#partners" },
-    { label: "OFERTA PARTNERSKA", href: "#partners" },
-    // { label: "PATRONI", href: "#patroni" }
+    { label: "Dlaczego KISS IT?", href: "#why-attend" },
+    { label: "PARTNERZY", href: "#partners" },
+    // { label: "OFERTA PARTNERSKA", href: "#partners" },
+    { label: "PATRONI", href: "#patrons" }
   ];
 
   return (

@@ -148,7 +148,7 @@ const cards: CardData[] = [
     icon: <KnowledgeIcon />,
     title: "WIEDZA OD EKSPERTÓW",
     description:
-      "Prelekcje od praktyków z branży. Zero teorii, 100% doświadczenia z produkcji.",
+      "Posłuchaj inżynierów z topowych firm o technologiach, które napędzają dzisiejszy przemysł IT.",
     extendedDescription:
       "Nasi prelegenci to doświadczeni architekci i inżynierowie, którzy codziennie pracują z systemami obsługującymi miliony użytkowników. Każda prezentacja to esencja lat doświadczeń skondensowana w praktyczne wskazówki.",
     highlights: [
@@ -164,7 +164,7 @@ const cards: CardData[] = [
     icon: <NetworkingIcon />,
     title: "NETWORKING",
     description:
-      "Poznaj ludzi z pasją do IT. Buduj kontakty, które procentują przez lata.",
+      "Rozmawiaj bezpośrednio z firmami szukającymi ludzi i poznaj kulisy pracy w topowych firmach IT.",
     extendedDescription:
       "Konferencja to nie tylko prelekcje - to przede wszystkim ludzie. Przerwy kawowe, lunch i afterparty to idealne okazje do nawiązania kontaktów z profesjonalistami z całej Polski.",
     highlights: [
@@ -180,7 +180,7 @@ const cards: CardData[] = [
     icon: <PracticeIcon />,
     title: "PRAKTYKA > TEORIA",
     description:
-      "Warsztaty, code review na żywo, case studies z prawdziwych projektów.",
+      "Dowiedz się, jak świadomie budować karierę i rozwijać kompetencje, które dadzą Ci realną przewagę na rynku pracy.",
     extendedDescription:
       "Wierzymy, że najlepiej uczy się przez praktykę. Dlatego oferujemy interaktywne warsztaty, live coding sessions i analizę prawdziwych systemów - nie slajdy z teorią.",
     highlights: [
@@ -212,9 +212,9 @@ const cards: CardData[] = [
     icon: <InspirationIcon />,
     title: "INSPIRACJA",
     description:
-      "Wyjdź z konferencji z głową pełną pomysłów i energią do działania.",
+      "Poznaj technologie, które przestały być nowinkami, a stają się standardem w nowoczesnym przemyśle.",
     extendedDescription:
-      "Każda edycja KISS IT to zastrzyk motywacji i świeżych pomysłów. Wracasz do pracy z nową perspektywą, gotowy do wdrażania zmian i dzielenia się wiedzą z zespołem.",
+      "KISS IT to zastrzyk motywacji i świeżych pomysłów. Wracasz do pracy z nową perspektywą, gotowy do wdrażania zmian i dzielenia się wiedzą z zespołem.",
     highlights: [
       "Keynote od wizjonerów",
       "Historie sukcesu",

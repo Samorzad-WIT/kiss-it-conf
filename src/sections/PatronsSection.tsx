@@ -1,9 +1,9 @@
 export const PatronsSection = () => {
   const patrons = [
     {
-      name: "Patronat Honorowy Rektora PWr",
-      url: "https://pwr.edu.pl/",
-      image: "/patrons/pwr-rektor.png",
+      name: "Patronat Honorowy Wojewody Dolnośląskiego",
+      url: "https://www.gov.pl/web/dolnoslaski-uw/anna-zabska",
+      image: "/patrons/wojewoda.png",
     },
     {
       name: "Patronat Honorowy Marszałka Województwa Dolnośląskiego",
@@ -11,9 +11,9 @@ export const PatronsSection = () => {
       image: "/patrons/dolny-slask.png",
     },
     {
-      name: "Patronat Honorowy Wojewody Dolnośląskiego",
-      url: "https://www.gov.pl/web/dolnoslaski-uw/anna-zabska",
-      image: "/patrons/wojewoda.png",
+      name: "Patronat Honorowy Rektora PWr",
+      url: "https://pwr.edu.pl/",
+      image: "/patrons/pwr-rektor.png",
     },
     {
       name: "Patronat Honorowy Dziekana WIT PWr",
@@ -47,8 +47,8 @@ export const PatronsSection = () => {
               className="block h-full"
             >
               <div
-                className="p-4 border border-white/5 bg-white/5 rounded-lg backdrop-blur-sm 
-                           opacity-70 hover:opacity-100 hover:scale-110 hover:border-[#fd00ff]/30 
+                className="p-4 border bg-white/5 rounded-lg backdrop-blur-sm 
+                           opacity-70 hover:opacity-100 hover:scale-110 border-[#fd00ff]/50 
                            transition-all duration-300 cursor-pointer flex flex-col items-center gap-4 group h-full justify-start"
               >
                 <div className="w-full flex items-center justify-center p-2">

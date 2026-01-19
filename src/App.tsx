@@ -13,7 +13,6 @@ import { VenueSection } from "./sections/VenueSection";
 //TODO  Temporary: sections hidden until content is ready
 void AgendaSection;
 void SpeakersSection;
-void VenueSection;
 
 import { PartnersSection } from "./sections/PartnersSection";
 import { PatronsSection } from "./sections/PatronsSection";
@@ -66,9 +65,9 @@ export default function App() {
         <WhyAttendSection />
         {/* <AgendaSection /> */}
         {/* <SpeakersSection /> */}
-        {/* <VenueSection /> */}
         <PartnersSection />
         <PatronsSection />
+        <VenueSection />
       </main>
 
       <Footer />

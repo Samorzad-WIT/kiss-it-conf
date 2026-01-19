@@ -18,8 +18,8 @@ export const Navbar = () => {
     // { label: "LOKALIZACJA", href: "#location" },
     { label: "Dlaczego KISS IT?", href: "#why-attend" },
     // { label: "PARTNERZY", href: "#partners" },
-    // { label: "OFERTA PARTNERSKA", href: "#partners" },
-    { label: "PATRONI", href: "#patrons" }
+    { label: "PATRONI", href: "#patrons" },
+    { label: "KONTAKT", href: "#footer" },
   ];
 
   const handleLinkClick = () => {

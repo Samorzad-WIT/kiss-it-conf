@@ -1,6 +1,4 @@
-import { motion, type Variants, AnimatePresence } from "framer-motion";
-import { useState } from "react";
-import { X } from "lucide-react";
+import { motion, type Variants } from "framer-motion";
 import { Badge } from "../components/ui/Badge";
 
 const containerVariants: Variants = {
@@ -137,8 +135,6 @@ type CardData = {
   icon: React.ReactNode;
   title: string;
   description: string;
-  extendedDescription: string;
-  highlights: string[];
   accentColor: string;
   borderColor: string;
 };
@@ -149,14 +145,6 @@ const cards: CardData[] = [
     title: "WIEDZA OD EKSPERTÓW",
     description:
       "Posłuchaj inżynierów z topowych firm o technologiach, które napędzają dzisiejszy przemysł IT.",
-    extendedDescription:
-      "Nasi prelegenci to doświadczeni architekci i inżynierowie, którzy codziennie pracują z systemami obsługującymi miliony użytkowników. Każda prezentacja to esencja lat doświadczeń skondensowana w praktyczne wskazówki.",
-    highlights: [
-      "Case studies z dużych projektów",
-      "Błędy do uniknięcia",
-      "Sprawdzone wzorce architektoniczne",
-      "Q&A z ekspertami",
-    ],
     accentColor: "#24ff54",
     borderColor: "#24ff54",
   },
@@ -165,14 +153,6 @@ const cards: CardData[] = [
     title: "NETWORKING",
     description:
       "Rozmawiaj bezpośrednio z firmami szukającymi ludzi i poznaj kulisy pracy w topowych firmach IT.",
-    extendedDescription:
-      "Konferencja to nie tylko prelekcje - to przede wszystkim ludzie. Przerwy kawowe, lunch i afterparty to idealne okazje do nawiązania kontaktów z profesjonalistami z całej Polski.",
-    highlights: [
-      "Dedykowane strefy networkingowe",
-      "Speed networking sessions",
-      "Afterparty z DJ-em",
-      "Kanał Discord dla uczestników",
-    ],
     accentColor: "#fd00ff",
     borderColor: "#fd00ff",
   },
@@ -181,14 +161,6 @@ const cards: CardData[] = [
     title: "PRAKTYKA > TEORIA",
     description:
       "Dowiedz się, jak świadomie budować karierę i rozwijać kompetencje, które dadzą Ci realną przewagę na rynku pracy.",
-    extendedDescription:
-      "Wierzymy, że najlepiej uczy się przez praktykę. Dlatego oferujemy interaktywne warsztaty, live coding sessions i analizę prawdziwych systemów - nie slajdy z teorią.",
-    highlights: [
-      "Warsztaty hands-on",
-      "Live coding & debugging",
-      "Architektura na żywo",
-      "Rozwiązywanie realnych problemów",
-    ],
     accentColor: "#6715ff",
     borderColor: "#6715ff",
   },
@@ -197,14 +169,6 @@ const cards: CardData[] = [
     title: "SPOŁECZNOŚĆ",
     description:
       "Dołącz do polskiej społeczności architektów IT. Razem tworzymy przyszłość.",
-    extendedDescription:
-      "KISS IT to więcej niż konferencja - to rosnąca społeczność pasjonatów dobrej architektury. Dołącz do nas i bądź częścią ruchu na rzecz prostszych, lepszych systemów.",
-    highlights: [
-      "Dostęp do zamkniętej grupy",
-      "Comiesięczne meetupy online",
-      "Wspólne projekty open source",
-      "Mentoring i wsparcie",
-    ],
     accentColor: "#fd00ff",
     borderColor: "#fd00ff",
   },
@@ -213,14 +177,6 @@ const cards: CardData[] = [
     title: "INSPIRACJA",
     description:
       "Poznaj technologie, które przestały być nowinkami, a stają się standardem w nowoczesnym przemyśle.",
-    extendedDescription:
-      "KISS IT to zastrzyk motywacji i świeżych pomysłów. Wracasz do pracy z nową perspektywą, gotowy do wdrażania zmian i dzielenia się wiedzą z zespołem.",
-    highlights: [
-      "Keynote od wizjonerów",
-      "Historie sukcesu",
-      "Trendy i przyszłość IT",
-      "Materiały do zabrania",
-    ],
     accentColor: "#24ff54",
     borderColor: "#24ff54",
   },
@@ -229,19 +185,16 @@ const cards: CardData[] = [
 const WhyAttendCard = ({
   card,
   index,
-  onClick,
   className,
 }: {
   card: CardData;
   index: number;
-  onClick: () => void;
   className?: string;
 }) => {
   return (
     <motion.div
       variants={cardVariants}
-      className={`group relative cursor-pointer ${className || ""}`}
-      onClick={onClick}
+      className={`group relative ${className || ""}`}
       style={
         {
           "--accent-color": card.accentColor,
@@ -267,7 +220,7 @@ const WhyAttendCard = ({
       />
 
       <div
-        className="relative p-6 bg-[#000018] border transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
+        className="relative h-full p-6 bg-[#000018] border transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1"
         style={{
           borderColor: `${card.borderColor}40`,
           boxShadow: `4px 4px 0px ${card.borderColor}20`,
@@ -323,114 +276,11 @@ const WhyAttendCard = ({
 };
 
 export const WhyAttendSection = () => {
-  const [selectedCard, setSelectedCard] = useState<CardData | null>(null);
-
   return (
     <section
       id="why-attend"
       className="py-24 bg-[#000018] relative scroll-mt-20 overflow-hidden"
     >
-      <AnimatePresence>
-        {selectedCard && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center p-4"
-            onClick={() => setSelectedCard(null)}
-          >
-            <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
-
-            <motion.div
-              initial={{ scale: 0.9, opacity: 0, y: 20 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.9, opacity: 0, y: 20 }}
-              transition={{ type: "spring", stiffness: 300, damping: 25 }}
-              className="relative max-w-lg w-full bg-[#000018] border-2 p-8"
-              style={{ borderColor: selectedCard.borderColor }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div
-                className="absolute -top-1 -left-1 w-4 h-4 border-t-2 border-l-2"
-                style={{ borderColor: selectedCard.borderColor }}
-              />
-              <div
-                className="absolute -top-1 -right-1 w-4 h-4 border-t-2 border-r-2"
-                style={{ borderColor: selectedCard.borderColor }}
-              />
-              <div
-                className="absolute -bottom-1 -left-1 w-4 h-4 border-b-2 border-l-2"
-                style={{ borderColor: selectedCard.borderColor }}
-              />
-              <div
-                className="absolute -bottom-1 -right-1 w-4 h-4 border-b-2 border-r-2"
-                style={{ borderColor: selectedCard.borderColor }}
-              />
-
-              <button
-                onClick={() => setSelectedCard(null)}
-                className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center border transition-colors duration-200 hover:bg-white/10"
-                style={{
-                  borderColor: selectedCard.borderColor,
-                  color: selectedCard.accentColor,
-                }}
-              >
-                <X size={18} />
-              </button>
-
-              <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.3)_50%)] bg-[length:100%_4px] pointer-events-none opacity-10" />
-
-              <div
-                className="w-16 h-16 flex items-center justify-center mb-6 border-2"
-                style={{
-                  borderColor: selectedCard.borderColor,
-                  backgroundColor: `${selectedCard.accentColor}15`,
-                }}
-              >
-                {selectedCard.icon}
-              </div>
-
-              <h3
-                className="font-display text-2xl tracking-wider mb-4"
-                style={{ color: selectedCard.accentColor }}
-              >
-                {selectedCard.title}
-              </h3>
-
-              <p className="text-gray-300 font-sans leading-relaxed mb-6">
-                {selectedCard.extendedDescription}
-              </p>
-
-              <div className="space-y-2">
-                <p className="text-sm font-display tracking-widest text-gray-500 mb-3">
-                  {">"} HIGHLIGHTS:
-                </p>
-                {selectedCard.highlights.map((highlight, i) => (
-                  <div
-                    key={i}
-                    className="flex items-center gap-3 text-sm font-sans"
-                  >
-                    <span
-                      className="w-2 h-2 flex-shrink-0"
-                      style={{ backgroundColor: selectedCard.accentColor }}
-                    />
-                    <span className="text-gray-400">{highlight}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div
-                className="absolute bottom-0 left-0 right-0 h-1"
-                style={{
-                  backgroundColor: selectedCard.accentColor,
-                  opacity: 0.5,
-                }}
-              />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -456,7 +306,6 @@ export const WhyAttendSection = () => {
               key={index}
               card={card}
               index={index}
-              onClick={() => setSelectedCard(card)}
               className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.34rem)]"
             />
           ))}

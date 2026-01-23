@@ -89,7 +89,7 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
           alt={`Logo ${partner.name}`}
           className={`
             ${config.logoSize} w-auto object-contain rounded-lg
-            transition-all duration-300 group-hover:-translate-y-2
+            transition-all duration-300 group-hover:-translate-y-4
           `}
         />
       ) : (
@@ -104,7 +104,7 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
       {/* Nazwa partnera pod logo (widoczna na hover) */}
       {partner.logo && (
         <div className="absolute bottom-0 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 pb-2">
-          <span className="text-sm font-medium text-white/90 font-sans">{partner.name}</span>
+          <span className="text-xl font-bold text-white font-sans drop-shadow-md">{partner.name}</span>
         </div>
       )}
     </motion.div>

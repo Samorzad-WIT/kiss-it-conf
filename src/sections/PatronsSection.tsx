@@ -55,7 +55,7 @@ export const PatronsSection = () => {
                   <img
                     src={patron.image}
                     alt={patron.name}
-                    className="max-w-full rounded-lg max-h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                    className="max-w-full rounded-lg max-h-full object-contain  transition-all duration-300"
                   />
                 </div>
 

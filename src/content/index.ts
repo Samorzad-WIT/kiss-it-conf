@@ -47,11 +47,22 @@ export interface VenueInfo {
   mapEmbedUrl: string;
 }
 
+export type PartnerTier = "platinum" | "gold" | "silver" | "community";
+
+export interface Partner {
+  name: string;
+  logo: string;
+  url?: string;
+  tier: PartnerTier;
+
+}
+
 export interface SiteContent {
   hero: HeroData;
   speakers: Speaker[];
   agenda: AgendaDay[];
   venue: VenueInfo;
+  partners: Partner[];
 }
 
 export const heroData: HeroData = {
@@ -208,11 +219,33 @@ export const venue: VenueInfo = {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.195590887994!2d17.058!3d51.108!2m3!1f0!2f0!3f0"
 };
 
+/**
+ * Partnerzy wydarzenia - łatwe do edycji i rozszerzenia
+ * Aby dodać nowego partnera, wystarczy dodać obiekt do odpowiedniego poziomu
+ */
+export const partners: Partner[] = [
+  // Przykładowi partnerzy - do zastąpienia prawdziwymi danymi
+  {
+    name: "TechCorp",
+    logo: "partners/platinum/google.png",
+    url: "https://techcorp.example.com",
+    tier: "platinum"
+  },
+  {
+    name: "CloudBase",
+    logo: "partners/gold/google.png",
+    url: "https://cloudbase.example.com",
+    tier: "gold"
+  },
+];
+
 export const siteContent: SiteContent = {
   hero: heroData,
   speakers,
   agenda,
-  venue
+  venue,
+  partners,
+
 };
 
 

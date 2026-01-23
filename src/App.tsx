@@ -18,6 +18,7 @@ import { PartnersSection } from "./sections/PartnersSection";
 import { PatronsSection } from "./sections/PatronsSection";
 import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";
 
+
 export default function App() {
   return (
     <div className="min-h-screen bg-[#100c1d] text-white selection:bg-[#fd00ff] selection:text-white font-sans">
@@ -65,6 +66,7 @@ export default function App() {
         <WhyAttendSection />
         {/* <AgendaSection /> */}
         {/* <SpeakersSection /> */}
+
         <PartnersSection />
         <PatronsSection />
         <VenueSection />

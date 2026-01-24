@@ -207,23 +207,6 @@ export const PartnersSection = () => {
           </div>
         )}
 
-        {/* Partner Technologiczny (Solvro) - Poniżej listy partnerów */}
-        <div className="my-24">
-          <a href="https://solvro.pwr.edu.pl" target="_blank">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              whileHover={{ scale: 1.05 }}
-              viewport={{ once: true }}
-              className="max-w-md mx-auto p-8 border border-[#fd00ff]/30 bg-[#fd00ff]/5 rounded-xl backdrop-blur-sm hover:border-[#fd00ff]/60 transition-all duration-300 cursor-pointer shadow-[0_0_30px_-10px_rgba(253,0,255,0.2)]"
-            >
-              <div className="h-full flex flex-col items-center justify-center font-display text-xl gap-4 text-white tracking-widest font-bold">
-                Partner Technologiczny
-                <img src="/partners/solvro.svg" alt="Solvro" className="h-10 w-auto" />
-              </div>
-            </motion.div>
-          </a>
-        </div>
 
         {/* CTA dla potencjalnych partnerów */}
         <motion.div

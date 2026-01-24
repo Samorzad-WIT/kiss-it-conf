@@ -47,7 +47,7 @@ export interface VenueInfo {
   mapEmbedUrl: string;
 }
 
-export type PartnerTier = "platinum" | "gold" | "silver" | "community";
+export type PartnerTier = "diament" | "gold" | "silver" | "bronze";
 
 export interface Partner {
   name: string;
@@ -229,7 +229,25 @@ export const partners: Partner[] = [
     name: "TechCorp",
     logo: "partners/platinum/google.png",
     url: "https://techcorp.example.com",
-    tier: "platinum"
+    tier: "diament"
+  },
+  {
+    name: "CloudBase",
+    logo: "partners/gold/google.png",
+    url: "https://cloudbase.example.com",
+    tier: "gold"
+  },
+  {
+    name: "CloudBase",
+    logo: "partners/gold/google.png",
+    url: "https://cloudbase.example.com",
+    tier: "gold"
+  },
+  {
+    name: "CloudBase",
+    logo: "partners/gold/google.png",
+    url: "https://cloudbase.example.com",
+    tier: "gold"
   },
   {
     name: "CloudBase",

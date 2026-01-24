@@ -30,30 +30,30 @@ const tierConfig: Record<PartnerTier, {
   borderColor: string;
   glowColor: string;
 }> = {
-  platinum: {
-    label: "Partnerzy Platynowi",
+  diament: {
+    label: "Partnerzy Diamantowi",
     logoSize: "h-20 md:h-24 ",
-    borderColor: "border-[#e5e4e2]",
-    glowColor: "hover:shadow-[0_0_30px_rgba(229,228,226,0.3)]"
-  },
+    borderColor: "border-[#fd00ff]",
+    glowColor: "hover:shadow-[0_0_30px_rgba(0,238,255,0.23)]"
+  },  
   gold: {
     label: "Partnerzy Złoci",
-    logoSize: "h-16 md:h-20",
-    borderColor: "border-[#ffd700]",
+    logoSize: "h-16 md:h-18",
+    borderColor: "border-[#fd00ff]",
     glowColor: "hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
   },
   silver: {
     label: "Partnerzy Srebrni",
-    logoSize: "h-12 md:h-14",
-    borderColor: "border-[#c0c0c0]",
-    glowColor: "hover:shadow-[0_0_20px_rgba(192,192,192,0.2)]"
+    logoSize: "h-16 md:h-18",
+    borderColor: "border-[#fd00ff]",
+    glowColor: "hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
   },
-  community: {
-    label: "Partnerzy Społecznościowi",
-    logoSize: "h-10 md:h-12",
-    borderColor: "border-[#24ff54]",
-    glowColor: "hover:shadow-[0_0_15px_rgba(36,255,84,0.2)]"
-  }
+  bronze: {
+    label: "Partnerzy Bronzowi",
+    logoSize: "h-16 md:h-18",
+    borderColor: "border-[#fd00ff]",
+    glowColor: "hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
+  } 
 };
 
 /** Komponent pojedynczego partnera */
@@ -89,7 +89,7 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
           alt={`Logo ${partner.name}`}
           className={`
             ${config.logoSize} w-auto object-contain rounded-lg
-            transition-all duration-300 group-hover:-translate-y-4
+            transition-all duration-300 group-hover:-translate-y-3
           `}
         />
       ) : (
@@ -148,7 +148,7 @@ const PartnerTierGroup = ({ tier, partners }: PartnerTierGroupProps) => {
       className="mb-12 last:mb-0"
     >
       <h3 className="text-lg md:text-xl font-display tracking-widest text-white/60 text-center mb-6 uppercase">
-        {config.label}
+        {/* {config.label} */} 
       </h3>
       <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
         {partners.map((partner, index) => (
@@ -159,25 +159,6 @@ const PartnerTierGroup = ({ tier, partners }: PartnerTierGroupProps) => {
   );
 };
 
-/** Placeholder dla pustej sekcji partnerów */
-const PartnersPlaceholder = () => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ delay: 0.2 }}
-    className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto opacity-30"
-  >
-    {[...Array(4)].map((_, i) => (
-      <div
-        key={i}
-        className="p-8 border border-white/10 bg-white/5 rounded-xl flex items-center justify-center w-48 h-32"
-      >
-        <div className="h-12 w-24 bg-white/10 rounded animate-pulse" />
-      </div>
-    ))}
-  </motion.div>
-);
-
 export const PartnersSection = () => {
   // Grupowanie partnerów według poziomów
   const groupedPartners = partners.reduce<Record<PartnerTier, Partner[]>>(
@@ -185,11 +166,11 @@ export const PartnersSection = () => {
       acc[partner.tier].push(partner);
       return acc;
     },
-    { platinum: [], gold: [], silver: [], community: [] }
+    { diament: [], gold: [],   silver: [], bronze: [] }
   );
 
   const hasPartners = partners.length > 0;
-  const tierOrder: PartnerTier[] = ['platinum', 'gold', 'silver', 'community'];
+  const tierOrder: PartnerTier[] = ['diament', 'gold', 'silver', 'bronze'];
 
   return (
     <section
@@ -228,11 +209,8 @@ export const PartnersSection = () => {
             ))}
           </div>
         ) : (
-          <div className="text-center">
-            <p className="text-white/50 font-sans mb-8">
-              Lista partnerów zostanie ogłoszona wkrótce
-            </p>
-            <PartnersPlaceholder />
+          <div >
+            
           </div>
         )}
 

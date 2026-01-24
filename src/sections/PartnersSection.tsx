@@ -31,7 +31,7 @@ const tierConfig: Record<PartnerTier, {
     logoSize: "h-20 md:h-24 ",
     borderColor: "border-[#fd00ff]",
     glowColor: "hover:shadow-[0_0_30px_rgba(0,238,255,0.23)]"
-  },  
+  },
   gold: {
     label: "Partnerzy Złoci",
     logoSize: "h-16 md:h-18",
@@ -49,7 +49,7 @@ const tierConfig: Record<PartnerTier, {
     logoSize: "h-16 md:h-18",
     borderColor: "border-[#fd00ff]",
     glowColor: "hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
-  } 
+  }
 };
 
 /** Komponent pojedynczego partnera */
@@ -80,14 +80,15 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
       `}
     >
       {partner.logo ? (
-        <img
-          src={partner.logo}
-          alt={`Logo ${partner.name}`}
-          className={`
-            ${config.logoSize} w-auto object-contain rounded-lg
-            transition-all duration-300 group-hover:-translate-y-3
-          `}
-        />
+        <div className="bg-white rounded-lg p-3 transition-all duration-300 group-hover:-translate-y-3">
+          <img
+            src={partner.logo}
+            alt={`Logo ${partner.name}`}
+            className={`
+              ${config.logoSize} w-auto object-contain
+            `}
+          />
+        </div>
       ) : (
         // Placeholder gdy brak logo
         <div className={`${config.logoSize} flex items-center justify-center px-4`}>
@@ -158,7 +159,7 @@ export const PartnersSection = () => {
       acc[partner.tier].push(partner);
       return acc;
     },
-    { diament: [], gold: [],   silver: [], bronze: [] }
+    { diament: [], gold: [], silver: [], bronze: [] }
   );
 
   const hasPartners = partners.length > 0;
@@ -202,7 +203,7 @@ export const PartnersSection = () => {
           </div>
         ) : (
           <div >
-            
+
           </div>
         )}
 

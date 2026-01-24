@@ -226,34 +226,10 @@ export const venue: VenueInfo = {
 export const partners: Partner[] = [
   // Przykładowi partnerzy - do zastąpienia prawdziwymi danymi
   {
-    name: "TechCorp",
-    logo: "partners/platinum/google.png",
-    url: "https://techcorp.example.com",
+    name: "Capgemini",
+    logo: "partners/diamond/Capgemini_Primary logo_Capgemini Blue_RGB.svg",
+    url: "https://www.capgemini.com/pl-pl/",
     tier: "diament"
-  },
-  {
-    name: "CloudBase",
-    logo: "partners/gold/google.png",
-    url: "https://cloudbase.example.com",
-    tier: "gold"
-  },
-  {
-    name: "CloudBase",
-    logo: "partners/gold/google.png",
-    url: "https://cloudbase.example.com",
-    tier: "gold"
-  },
-  {
-    name: "CloudBase",
-    logo: "partners/gold/google.png",
-    url: "https://cloudbase.example.com",
-    tier: "gold"
-  },
-  {
-    name: "CloudBase",
-    logo: "partners/gold/google.png",
-    url: "https://cloudbase.example.com",
-    tier: "gold"
   },
 ];
 

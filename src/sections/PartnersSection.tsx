@@ -20,10 +20,6 @@ const itemVariants: Variants = {
   }
 };
 
-/**
- * Konfiguracja poziomów partnerskich
- * Łatwo rozszerzalna o nowe poziomy
- */
 const tierConfig: Record<PartnerTier, {
   label: string;
   logoSize: string;
@@ -137,7 +133,6 @@ interface PartnerTierGroupProps {
 const PartnerTierGroup = ({ tier, partners }: PartnerTierGroupProps) => {
   if (partners.length === 0) return null;
 
-  const config = tierConfig[tier];
 
   return (
     <motion.div
@@ -147,9 +142,6 @@ const PartnerTierGroup = ({ tier, partners }: PartnerTierGroupProps) => {
       variants={containerVariants}
       className="mb-12 last:mb-0"
     >
-      <h3 className="text-lg md:text-xl font-display tracking-widest text-white/60 text-center mb-6 uppercase">
-        {/* {config.label} */} 
-      </h3>
       <div className="flex flex-wrap justify-center gap-6 max-w-5xl mx-auto">
         {partners.map((partner, index) => (
           <PartnerCard key={`${tier}-${partner.name}-${index}`} partner={partner} tier={tier} />

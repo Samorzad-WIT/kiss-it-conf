@@ -47,11 +47,9 @@ export const VenueSection = () => {
                                     <h4 className="font-display text-[#fd00ff] text-lg mb-1">DOJAZD</h4>
                                     <p className="text-white font-medium">Przystanek: Plac Grunwaldzki</p>
                                     <div className="flex flex-wrap gap-2 mt-2">
-                                        {['0', '4', '16', '33', '70'].map(num => (
-                                            <span key={num} className="px-2 py-0.5 bg-[#fd00ff]/10 border border-[#fd00ff]/30 text-xs text-[#fd00ff] rounded">
-                                                {num}
-                                            </span>
-                                        ))}
+                                        <span className="px-2 py-0.5 text-xs rounded">
+                                            <span className="text-3xl">🚌  🚃</span>
+                                        </span>
                                     </div>
                                 </div>
                             </div>

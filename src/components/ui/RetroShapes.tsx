@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 // Import oryginalnych plików SVG z Figmy
 import sphere1 from '../../assets/sphere 1.svg';
@@ -22,9 +23,10 @@ interface Shape {
 }
 
 
+// Desktop shapes - all 8 shapes
 // Figury rozmieszczone losowo z dużym zakresem ruchu
 // Unikają centralnej strefy (30-70% x, 35-65% y) gdzie jest tekst
-const SHAPES: Shape[] = [
+const DESKTOP_SHAPES: Shape[] = [
   // Górna strefa (y: 0-30%)
   { id: 1, image: sphere1, x: 5, y: 20, size: 80, opacity: 0.6, duration: 20, delay: 0, moveX: 80, moveY: 40 },
   { id: 2, image: square1, x: 25, y: 10, size: 60, opacity: 0.5, duration: 25, delay: -3, moveX: -60, moveY: 35, variant: 'green' },
@@ -42,10 +44,34 @@ const SHAPES: Shape[] = [
   { id: 8, image: sphere2, x: 78, y: 88, size: 55, opacity: 0.5, duration: 25, delay: -1, moveX: -70, moveY: -42, variant: 'blue' },
 ];
 
+// Mobile shapes - (top 20% and bottom 20%)
+const MOBILE_SHAPES: Shape[] = [
+  // Top safe zone (y: 0-20%) - 2 shapes
+  { id: 1, image: square2, x: 75, y: 10, size: 55, opacity: 0.5, duration: 19, delay: -2, moveX: -30, moveY: 10 },
+  { id: 2, image: square1, x: 15, y: 15, size: 35, opacity: 0.4, duration: 22, delay: -1, moveX: 25, moveY: 8, variant: 'green' },
+
+  // Bottom safe zone (y: 80-100%) - 2 shapes
+  { id: 3, image: square1, x: 20, y: 88, size: 45, opacity: 0.4, duration: 20, delay: -8, moveX: 30, moveY: -8, variant: 'green' },
+  { id: 4, image: sphere2, x: 78, y: 90, size: 55, opacity: 0.5, duration: 19, delay: -1, moveX: -25, moveY: -8, variant: 'blue' },
+];
+
 export const RetroShapes = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const shapes = isMobile ? MOBILE_SHAPES : DESKTOP_SHAPES;
   return (
     <div className="absolute inset-0 pointer-events-none z-[2]">
-      {SHAPES.map((shape) => (
+      {shapes.map((shape) => (
         <motion.div
           key={shape.id}
           className="absolute"
@@ -79,7 +105,7 @@ export const RetroShapes = () => {
               0
             ],
             scale: [1, 1.05, 1.1, 1.05, 1, 0.98, 0.95, 0.98, 1],
-            rotate: [0, 5, 10, 5, 0, -5, -10, -5, 0],
+            rotate: [0, 10, 15, 10, 5, -10, -15, -10, 0],
           }}
           transition={{
             opacity: { duration: 2, delay: 0.5 },

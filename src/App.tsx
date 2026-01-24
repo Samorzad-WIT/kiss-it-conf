@@ -69,8 +69,8 @@ export default function App() {
         {/* <SpeakersSection /> */}
 
         <PartnersSection />
-        <KolaNaukoweSection />
         <PatronsSection />
+        <KolaNaukoweSection />
         <VenueSection />
       </main>
 

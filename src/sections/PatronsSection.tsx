@@ -48,7 +48,7 @@ export const PatronsSection = () => {
             >
               <div
                 className="p-4 border bg-white/5 rounded-lg backdrop-blur-sm 
-                           opacity-70 hover:opacity-100 hover:scale-110 border-[#fd00ff]/50 
+                           hover:scale-110 border-[#fd00ff]/50 
                            transition-all duration-300 cursor-pointer flex flex-col items-center gap-4 group h-full justify-start"
               >
                 <div className="w-full flex items-center justify-center p-2">

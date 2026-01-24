@@ -73,7 +73,6 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
         border ${config.borderColor} border-opacity-20 
         bg-white/5 rounded-xl backdrop-blur-sm 
         hover:border-opacity-60 hover:bg-white/10
-        ${config.glowColor}
         transition-all duration-300 cursor-pointer
         flex items-center justify-center
         w-full md:w-auto min-w-[200px]

@@ -32,20 +32,8 @@ const tierConfig: Record<PartnerTier, {
     borderColor: "border-[#fd00ff]",
     glowColor: "hover:shadow-[0_0_30px_rgba(0,238,255,0.23)]"
   },
-  gold: {
-    label: "Partnerzy Złoci",
-    logoSize: "h-16 md:h-18",
-    borderColor: "border-[#fd00ff]",
-    glowColor: "hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
-  },
-  silver: {
-    label: "Partnerzy Srebrni",
-    logoSize: "h-16 md:h-18",
-    borderColor: "border-[#fd00ff]",
-    glowColor: "hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
-  },
-  bronze: {
-    label: "Partnerzy Bronzowi",
+  other: {
+    label: "Partnerzy",
     logoSize: "h-16 md:h-18",
     borderColor: "border-[#fd00ff]",
     glowColor: "hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
@@ -69,7 +57,7 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
         filter: "brightness(1.15)"
       }}
       className={`
-        group relative p-6 
+        group relative p-6
         border ${config.borderColor} border-opacity-20 
         bg-white/5 rounded-xl backdrop-blur-sm 
         hover:border-opacity-60 hover:bg-white/10
@@ -100,7 +88,7 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
       {/* Nazwa partnera pod logo (widoczna na hover) */}
       {partner.logo && (
         <div className="absolute bottom-0 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 pb-2">
-          <span className="text-xl font-bold text-white font-sans drop-shadow-md">{partner.name}</span>
+          <span className={`${tier === 'other' ? 'text-sm' : 'text-xl'} font-bold text-white font-sans drop-shadow-md`}>{partner.name}</span>
         </div>
       )}
     </motion.div>
@@ -158,11 +146,11 @@ export const PartnersSection = () => {
       acc[partner.tier].push(partner);
       return acc;
     },
-    { diament: [], gold: [], silver: [], bronze: [] }
+    { diament: [], other: [] }
   );
 
   const hasPartners = partners.length > 0;
-  const tierOrder: PartnerTier[] = ['diament', 'gold', 'silver', 'bronze'];
+  const tierOrder: PartnerTier[] = ['diament', 'other'];
 
   return (
     <section

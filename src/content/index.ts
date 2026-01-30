@@ -47,7 +47,7 @@ export interface VenueInfo {
   mapEmbedUrl: string;
 }
 
-export type PartnerTier = "diament" | "gold" | "silver" | "bronze";
+export type PartnerTier = "diament" | "other";
 
 export interface Partner {
   name: string;
@@ -230,6 +230,18 @@ export const partners: Partner[] = [
     logo: "partners/diamond/Capgemini_Primary logo_Capgemini Blue_RGB.svg",
     url: "https://www.capgemini.com/pl-pl/",
     tier: "diament"
+  },
+  {
+    name: "Capgemini",
+    logo: "partners/diamond/Capgemini_Primary logo_Capgemini Blue_RGB.svg",
+    url: "https://www.capgemini.com/pl-pl/",
+    tier: "other"
+  },
+  {
+    name: "Women in Big Data Poland",
+    logo: "partners/other/WIBD.svg",
+    url: "https://www.linkedin.com/company/women-in-big-data-poland/",
+    tier: "other"
   },
 ];
 

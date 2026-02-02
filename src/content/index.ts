@@ -232,12 +232,6 @@ export const partners: Partner[] = [
     tier: "diament"
   },
   {
-    name: "Capgemini",
-    logo: "partners/diamond/Capgemini_Primary logo_Capgemini Blue_RGB.svg",
-    url: "https://www.capgemini.com/pl-pl/",
-    tier: "other"
-  },
-  {
     name: "Women in Big Data Poland",
     logo: "partners/other/WIBD.svg",
     url: "https://www.linkedin.com/company/women-in-big-data-poland/",

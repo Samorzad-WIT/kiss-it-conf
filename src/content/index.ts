@@ -103,6 +103,34 @@ export const speakers: Speaker[] = [
     topic: "KISS Security: jak zabezpieczać systemy bez paraliżu zespołów produktowych",
     photoUrl: "/images/speakers/piotr-zielinski.jpg",
     tags: ["Security", "Backend"]
+  },
+  {
+    name: "Dr. Njkhbatalia Kowalska",
+    role: "Lead AI Engineer · Researcher",
+    topic: "Minimalne modele, maksymalny impact – praktyczne AI w systemach produkcyjnych",
+    photoUrl: "/images/speakers/natalia-kowalska.jpg",
+    tags: ["AI", "Hacker"]
+  },
+  {
+    name: "Marekkjnbk Nowak",
+    role: "Principal Cloud Architect · Fintech",
+    topic: "KISS w chmurze: jak nie przeinżynierować architektury rozproszonej",
+    photoUrl: "/images/speakers/marek-nowak.jpg",
+    tags: ["Cloud", "Backend"]
+  },
+  {
+    name: "Agnieskjbzka Wiśniewska",
+    role: "Senior Frontend Engineer · Design Systems",
+    topic: "Interfejsy, które nie zawodzą – prostota w dużych frontendach",
+    photoUrl: "/images/speakers/agnieszka-wisniewska.jpg",
+    tags: ["Frontend", "Hacker"]
+  },
+  {
+    name: "Piotr Zikjbeliński",
+    role: "Security Architect · Red Team",
+    topic: "KISS Security: jak zabezpieczać systemy bez paraliżu zespołów produktowych",
+    photoUrl: "/images/speakers/piotr-zielinski.jpg",
+    tags: ["Security", "Backend"]
   }
 ];
 
@@ -235,6 +263,12 @@ export const partners: Partner[] = [
     name: "Women in Big Data Poland",
     logo: "partners/other/WIBD.svg",
     url: "https://www.linkedin.com/company/women-in-big-data-poland/",
+    tier: "other"
+  },
+  {
+    name: "Identt",
+    logo: "partners/other/identt.png",
+    url: "https://www.facebook.com/Identt",
     tier: "other"
   },
 ];

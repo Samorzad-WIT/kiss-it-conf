@@ -15,10 +15,10 @@ export const Navbar = () => {
   const navLinks = [
     // { label: "AGENDA", href: "#agenda" },
     // { label: "PRELEGENCI", href: "#speakers" },
-    // { label: "LOKALIZACJA", href: "#location" },
     { label: "Dlaczego KISS IT?", href: "#why-attend" },
-    // { label: "PARTNERZY", href: "#partners" },
+    { label: "PARTNERZY", href: "#partners" },
     { label: "PATRONI", href: "#patrons" },
+    { label: "LOKALIZACJA", href: "#location" },
     { label: "KONTAKT", href: "#footer" },
   ];
 
@@ -26,8 +26,11 @@ export const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  // Apply blur when scrolled OR when mobile menu is open
+  const shouldBlur = scrolled || isMenuOpen;
+
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-[#000018]/90 backdrop-blur-md border-b border-[#24ff54]/20' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${shouldBlur ? 'bg-[#000018]/90 backdrop-blur-md border-b border-[#24ff54]/20' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo(0, 0)}>
           <img src="/logo.svg" alt="KISS IT" className="h-10" />

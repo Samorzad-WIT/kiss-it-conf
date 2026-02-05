@@ -35,12 +35,12 @@ export const HeroSection = () => {
     date: "17.03.2026",
     location: "Politechnika Wrocławska, Budynek D-20",
     cta: "ZAREJESTRUJ SIĘ",
-    ctaLink: "https://eventownik.solvro.pl/konferencja",
+    ctaLink: "https://eventownik.solvro.pl/kiss-it-pwr-2026",
     conferenceDate: new Date("2026-03-17T09:00:00"),
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#000018]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#000018] pt-20">
       {/* Siatka z przekątnym rozmyciem przez całą siatkę */}
       <div className="absolute inset-0 pointer-events-none z-0">
         {/* Ostra siatka - poza pasem przekątnej */}
@@ -92,7 +92,7 @@ export const HeroSection = () => {
           <CountdownTimer targetDate={content.conferenceDate} />
         </motion.div>
 
-        {/* <motion.div variants={itemVariants}><NeonButton href={content.ctaLink}>{content.cta}</NeonButton></motion.div> */}
+        <motion.div variants={itemVariants}><NeonButton href={content.ctaLink}>{content.cta}</NeonButton></motion.div>
       </motion.div>
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#000018] to-transparent" />
     </section>

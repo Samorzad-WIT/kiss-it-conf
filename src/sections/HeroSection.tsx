@@ -53,7 +53,6 @@ export const HeroSection = () => {
             WebkitMaskImage: 'linear-gradient(to bottom right, black 0%, black 20%, transparent 45%, transparent 55%, black 80%, black 100%)'
           }}
         />
-        {/* Rozmyta siatka - tylko wąski pas wzdłuż przekątnej */}
         <div
           className="absolute inset-0 opacity-20"
           style={{

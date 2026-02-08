@@ -76,14 +76,14 @@ export const Footer = () => (
 
       <div className="flex flex-col gap-8">
         {/* TODO: Add regulamin link */}
-        {/* <div className="flex justify-start">
+        <div className="flex justify-start">
           <a
-            href="/regulamin"
+            href="https://drive.google.com/file/d/11d0H-rbSonmB9EZPZvu9BP8x901T9DxT/view?usp=sharing"
             className="text-white/70 hover:text-white text-sm underline underline-offset-2 transition-colors"
           >
             Regulamin wydarzenia
           </a>
-        </div> */}
+        </div>
 
         <div className="w-full text-center text-white/50 text-sm font-sans">
           KISS IT PWr | © 2026

@@ -266,7 +266,7 @@ export const partners: Partner[] = [
     tier: "other"
   },
   {
-    name: "Identt",
+    name: "IDENTT",
     logo: "partners/other/identt.png",
     url: "https://www.facebook.com/Identt",
     tier: "other"

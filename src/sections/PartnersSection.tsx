@@ -57,13 +57,13 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
         filter: "brightness(1.15)"
       }}
       className={`
-        group relative p-6
+        group relative p-5
         border ${config.borderColor} border-opacity-20 
         bg-white/5 rounded-xl backdrop-blur-sm 
         hover:border-opacity-60 hover:bg-white/10
         transition-all duration-300 cursor-pointer
-        flex items-center justify-center
-        w-full md:w-auto min-w-[200px]
+        flex flex-col items-center justify-center
+        w-fit
       `}
     >
       {partner.logo ? (
@@ -79,16 +79,23 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
       ) : (
         // Placeholder gdy brak logo
         <div className={`${config.logoSize} flex items-center justify-center px-4`}>
-          <span className="font-display text-xl md:text-2xl text-white/80 tracking-widest group-hover:text-white transition-colors text-center">
+          <span className="font-display text-xl md:text-2xl text-white/80 tracking-widest group-hover:text-white transition-colors text-center whitespace-nowrap">
             {partner.name}
           </span>
         </div>
       )}
 
-      {/* Nazwa partnera pod logo (widoczna na hover) */}
+      {/* Invisible zero-height placeholder in flow — pushes card width to fit the name */}
       {partner.logo && (
-        <div className="absolute bottom-0 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 pb-2">
-          <span className={`${tier === 'other' ? 'text-sm' : 'text-xl'} font-bold text-white font-sans drop-shadow-md`}>{partner.name}</span>
+        <div className="invisible h-0 whitespace-nowrap" aria-hidden="true">
+          <span className={`${tier === 'other' ? 'text-sm' : 'text-xl'} font-bold`}>{partner.name}</span>
+        </div>
+      )}
+
+      {/* Visible name on hover — absolute so it doesn't affect layout */}
+      {partner.logo && (
+        <div className="absolute bottom-1 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          <span className={`${tier === 'other' ? 'text-sm' : 'text-xl'} font-bold text-white font-sans drop-shadow-md whitespace-nowrap m-2`}>{partner.name}</span>
         </div>
       )}
     </motion.div>

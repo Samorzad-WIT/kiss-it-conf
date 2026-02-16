@@ -20,11 +20,11 @@ export const PatronsSection = () => {
       url: "https://wit.pwr.edu.pl/",
       image: "/patrons/wit.png",
     },
-    // {
-    //   name: "Patronat Wroclawskiego Centrum Akademickiego",
-    //   url: "https://wca.wroclaw.pl/",
-    //   image: "/patrons/wca.png",
-    // },
+    {
+      name: "Patronat Wroclawskiego Centrum Akademickiego",
+      url: "https://wca.wroclaw.pl/",
+      image: "/patrons/Wca.png",
+    },
     {
       name: "Patronat medialny Telewizji STYK",
       url: "https://styk.pwr.edu.pl/",

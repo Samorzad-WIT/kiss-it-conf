@@ -29,13 +29,13 @@ const tierConfig: Record<PartnerTier, {
   diament: {
     label: "Partnerzy Diamantowi",
     logoSize: "h-20 md:h-24 max-w-48 md:max-w-56",
-    borderColor: "border-[#fd00ff]",
+    borderColor: "border-[#fd00ff]/50",
     glowColor: "hover:shadow-[0_0_30px_rgba(0,238,255,0.23)]"
   },
   other: {
     label: "Partnerzy",
     logoSize: "h-14 md:h-16 max-w-32 md:max-w-40",
-    borderColor: "border-[#fd00ff]",
+    borderColor: "border-[#fd00ff]/50",
     glowColor: "hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
   }
 };

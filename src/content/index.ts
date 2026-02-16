@@ -271,6 +271,18 @@ export const partners: Partner[] = [
     url: "https://www.facebook.com/Identt",
     tier: "other"
   },
+  {
+    name: "WCSS",
+    logo: "partners/other/wcss.png",
+    url: "https://wcss.pl/",
+    tier: "other"
+  },
+  {
+    name: "PWN",
+    logo: "partners/other/pwn.png",
+    url: "https://pwn.pl/",
+    tier: "other"
+  },
 ];
 
 export const siteContent: SiteContent = {

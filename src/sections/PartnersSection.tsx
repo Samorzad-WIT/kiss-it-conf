@@ -1,5 +1,13 @@
 import { motion, type Variants } from 'framer-motion';
-import { partners, type Partner, type PartnerTier } from '../content';
+import {
+  partners,
+  tierConfig,
+  tierOrder,
+  partnerCta,
+  partnersSectionHeader,
+  type Partner,
+  type PartnerTier,
+} from '../content';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -17,26 +25,6 @@ const itemVariants: Variants = {
     y: 0,
     opacity: 1,
     transition: { type: "spring", stiffness: 100 }
-  }
-};
-
-const tierConfig: Record<PartnerTier, {
-  label: string;
-  logoSize: string;
-  borderColor: string;
-  glowColor: string;
-}> = {
-  diament: {
-    label: "Partnerzy Diamantowi",
-    logoSize: "h-20 md:h-24 max-w-48 md:max-w-56",
-    borderColor: "border-[#fd00ff]/50",
-    glowColor: "hover:shadow-[0_0_30px_rgba(0,238,255,0.23)]"
-  },
-  other: {
-    label: "Partnerzy",
-    logoSize: "h-14 md:h-16 max-w-32 md:max-w-40",
-    borderColor: "border-[#fd00ff]/50",
-    glowColor: "hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
   }
 };
 
@@ -157,7 +145,6 @@ export const PartnersSection = () => {
   );
 
   const hasPartners = partners.length > 0;
-  const tierOrder: PartnerTier[] = ['diament', 'other'];
 
   return (
     <section
@@ -177,10 +164,10 @@ export const PartnersSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 font-sans">
-            PARTNERZY WYDARZENIA
+            {partnersSectionHeader.title}
           </h2>
           <p className="text-gray-400 font-sans max-w-2xl mx-auto">
-            Wspólnie tworzymy wyjątkowe doświadczenie dla społeczności IT
+            {partnersSectionHeader.subtitle}
           </p>
         </motion.div>
 
@@ -211,18 +198,18 @@ export const PartnersSection = () => {
           className="mt-20 p-8 md:p-12 border border-dashed border-gray-700 rounded-2xl max-w-3xl mx-auto bg-[#000018]/80 backdrop-blur-sm text-center"
         >
           <h3 className="text-2xl md:text-3xl text-white font-display mb-3 tracking-wide">
-            Chcesz zostać partnerem?
+            {partnerCta.title}
           </h3>
           <p className="text-gray-400 mb-6 font-sans max-w-xl mx-auto">
-            Wspieraj lokalną społeczność IT i pokaż się setkom inżynierów.
+            {partnerCta.description}
           </p>
           <a
-            href="/oferta_partnerska_1_web.pdf"
+            href={partnerCta.linkHref}
             download
             className="inline-flex items-center gap-2 text-[#24ff54] font-display text-lg hover:underline tracking-widest transition-all hover:gap-4"
           >
             <span>{'>>>'}</span>
-            <span>POBIERZ OFERTĘ PARTNERSKĄ</span>
+            <span>{partnerCta.linkText}</span>
           </a>
         </motion.div>
       </div>

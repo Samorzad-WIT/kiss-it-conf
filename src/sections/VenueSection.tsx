@@ -1,5 +1,6 @@
 import { Badge } from '../components/ui/Badge';
 import { MapPin, Map as MapIcon } from 'lucide-react';
+import { venueData } from '../content';
 
 export const VenueSection = () => {
     return (
@@ -13,12 +14,10 @@ export const VenueSection = () => {
                     <div className="mb-8">
                         <Badge color="green">TARGET COORDINATES</Badge>
                         <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-6 font-sans">
-                            LOKALIZACJA<span className="text-[#fd00ff]">.</span>
+                            {venueData.sectionTitle}<span className="text-[#fd00ff]">.</span>
                         </h2>
                         <p className="text-xl text-gray-300 mb-8 font-light leading-relaxed">
-                            Spotykamy się w samym sercu kampusu Politechniki Wrocławskiej.
-                            Budynek D-20 to nowoczesne centrum studenckie,
-                            które na jeden dzień zamieni się w centrum polskiego IT.
+                            {venueData.description}
                         </p>
                     </div>
 
@@ -31,8 +30,8 @@ export const VenueSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-display text-[#24ff54] text-lg mb-1">ADRES</h4>
-                                    <p className="text-white font-medium text-lg">ul. Janiszewskiego 8</p>
-                                    <p className="text-gray-400">50-372 Wrocław, Budynek D-20</p>
+                                    <p className="text-white font-medium text-lg">{venueData.address.street}</p>
+                                    <p className="text-gray-400">{venueData.address.city}</p>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +44,7 @@ export const VenueSection = () => {
                                 </div>
                                 <div>
                                     <h4 className="font-display text-[#fd00ff] text-lg mb-1">DOJAZD</h4>
-                                    <p className="text-white font-medium">Przystanek: Plac Grunwaldzki</p>
+                                    <p className="text-white font-medium">Przystanek: {venueData.transport.stop}</p>
                                     <div className="flex flex-wrap gap-2 mt-2">
                                         <span className="px-2 py-0.5 text-xs rounded">
                                             <span className="text-3xl">🚌  🚃</span>
@@ -68,7 +67,7 @@ export const VenueSection = () => {
                     <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px] pointer-events-none z-10 opacity-10" />
 
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.895446968189!2d17.057317177867798!3d51.11038917172585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470fe82ad79bcced%3A0xfd7c70ff2ba26316!2sJaniszewskiego%208%2C%2050-372%20Wroc%C5%82aw!5e0!3m2!1spl!2spl!4v1768780573375!5m2!1spl!2spl"
+                        src={venueData.mapEmbedUrl}
                         width="100%"
                         height="100%"
                         style={{ border: 0, filter: 'grayscale(100%) invert(90%) contrast(120%)' }}

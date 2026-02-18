@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { navLinks } from '../content';
 
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -11,16 +12,6 @@ export const Navbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const navLinks = [
-    // { label: "AGENDA", href: "#agenda" },
-    // { label: "PRELEGENCI", href: "#speakers" },
-    { label: "Dlaczego KISS IT?", href: "#why-attend" },
-    { label: "PARTNERZY", href: "#partners" },
-    { label: "PATRONI", href: "#patrons" },
-    { label: "LOKALIZACJA", href: "#location" },
-    { label: "KONTAKT", href: "#footer" },
-  ];
 
   const handleLinkClick = () => {
     setIsMenuOpen(false);

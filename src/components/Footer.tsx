@@ -1,32 +1,5 @@
 import { Mail } from 'lucide-react';
-
-interface ContactPerson {
-  name: string;
-  role: string;
-  email: string;
-  photoUrl: string;
-}
-
-const contacts: ContactPerson[] = [
-  {
-    name: "Amelia Sroczyńska",
-    role: "Koordynatorka Główna KISS IT PWr",
-    email: "kiss-it@pwr.edu.pl",
-    photoUrl: "/people/amelia.png"
-  },
-  {
-    name: "Bartosz Grabiński",
-    role: "Koordynator sekcji Partnerskiej KISS IT PWr",
-    email: "bartosz.grabinski@samorzad.pwr.edu.pl",
-    photoUrl: "/people/bartek.png"
-  },
-  {
-    name: "Piotr Dębicki",
-    role: "Przewodniczący Samorządu W4",
-    email: "wit@samorzad.pwr.edu.pl",
-    photoUrl: "/people/piotrek.png"
-  }
-];
+import { footerData, type ContactPerson } from '../content';
 
 const ContactCard = ({ person }: { person: ContactPerson }) => (
   <div className="flex flex-row h-24 gap-4 w-full lg:w-auto">
@@ -67,7 +40,7 @@ export const Footer = () => (
       </h2>
 
       <div className="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-8 mb-16">
-        {contacts.map((person, index) => (
+        {footerData.contacts.map((person, index) => (
           <ContactCard key={index} person={person} />
         ))}
       </div>
@@ -75,10 +48,9 @@ export const Footer = () => (
       <div className="h-px w-full bg-gradient-to-r from-[#8b5cf6]/50 via-[#8b5cf6]/30 to-transparent mb-8" />
 
       <div className="flex flex-col gap-8">
-        {/* TODO: Add regulamin link */}
         <div className="flex justify-start">
           <a
-            href="https://drive.google.com/file/d/11d0H-rbSonmB9EZPZvu9BP8x901T9DxT/view?usp=sharing"
+            href={footerData.regulaminUrl}
             className="text-white/70 hover:text-white text-sm underline underline-offset-2 transition-colors"
           >
             Regulamin wydarzenia
@@ -86,7 +58,7 @@ export const Footer = () => (
         </div>
 
         <div className="w-full text-center text-white/50 text-sm font-sans">
-          KISS IT PWr | © 2026
+          {footerData.copyright}
         </div>
       </div>
     </div>

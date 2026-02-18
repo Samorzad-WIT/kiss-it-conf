@@ -1,5 +1,6 @@
 import { motion, type Variants } from "framer-motion";
 import { Badge } from "../components/ui/Badge";
+import { whyAttendCards, type WhyAttendCard } from "../content";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -131,63 +132,21 @@ const InspirationIcon = () => (
   </svg>
 );
 
-type CardData = {
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  accentColor: string;
-  borderColor: string;
+/** Map iconKey from content data to actual SVG components */
+const iconMap: Record<WhyAttendCard["iconKey"], React.ReactNode> = {
+  knowledge: <KnowledgeIcon />,
+  networking: <NetworkingIcon />,
+  practice: <PracticeIcon />,
+  community: <CommunityIcon />,
+  inspiration: <InspirationIcon />,
 };
 
-const cards: CardData[] = [
-  {
-    icon: <KnowledgeIcon />,
-    title: "WIEDZA OD EKSPERTÓW",
-    description:
-      "Posłuchaj inżynierów z topowych firm o technologiach, które napędzają dzisiejszy przemysł IT.",
-    accentColor: "#24ff54",
-    borderColor: "#24ff54",
-  },
-  {
-    icon: <NetworkingIcon />,
-    title: "NETWORKING",
-    description:
-      "Rozmawiaj bezpośrednio z firmami szukającymi ludzi i poznaj kulisy pracy w topowych firmach IT.",
-    accentColor: "#fd00ff",
-    borderColor: "#fd00ff",
-  },
-  {
-    icon: <PracticeIcon />,
-    title: "PRAKTYKA > TEORIA",
-    description:
-      "Dowiedz się, jak świadomie budować karierę i rozwijać kompetencje, które dadzą Ci realną przewagę na rynku pracy.",
-    accentColor: "#6715ff",
-    borderColor: "#6715ff",
-  },
-  {
-    icon: <CommunityIcon />,
-    title: "SPOŁECZNOŚĆ",
-    description:
-      "Dołącz do polskiej społeczności architektów IT. Razem tworzymy przyszłość.",
-    accentColor: "#fd00ff",
-    borderColor: "#fd00ff",
-  },
-  {
-    icon: <InspirationIcon />,
-    title: "INSPIRACJA",
-    description:
-      "Poznaj technologie, które przestały być nowinkami, a stają się standardem w nowoczesnym przemyśle.",
-    accentColor: "#24ff54",
-    borderColor: "#24ff54",
-  },
-];
-
-const WhyAttendCard = ({
+const WhyAttendCardComponent = ({
   card,
   index,
   className,
 }: {
-  card: CardData;
+  card: WhyAttendCard;
   index: number;
   className?: string;
 }) => {
@@ -244,7 +203,7 @@ const WhyAttendCard = ({
               backgroundColor: `${card.accentColor}10`,
             }}
           >
-            {card.icon}
+            {iconMap[card.iconKey]}
           </div>
 
           <div
@@ -301,8 +260,8 @@ export const WhyAttendSection = () => {
           viewport={{ once: true, margin: "-50px" }}
           className="flex flex-wrap justify-center gap-8"
         >
-          {cards.map((card, index) => (
-            <WhyAttendCard
+          {whyAttendCards.map((card, index) => (
+            <WhyAttendCardComponent
               key={index}
               card={card}
               index={index}

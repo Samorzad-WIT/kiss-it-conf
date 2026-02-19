@@ -23,7 +23,7 @@ export const patrons: Patron[] = [
     },
     {
         name: "Patronat Honorowy Wrocławskiego Centrum Akademickiego",
-        url: "https://wca.wroclaw.pl/",
+        url: "https://www.wroclaw.pl/akademicki-wroclaw/wroclawskie-centrum-akademickie",
         image: "/patrons/wca.png",
     },
     {

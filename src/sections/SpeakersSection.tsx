@@ -1,5 +1,6 @@
 import { motion, type Variants } from 'framer-motion';
 import { Badge } from '../components/ui/Badge';
+import { speakers, type Speaker } from '../content';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -18,16 +19,6 @@ const itemVariants: Variants = {
     opacity: 1,
     transition: { type: "spring", stiffness: 100 }
   }
-};
-
-type Speaker = {
-  id: number;
-  name: string;
-  role: string;
-  company: string;
-  topic: string;
-  tags: string[];
-  image: string;
 };
 
 const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
@@ -60,45 +51,6 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
 };
 
 export const SpeakersSection = () => {
-  const speakers = [
-    {
-      id: 1,
-      name: "Dr. Adam Nowak",
-      role: "AI Lead Architect",
-      company: "Neural Systems",
-      topic: "Skalowalność LLM w infrastrukturze on-premise",
-      tags: ["AI", "Infrastructure", "Python"],
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400"
-    },
-    {
-      id: 2,
-      name: "Sarah Jenkins",
-      role: "Senior DevOps",
-      company: "CloudCore",
-      topic: "Kubernetes bez bólu głowy: KISS approach",
-      tags: ["DevOps", "K8s", "Cloud"],
-      image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
-    },
-    {
-      id: 3,
-      name: "Krzysztof 'Hack' Wójcik",
-      role: "Security Researcher",
-      company: "RedTeam Ops",
-      topic: "Zero Trust w 15 minut",
-      tags: ["Security", "Network", "Audit"],
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&q=80&w=400"
-    },
-    {
-      id: 4,
-      name: "Elena Rodriguez",
-      role: "Frontend Architect",
-      company: "Vercel",
-      topic: "Mikrofrontendy - kiedy NIE warto?",
-      tags: ["React", "Architecture", "Web"],
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400"
-    }
-  ];
-
   return (
     <section id="speakers" className="py-24 bg-[#000018] relative scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -107,7 +59,7 @@ export const SpeakersSection = () => {
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 font-sans">PRELEGENCI<span className="text-[#fd00ff]">.</span></h2>
             <p className="text-gray-400 font-display text-xl">{'>>>'} LOAD_SPEAKERS_MODULE()</p>
           </div>
-          <div className="hidden md:block"><Badge color="green">4 EXPERTS LOADED</Badge></div>
+          <div className="hidden md:block"><Badge color="green">{speakers.length} EXPERTS LOADED</Badge></div>
         </div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-100px" }} variants={containerVariants} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {speakers.map((speaker) => <SpeakerCard key={speaker.id} speaker={speaker} />)}

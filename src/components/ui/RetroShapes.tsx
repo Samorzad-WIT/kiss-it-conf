@@ -33,14 +33,14 @@ const DESKTOP_SHAPES: Shape[] = [
   { id: 3, image: square2, x: 75, y: 15, size: 55, opacity: 0.5, duration: 22, delay: -2, moveX: -55, moveY: 38 },
 
   // Lewa strefa (x: 0-25%)
-  { id: 4, image: square1, x: 10, y: 55, size: 35, opacity: 0.4, duration: 23, delay: -1, moveX: 55, moveY: -50, variant: 'green' },
+  { id: 4, image: square1, x: 10, y: 55, size: 35, opacity: 0.4, duration: 23, delay: -1, moveX: 40, moveY: -50, variant: 'green' },
 
   // Prawa strefa (x: 75-100%)
   { id: 5, image: square2, x: 95, y: 52, size: 200, opacity: 0.45, duration: 27, delay: -3, moveX: 45, moveY: -55 },
 
   // Dolna strefa (y: 70-100%)
   { id: 6, image: square3, x: 5, y: 80, size: 300, opacity: 0.55, duration: 24, delay: -2, moveX: -40, moveY: -35, variant: 'blue' },
-  { id: 7, image: square1, x: 55, y: 90, size: 45, opacity: 0.4, duration: 19, delay: -8, moveX: 55, moveY: -50, variant: 'green' },
+  { id: 7, image: square1, x: 30, y: 90, size: 45, opacity: 0.4, duration: 19, delay: -8, moveX: 55, moveY: -50, variant: 'green' },
   { id: 8, image: sphere2, x: 78, y: 88, size: 55, opacity: 0.5, duration: 25, delay: -1, moveX: -70, moveY: -42, variant: 'blue' },
 ];
 

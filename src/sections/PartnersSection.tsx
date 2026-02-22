@@ -1,5 +1,13 @@
 import { motion, type Variants } from 'framer-motion';
-import { partners, type Partner, type PartnerTier } from '../content';
+import {
+  partners,
+  tierConfig,
+  tierOrder,
+  partnerCta,
+  partnersSectionHeader,
+  type Partner,
+  type PartnerTier,
+} from '../content';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -20,26 +28,6 @@ const itemVariants: Variants = {
   }
 };
 
-const tierConfig: Record<PartnerTier, {
-  label: string;
-  logoSize: string;
-  borderColor: string;
-  glowColor: string;
-}> = {
-  diament: {
-    label: "Partnerzy Diamantowi",
-    logoSize: "h-20 md:h-24 ",
-    borderColor: "border-[#fd00ff]",
-    glowColor: "hover:shadow-[0_0_30px_rgba(0,238,255,0.23)]"
-  },
-  other: {
-    label: "Partnerzy",
-    logoSize: "h-16 md:h-18",
-    borderColor: "border-[#fd00ff]",
-    glowColor: "hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]"
-  }
-};
-
 /** Komponent pojedynczego partnera */
 interface PartnerCardProps {
   partner: Partner;
@@ -57,13 +45,13 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
         filter: "brightness(1.15)"
       }}
       className={`
-        group relative p-6
+        group relative p-5
         border ${config.borderColor} border-opacity-20 
         bg-white/5 rounded-xl backdrop-blur-sm 
         hover:border-opacity-60 hover:bg-white/10
         transition-all duration-300 cursor-pointer
-        flex items-center justify-center
-        w-full md:w-auto min-w-[200px]
+        flex flex-col items-center justify-center
+        w-fit
       `}
     >
       {partner.logo ? (
@@ -79,16 +67,23 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
       ) : (
         // Placeholder gdy brak logo
         <div className={`${config.logoSize} flex items-center justify-center px-4`}>
-          <span className="font-display text-xl md:text-2xl text-white/80 tracking-widest group-hover:text-white transition-colors text-center">
+          <span className="font-display text-xl md:text-2xl text-white/80 tracking-widest group-hover:text-white transition-colors text-center whitespace-nowrap">
             {partner.name}
           </span>
         </div>
       )}
 
-      {/* Nazwa partnera pod logo (widoczna na hover) */}
+      {/* Invisible zero-height placeholder in flow — pushes card width to fit the name */}
       {partner.logo && (
-        <div className="absolute bottom-0 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-4 group-hover:translate-y-0 pb-2">
-          <span className={`${tier === 'other' ? 'text-sm' : 'text-xl'} font-bold text-white font-sans drop-shadow-md`}>{partner.name}</span>
+        <div className="invisible h-0 whitespace-nowrap" aria-hidden="true">
+          <span className={`${tier === 'other' ? 'text-sm' : 'text-xl'} font-bold`}>{partner.name}</span>
+        </div>
+      )}
+
+      {/* Visible name on hover — absolute so it doesn't affect layout */}
+      {partner.logo && (
+        <div className="absolute bottom-1 left-0 right-0 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+          <span className={`${tier === 'other' ? 'text-sm' : 'text-xl'} font-bold text-white font-sans drop-shadow-md whitespace-nowrap m-2`}>{partner.name}</span>
         </div>
       )}
     </motion.div>
@@ -150,7 +145,6 @@ export const PartnersSection = () => {
   );
 
   const hasPartners = partners.length > 0;
-  const tierOrder: PartnerTier[] = ['diament', 'other'];
 
   return (
     <section
@@ -170,10 +164,10 @@ export const PartnersSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 font-sans">
-            PARTNERZY WYDARZENIA
+            {partnersSectionHeader.title}
           </h2>
           <p className="text-gray-400 font-sans max-w-2xl mx-auto">
-            Wspólnie tworzymy wyjątkowe doświadczenie dla społeczności IT
+            {partnersSectionHeader.subtitle}
           </p>
         </motion.div>
 
@@ -204,18 +198,18 @@ export const PartnersSection = () => {
           className="mt-20 p-8 md:p-12 border border-dashed border-gray-700 rounded-2xl max-w-3xl mx-auto bg-[#000018]/80 backdrop-blur-sm text-center"
         >
           <h3 className="text-2xl md:text-3xl text-white font-display mb-3 tracking-wide">
-            Chcesz zostać partnerem?
+            {partnerCta.title}
           </h3>
           <p className="text-gray-400 mb-6 font-sans max-w-xl mx-auto">
-            Wspieraj lokalną społeczność IT i pokaż się setkom inżynierów.
+            {partnerCta.description}
           </p>
           <a
-            href="/oferta_partnerska_1_web.pdf"
+            href={partnerCta.linkHref}
             download
             className="inline-flex items-center gap-2 text-[#24ff54] font-display text-lg hover:underline tracking-widest transition-all hover:gap-4"
           >
             <span>{'>>>'}</span>
-            <span>POBIERZ OFERTĘ PARTNERSKĄ</span>
+            <span>{partnerCta.linkText}</span>
           </a>
         </motion.div>
       </div>

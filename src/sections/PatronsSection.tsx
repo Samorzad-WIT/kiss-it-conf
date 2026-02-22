@@ -1,32 +1,6 @@
-export const PatronsSection = () => {
-  const patrons = [
-    {
-      name: "Patronat Honorowy Wojewody Dolnośląskiego",
-      url: "https://www.gov.pl/web/dolnoslaski-uw/anna-zabska",
-      image: "/patrons/wojewoda.png",
-    },
-    {
-      name: "Patronat Honorowy Marszałka Województwa Dolnośląskiego",
-      url: "https://www.duw.pl",
-      image: "/patrons/dolny-slask.png",
-    },
-    {
-      name: "Patronat Honorowy Rektora PWr",
-      url: "https://pwr.edu.pl/",
-      image: "/patrons/pwr-rektor.png",
-    },
-    {
-      name: "Patronat Honorowy Dziekana WIT PWr",
-      url: "https://wit.pwr.edu.pl/",
-      image: "/patrons/wit.png",
-    },
-    {
-      name: "Patronat medialny Telewizji STYK",
-      url: "https://styk.pwr.edu.pl/",
-      image: "/patrons/styk.png",
-    },
-  ];
+import { patrons } from '../content';
 
+export const PatronsSection = () => {
   return (
     <section
       id="patrons"
@@ -51,11 +25,11 @@ export const PatronsSection = () => {
                            hover:scale-110 border-[#fd00ff]/50 
                            transition-all duration-300 cursor-pointer flex flex-col items-center gap-4 group h-full justify-start"
               >
-                <div className="w-full flex items-center justify-center p-2">
+                <div className="w-full h-32 flex items-center justify-center p-2 bg-white rounded-lg">
                   <img
                     src={patron.image}
                     alt={patron.name}
-                    className="max-w-full rounded-lg max-h-full object-contain  transition-all duration-300"
+                    className="max-w-full max-h-full object-contain transition-all duration-300"
                   />
                 </div>
 

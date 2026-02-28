@@ -58,10 +58,10 @@ export const VenueSection = () => {
 
                 <div className="order-1 lg:order-2 h-[500px] relative rounded-2xl overflow-hidden border border-[#24ff54]/30 shadow-[0_0_30px_rgba(36,255,84,0.1)] group">
                     {/* Corner accents */}
-                    <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#24ff54] z-20" />
-                    <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#24ff54] z-20" />
-                    <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#24ff54] z-20" />
-                    <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#24ff54] z-20" />
+                    <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#24ff54] z-20 rounded-tl-2xl" />
+                    <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#24ff54] z-20 rounded-tr-2xl" />
+                    <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#24ff54] z-20 rounded-bl-2xl" />
+                    <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#24ff54] z-20 rounded-br-2xl" />
 
                     {/* Scanline effect */}
                     <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px] pointer-events-none z-10 opacity-10" />

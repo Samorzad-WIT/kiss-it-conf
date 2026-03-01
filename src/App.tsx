@@ -18,6 +18,7 @@ import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";
 //TODO  Temporary: sections hidden until content is ready
 void SpeakersSection;
 void BarterySection;
+void AgendaSection;
 
 
 
@@ -67,15 +68,15 @@ export default function App() {
             <main>
                 <HeroSection/>
                 <WhyAttendSection/>
-                <AgendaSection/>
+                {/* <AgendaSection/> */}
                 {/* <SpeakersSection /> */}
 
-        <PartnersSection />
-        <PatronsSection />
-        <KolaNaukoweSection />
-        {/* <BarterySection /> */}
-        <VenueSection />
-      </main>
+                <PartnersSection />
+                <PatronsSection />
+                <KolaNaukoweSection />
+                {/* <BarterySection /> */}
+                <VenueSection />
+              </main>
 
             <Footer/>
         </div>

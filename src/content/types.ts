@@ -67,12 +67,11 @@ export interface KoloNaukowe {
     label: string;
 }
 
-export interface Wspolpraca {
+export interface Bartery {
     name: string;
     url: string;
     logo: string;
-    label: string;
-}
+}   
 
 export interface WhyAttendCard {
     /** Key referencing the icon component in WhyAttendSection */

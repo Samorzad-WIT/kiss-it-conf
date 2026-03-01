@@ -16,7 +16,7 @@ void SpeakersSection;
 
 import { PartnersSection } from "./sections/PartnersSection";
 import { KolaNaukoweSection } from "./sections/KolaNaukoweSection";
-import { WspolpraceSection } from "./sections/WspolpraceSection";
+import { BarterySection } from "./sections/BarterySection.tsx";
 import { PatronsSection } from "./sections/PatronsSection";
 import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";
 
@@ -72,7 +72,7 @@ export default function App() {
         <PartnersSection />
         <PatronsSection />
         <KolaNaukoweSection />
-        <WspolpraceSection />
+        {/* <BarterySection /> */}
         <VenueSection />
       </main>
 

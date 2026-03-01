@@ -1,4 +1,10 @@
-export type SpeakerTag = "AI" | "Cloud" | "Security" | "Frontend" | "Backend" | "Hacker";
+export type SpeakerTag =
+    | "AI"
+    | "Cloud"
+    | "Security"
+    | "Frontend"
+    | "Backend"
+    | "Hacker";
 
 export interface HeroData {
     systemStatus: string;
@@ -22,13 +28,28 @@ export interface Speaker {
     image: string;
 }
 
-export interface AgendaItem {
-    time: string;
+export interface RoomTalk {
     title: string;
     speaker?: string;
-    type: "talk" | "break";
-    /** Lucide icon name — resolved in the component */
-    icon: string;
+    type: "Keynote" | "Talk" | "Panel" | "Workshop";
+    level?: "Beginner" | "Intermediate" | "Advanced";
+}
+
+export interface AgendaTimeSlot {
+    time: string;
+    isBreak?: boolean;
+    breakTitle?: string;
+    /** Talk that spans all rooms (keynotes, panels) */
+    allRooms?: RoomTalk;
+    s1?: RoomTalk;
+    s2?: RoomTalk;
+    s3?: RoomTalk;
+}
+
+export interface AgendaDay {
+    id: string;
+    label: string;
+    slots: AgendaTimeSlot[];
 }
 
 export interface VenueInfo {
@@ -69,7 +90,12 @@ export interface KoloNaukowe {
 
 export interface WhyAttendCard {
     /** Key referencing the icon component in WhyAttendSection */
-    iconKey: "knowledge" | "networking" | "practice" | "community" | "inspiration";
+    iconKey:
+        | "knowledge"
+        | "networking"
+        | "practice"
+        | "community"
+        | "inspiration";
     title: string;
     description: string;
     accentColor: string;

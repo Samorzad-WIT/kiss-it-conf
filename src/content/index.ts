@@ -22,6 +22,7 @@ export {
 } from "./partners";
 export { patrons } from "./patrons";
 export { kolaNaukowe } from "./kolaNaukowe";
+export { bartery } from "./bartery";
 export { whyAttendCards } from "./whyAttend";
 export { navLinks } from "./navbar";
 export { footerData } from "./footer";

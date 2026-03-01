@@ -7,15 +7,20 @@ import {HeroSection} from "./sections/HeroSection";
 import {AgendaSection} from "./sections/AgendaSection";
 import {SpeakersSection} from "./sections/SpeakersSection";
 import {VenueSection} from "./sections/VenueSection";
-import {PartnersSection} from "./sections/PartnersSection";
-import {KolaNaukoweSection} from "./sections/KolaNaukoweSection";
-import {PatronsSection} from "./sections/PatronsSection";
-import {WhyAttendSection} from "./sections/WhyAttendSection.tsx";
+import { PartnersSection } from "./sections/PartnersSection";
+import { KolaNaukoweSection } from "./sections/KolaNaukoweSection";
+import { BarterySection } from "./sections/BarterySection.tsx";
+import { PatronsSection } from "./sections/PatronsSection";
+import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";
 
 <link rel="icon" href="/wrss_logo.png" sizes="any"/>;
 
 //TODO  Temporary: sections hidden until content is ready
 void SpeakersSection;
+void BarterySection;
+
+
+
 
 export default function App() {
     return (
@@ -65,11 +70,12 @@ export default function App() {
                 <AgendaSection/>
                 {/* <SpeakersSection /> */}
 
-                <PartnersSection/>
-                <PatronsSection/>
-                <KolaNaukoweSection/>
-                <VenueSection/>
-            </main>
+        <PartnersSection />
+        <PatronsSection />
+        <KolaNaukoweSection />
+        {/* <BarterySection /> */}
+        <VenueSection />
+      </main>
 
             <Footer/>
         </div>

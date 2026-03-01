@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-Landing page for **KISS IT 2026** — a student-organised IT conference at Politechnika Wrocławska (Wrocław University of Science and Technology). The site is a single-page application with sections for hero, why attend, agenda, speakers, partners, patrons, koła naukowe, venue, and footer/contact.
+Landing page for **KISS IT 2026** — a student-organised IT conference at Politechnika Wrocławska (Wrocław University of Science and Technology). The site is a single-page application with sections for hero, why attend, agenda, speakers, partners, patrons, koła naukowe, współprace/bartery, venue, and footer/contact.
 
 ## Tech Stack
 
@@ -29,6 +29,7 @@ src/
 │   ├── partners.ts   # Partners + tier config + CTA text
 │   ├── patrons.ts    # Honorary patrons
 │   ├── kolaNaukowe.ts # Scientific clubs / tech partners
+│   ├── wspolprace.ts # Współprace / bartery partnerships
 │   ├── whyAttend.ts  # "Why attend" card data
 │   ├── navbar.ts     # Navigation links
 │   ├── footer.ts     # Contact people, regulamin URL, copyright

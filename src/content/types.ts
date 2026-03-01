@@ -67,6 +67,13 @@ export interface KoloNaukowe {
     label: string;
 }
 
+export interface Wspolpraca {
+    name: string;
+    url: string;
+    logo: string;
+    label: string;
+}
+
 export interface WhyAttendCard {
     /** Key referencing the icon component in WhyAttendSection */
     iconKey: "knowledge" | "networking" | "practice" | "community" | "inspiration";

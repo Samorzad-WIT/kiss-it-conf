@@ -35,6 +35,12 @@ export const partners: Partner[] = [
         url: "https://pwn.pl/",
         tier: "other",
     },
+    {
+        name: "InsERT",
+        logo: "partners/other/insert.png",
+        url: "https://www.insert.com.pl/index.html",
+        tier: "other",
+    },
 ];
 
 /** Konfiguracja wyświetlania poziomów partnerskich */

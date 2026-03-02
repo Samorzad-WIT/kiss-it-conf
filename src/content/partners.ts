@@ -30,12 +30,6 @@ export const partners: Partner[] = [
         tier: "other",
     },
     {
-        name: "PWN",
-        logo: "partners/other/pwn.png",
-        url: "https://pwn.pl/",
-        tier: "other",
-    },
-    {
         name: "InsERT",
         logo: "partners/other/insert.png",
         url: "https://www.insert.com.pl/index.html",

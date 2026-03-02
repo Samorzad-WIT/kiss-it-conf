@@ -8,7 +8,7 @@ export const BarterySection = () => {
         >
             <div className="max-w-7xl mx-auto px-6 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 font-sans">
-                    BARTERY
+                    WSPÓŁPRACE BARTEROWE    
                 </h2>
 
                 <div className="grid grid-cols-[repeat(auto-fit,11rem)] md:grid-cols-[repeat(auto-fit,12rem)] justify-center gap-8">
@@ -33,7 +33,7 @@ export const BarterySection = () => {
                                     />
                                 </div>
 
-                                <div className="min-h-12 flex items-center justify-center font-display text-xs md:text-sm text-white tracking-wide leading-tight text-center overflow-hidden">
+                                <div className="min-h-12 flex items-center justify-center font-display text-sm md:text-base text-white tracking-wide leading-tight text-center overflow-hidden">
                                     {item.name}
                                 </div>
                             </div>

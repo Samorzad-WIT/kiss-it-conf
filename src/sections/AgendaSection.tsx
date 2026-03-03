@@ -1,11 +1,16 @@
 import {useState} from "react";
 import {AnimatePresence, motion} from "framer-motion";
-import {Coffee, MessageSquare, Mic, Users, Wrench} from "lucide-react";
-import {Badge} from "../components/ui/Badge";
-import {agenda, type AgendaDay, type RoomTalk} from "../content";
+import {ChevronDown, Coffee, MessageSquare, Mic, Users, Wrench,} from "lucide-react";
+import {agenda, type AgendaTimeSlot, type RoomTalk} from "../content";
 
-const ROOMS = ["S1", "S2", "S3"] as const;
-type RoomKey = `s${1 | 2 | 3}`;
+const ROOM_KEYS = ["s1", "s2", "s3", "s4", "s5"] as const;
+const ROOM_NAMES: Record<string, string> = {
+    s1: "Sala 1",
+    s2: "Sala 2",
+    s3: "Sala 3",
+    s4: "Sala 4",
+    s5: "Sala 5",
+};
 
 const typeIcon = (type: RoomTalk["type"]) => {
     switch (type) {
@@ -33,185 +38,234 @@ const levelColor = (level?: RoomTalk["level"]) => {
     }
 };
 
-const TalkCard = ({talk, room}: { talk: RoomTalk; room?: string }) => (
-    <div
-        className="group relative p-4 rounded-lg border border-[#6715ff]/30 bg-[#6715ff]/10 hover:border-[#24ff54] transition-all duration-300 h-full flex flex-col">
-        <div className="flex items-center justify-between gap-2 mb-2">
-            {room && (
-                <span className="text-xs font-display text-[#fd00ff] tracking-widest">
-          {room}
-        </span>
-            )}
-            <span className="flex items-center gap-1 text-xs font-display text-gray-500 tracking-wider">
-        {typeIcon(talk.type)}
-                {talk.type}
-      </span>
-        </div>
-
-        <h4 className="text-sm font-bold text-white font-sans leading-snug">
-            {talk.title}
-        </h4>
-
-        {talk.speaker && (
-            <p className="text-xs text-gray-400 mt-auto pt-2 font-display">
-                {">> "}
-                <span className="text-[#24ff54]">{talk.speaker}</span>
-            </p>
-        )}
-
-        {talk.level && (
-            <span
-                className={`text-[10px] font-display tracking-wider mt-1 ${levelColor(talk.level)}`}
-            >
-        [{talk.level}]
-      </span>
-        )}
-    </div>
-);
-
 const BreakRow = ({title}: { title: string }) => (
     <div
-        className="p-3 border border-dashed border-gray-700 bg-white/5 rounded-lg flex items-center justify-center gap-2 text-gray-400 font-display tracking-wider text-sm">
-        <Coffee className="w-4 h-4"/>
-        {title}
+        className="flex items-center gap-3 p-4 border border-dashed border-gray-700 bg-white/5 rounded-xl text-gray-400 font-display tracking-wider text-base">
+        <Coffee className="w-5 h-5 text-[#24ff54]/70"/>
+        <span className="uppercase tracking-widest">{title}</span>
     </div>
 );
 
-const DesktopAgenda = ({day}: { day: AgendaDay }) => (
-    <div className="hidden md:block">
-        <div className="grid grid-cols-[90px_1fr_1fr_1fr] gap-3 mb-4">
-            <div/>
-            {ROOMS.map((r) => (
-                <div
-                    key={r}
-                    className="text-center font-display text-[#24ff54] text-xl tracking-[.25em] border-b border-[#24ff54]/20 pb-2"
-                >
-                    {r}
-                </div>
-            ))}
-        </div>
+// Renders the expandable list of rooms for a single time slot
+const RoomsAccordion = ({slot}: { slot: AgendaTimeSlot }) => {
+    // Extract all existing talks for this slot
+    const talks = ROOM_KEYS.reduce<
+        { id: string; name: string; talk: RoomTalk }[]
+    >((acc, key) => {
+        if (slot[key]) {
+            acc.push({id: key, name: ROOM_NAMES[key], talk: slot[key]!});
+        }
+        return acc;
+    }, []);
 
+    // Default expansion to the very first room available in the slot
+    const [expandedId, setExpandedId] = useState<string | null>(
+        talks.length > 0 ? talks[0].id : null,
+    );
+
+    if (talks.length === 0) return null;
+
+    return (
         <div className="space-y-3">
-            {day.slots.map((slot, i) => (
-                <motion.div
-                    key={i}
-                    initial={{opacity: 0, y: 12}}
-                    whileInView={{opacity: 1, y: 0}}
-                    viewport={{once: true}}
-                    transition={{delay: i * 0.06}}
-                    className="grid grid-cols-[90px_1fr_1fr_1fr] gap-3 items-stretch"
-                >
-                    <div className="font-display text-[#24ff54] text-lg tracking-widest flex items-center">
-                        {slot.time}
-                    </div>
+            {talks.map(({id, name, talk}) => {
+                const isExpanded = expandedId === id;
 
-                    {slot.isBreak ? (
-                        <div className="col-span-3">
-                            <BreakRow title={slot.breakTitle!}/>
-                        </div>
-                    ) : slot.allRooms ? (
-                        <div className="col-span-3">
-                            <TalkCard talk={slot.allRooms}/>
-                        </div>
-                    ) : (
-                        <>
-                            {(["s1", "s2", "s3"] as RoomKey[]).map((key) => {
-                                const talk = slot[key];
-                                return (
-                                    <div key={key}>
-                                        {talk ? (
-                                            <TalkCard talk={talk}/>
+                return (
+                    <div
+                        key={id}
+                        className={`border rounded-xl overflow-hidden transition-all duration-300 ${
+                            isExpanded
+                                ? "bg-[#2d1257] border-[#6715ff]"
+                                : "bg-[#6715ff]/10 border-[#6715ff]/30 hover:border-[#6715ff]/60"
+                        }`}
+                    >
+                        {/* Header (clickable to expand/collapse) */}
+                        <button
+                            onClick={() => setExpandedId(isExpanded ? null : id)}
+                            className="w-full text-left p-4 flex items-start sm:items-center justify-between gap-4 cursor-pointer"
+                        >
+                            <div className="flex-1">
+                                <div className="flex items-center gap-2 mb-1">
+                  <span
+                      className="text-xs font-display text-[#fd00ff] tracking-widest bg-[#fd00ff]/10 px-2 py-0.5 rounded">
+                    {name}
+                  </span>
+                                    <span
+                                        className="flex items-center gap-1 text-xs font-display text-gray-400 tracking-wider">
+                    {typeIcon(talk.type)}
+                                        {talk.type}
+                  </span>
+                                    {talk.level && (
+                                        <span
+                                            className={`text-[10px] font-display tracking-wider ${levelColor(talk.level)}`}
+                                        >
+                      [{talk.level}]
+                    </span>
+                                    )}
+                                </div>
+                                <h4 className="text-lg md:text-xl font-bold text-white font-sans leading-snug">
+                                    {talk.title}
+                                </h4>
+                                {/* Always show speaker if collapsed, maybe hide if expanded? Let's show it always in header or body. */}
+                                {!isExpanded && talk.speaker && (
+                                    <p className="text-sm text-gray-400 mt-2 font-display">
+                                        {">> "}
+                                        <span className="text-[#24ff54]">
+                      Prelegent: {talk.speaker}
+                    </span>
+                                    </p>
+                                )}
+                            </div>
+
+                            <div className="shrink-0 flex items-center justify-center w-8 h-8 rounded-full bg-white/5">
+                                <ChevronDown
+                                    className={`w-5 h-5 text-[#24ff54] transition-transform duration-300 ${
+                                        isExpanded ? "rotate-180" : ""
+                                    }`}
+                                />
+                            </div>
+                        </button>
+
+                        {/* Expandable Content body */}
+                        <AnimatePresence>
+                            {isExpanded && (
+                                <motion.div
+                                    initial={{height: 0, opacity: 0}}
+                                    animate={{height: "auto", opacity: 1}}
+                                    exit={{height: 0, opacity: 0}}
+                                    className="overflow-hidden"
+                                >
+                                    <div className="px-4 pb-5 pt-0">
+                                        <div className="w-full h-px bg-white/10 mb-4"/>
+                                        {talk.speaker && (
+                                            <p className="text-sm font-display tracking-widest mb-3 uppercase">
+                                                <span className="text-gray-400">{">> "}Prelegent:</span>{" "}
+                                                <span className="text-[#24ff54]">{talk.speaker}</span>
+                                            </p>
+                                        )}
+
+                                        {talk.description ? (
+                                            <p className="text-gray-300 text-sm md:text-base leading-relaxed font-sans">
+                                                {talk.description}
+                                            </p>
                                         ) : (
-                                            <div className="min-h-[60px]"/>
+                                            <p className="text-gray-500 italic text-sm font-sans">
+                                                Brak opisu dla tej sesji...
+                                            </p>
                                         )}
                                     </div>
-                                );
-                            })}
-                        </>
-                    )}
-                </motion.div>
-            ))}
-        </div>
-    </div>
-);
-
-const MobileAgenda = ({day}: { day: AgendaDay }) => (
-    <div className="md:hidden space-y-6">
-        {day.slots.map((slot, i) => (
-            <motion.div
-                key={i}
-                initial={{opacity: 0, y: 12}}
-                whileInView={{opacity: 1, y: 0}}
-                viewport={{once: true}}
-                transition={{delay: i * 0.06}}
-            >
-                <div className="font-display text-[#24ff54] text-xl tracking-widest mb-2">
-                    {slot.time}
-                </div>
-
-                {slot.isBreak ? (
-                    <BreakRow title={slot.breakTitle!}/>
-                ) : slot.allRooms ? (
-                    <TalkCard talk={slot.allRooms}/>
-                ) : (
-                    <div className="space-y-2">
-                        {(["s1", "s2", "s3"] as RoomKey[]).map((key, idx) => {
-                            const talk = slot[key];
-                            return talk ? (
-                                <TalkCard key={key} talk={talk} room={ROOMS[idx]}/>
-                            ) : null;
-                        })}
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
                     </div>
-                )}
-            </motion.div>
-        ))}
-    </div>
-);
+                );
+            })}
+        </div>
+    );
+};
 
+// Simplified main Agenda Component replacing Desktop / Mobile splitting to unified Timeline
 export const AgendaSection = () => {
-    const [activeDay, setActiveDay] = useState(0);
+    // We only have Day 1 now, according to requirements.
+    // If agenda array has more days, we just take the first.
+    const day = agenda[0];
 
     return (
         <section
             id="agenda"
-            className="py-24 bg-[#050520] relative scroll-mt-20 border-t border-[#24ff54]/10"
+            className="py-24 relative scroll-mt-20 border-t border-[#24ff54]/10 bg-[#000018]"
         >
-            <div className="max-w-6xl mx-auto px-6">
-                <div className="mb-12 flex flex-col items-center gap-4">
-                    <Badge color="purple">TIMELINE SEQUENCE</Badge>
-                    <h2 className="text-4xl md:text-5xl font-bold text-white font-sans">
-                        AGENDA<span className="text-[#24ff54]">.</span>
+            <div className="max-w-5xl mx-auto px-4 sm:px-6">
+                <div className="mb-16">
+                    <h2 className="text-5xl md:text-7xl font-bold font-display tracking-wider text-[#24ff54]">
+                        Agenda
                     </h2>
                 </div>
 
-                <div className="flex gap-3 mb-10 justify-center flex-wrap">
-                    {agenda.map((day, i) => (
-                        <button
-                            key={day.id}
-                            onClick={() => setActiveDay(i)}
-                            className={`px-5 py-2 font-display text-sm tracking-widest border rounded-sm transition-all duration-200 ${
-                                activeDay === i
-                                    ? "border-[#24ff54] text-[#24ff54] bg-[#24ff54]/10"
-                                    : "border-gray-700 text-gray-500 hover:border-gray-500 hover:text-gray-300"
-                            }`}
-                        >
-                            {day.label}
-                        </button>
-                    ))}
-                </div>
+                <div className="relative">
+                    {/* Vertical axis line */}
+                    <div
+                        className="absolute left-[13px] sm:left-[23px] md:left-[35px] top-4 bottom-0 w-[2px] bg-[#24ff54]/40
+                          shadow-[0_0_15px_rgba(36,255,84,0.5)] z-0 rounded-full"
+                    />
 
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={agenda[activeDay].id}
-                        initial={{opacity: 0}}
-                        animate={{opacity: 1}}
-                        exit={{opacity: 0}}
-                        transition={{duration: 0.2}}
-                    >
-                        <DesktopAgenda day={agenda[activeDay]}/>
-                        <MobileAgenda day={agenda[activeDay]}/>
-                    </motion.div>
-                </AnimatePresence>
+                    <div className="space-y-12 pb-12 relative z-10">
+                        {day?.slots.map((slot, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{opacity: 0, y: 20}}
+                                whileInView={{opacity: 1, y: 0}}
+                                viewport={{once: true, margin: "-10%"}}
+                                transition={{duration: 0.4, delay: i * 0.05}}
+                                className="flex items-start gap-4 sm:gap-6 md:gap-10"
+                            >
+                                {/* Timeline node & time */}
+                                <div
+                                    className="flex flex-col sm:flex-row items-center sm:items-start sm:gap-4 shrink-0 pt-2 w-16 sm:w-28 md:w-32">
+                                    <div
+                                        className="w-[28px] h-[28px] rounded-full border-[2px] border-[#24ff54] bg-[#000018]
+                                  shadow-[0_0_12px_#24ff54] shrink-0 z-10 hidden sm:block"
+                                    />
+                                    <div
+                                        className="w-[16px] h-[16px] rounded-full border-[2px] border-[#24ff54] bg-[#000018]
+                                  shadow-[0_0_8px_#24ff54] shrink-0 z-10 sm:hidden mt-2"
+                                    />
+
+                                    <span
+                                        className="font-display text-[#24ff54] text-xl sm:text-2xl md:text-3xl mt-1 tracking-widest leading-none drop-shadow-[0_0_8px_rgba(36,255,84,0.8)]">
+                    {slot.time}
+                  </span>
+                                </div>
+
+                                {/* Content */}
+                                <div className="flex-1 w-full min-w-0 pr-2">
+                                    {slot.isBreak ? (
+                                        <BreakRow title={slot.breakTitle!}/>
+                                    ) : slot.allRooms ? (
+                                        <div
+                                            className="border border-[#6715ff]/40 bg-[#2d1257] rounded-xl p-5 shadow-[0_0_15px_rgba(103,21,255,0.15)]">
+                                            <div className="flex items-center gap-2 mb-2">
+                        <span
+                            className="text-xs font-display text-white bg-gradient-to-r from-[#fd00ff] to-[#6715ff] px-2 py-0.5 rounded tracking-widest uppercase">
+                          All Rooms
+                        </span>
+                                                <span
+                                                    className="flex items-center gap-1 text-xs font-display text-[#24ff54] tracking-wider">
+                          {typeIcon(slot.allRooms.type)}
+                                                    {slot.allRooms.type}
+                        </span>
+                                            </div>
+
+                                            <h4 className="text-xl md:text-2xl font-bold text-white font-sans leading-snug mb-3">
+                                                {slot.allRooms.title}
+                                            </h4>
+
+                                            <div className="w-full h-px bg-white/10 mb-4"/>
+
+                                            {slot.allRooms.speaker && (
+                                                <p className="text-sm font-display tracking-widest mb-3 uppercase">
+                          <span className="text-gray-400">
+                            {">> "}Prelegent:
+                          </span>{" "}
+                                                    <span className="text-[#24ff54]">
+                            {slot.allRooms.speaker}
+                          </span>
+                                                </p>
+                                            )}
+                                            {slot.allRooms.description && (
+                                                <p className="text-gray-300 text-sm md:text-base leading-relaxed font-sans mt-2">
+                                                    {slot.allRooms.description}
+                                                </p>
+                                            )}
+                                        </div>
+                                    ) : (
+                                        <RoomsAccordion slot={slot}/>
+                                    )}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </section>
     );

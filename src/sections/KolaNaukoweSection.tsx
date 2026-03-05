@@ -1,5 +1,22 @@
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { kolaNaukowe } from '../content';
+
+const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.08 },
+    },
+};
+
+const itemVariants: Variants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+        y: 0,
+        opacity: 1,
+        transition: { type: 'spring', stiffness: 100 },
+    },
+};
 
 export const KolaNaukoweSection = () => {
     return (
@@ -24,25 +41,40 @@ export const KolaNaukoweSection = () => {
                     </h2>
                 </motion.div>
 
-                {/* Koła naukowe */}
-                <div className="flex justify-center">
+                {/* Siatka kół naukowych */}
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    variants={containerVariants}
+                    className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 max-w-5xl mx-auto"
+                >
                     {kolaNaukowe.map((kolo) => (
-                        <a key={kolo.name} href={kolo.url} target="_blank" rel="noopener noreferrer">
-                            <motion.div
-                                initial={{ opacity: 0, scale: 0.95 }}
-                                whileInView={{ opacity: 1, scale: 1 }}
-                                whileHover={{ scale: 1.05 }}
-                                viewport={{ once: true }}
-                                className="max-w-md mx-auto p-8 border border-[#fd00ff]/30 bg-[#fd00ff]/5 rounded-xl backdrop-blur-sm hover:border-[#fd00ff]/60 transition-all duration-300 cursor-pointer shadow-[0_0_30px_-10px_rgba(253,0,255,0.2)]"
-                            >
-                                <div className="h-full flex flex-col items-center justify-center font-display text-xl gap-4 text-white tracking-widest font-bold">
-                                    {kolo.label}
-                                    <img src={kolo.logo} alt={kolo.name} className="h-10 w-auto" />
-                                </div>
-                            </motion.div>
-                        </a>
+                        <motion.a
+                            key={kolo.name}
+                            href={kolo.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            variants={itemVariants}
+                            whileHover={{ scale: 1.05, filter: 'brightness(1.15)' }}
+                            className="group relative flex flex-col items-center gap-4 p-5 border border-[#fd00ff]/20 bg-white/5 rounded-xl backdrop-blur-sm hover:border-[#fd00ff]/60 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+                        >
+                            {/* Logo */}
+                            <div className={`rounded-lg p-3 flex items-center justify-center transition-all duration-300 group-hover:-translate-y-1 ${kolo.name !== 'Solvro' ? 'bg-white' : ''}`}>
+                                <img
+                                    src={kolo.logo}
+                                    alt={`Logo ${kolo.name}`}
+                                    className="h-16 w-auto object-contain"
+                                />
+                            </div>
+
+                            {/* Nazwa koła */}
+                            <span className="text-sm font-bold text-white font-sans text-center tracking-wide leading-tight">
+                                {kolo.name !== 'Solvro' ? kolo.name : 'Partner technologiczny'}
+                            </span>
+                        </motion.a>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );

@@ -23,6 +23,7 @@ export interface Speaker {
     role: string;
     company: string;
     topic: string;
+    description?: string;
     tags: string[];
     image: string;
 }
@@ -94,16 +95,16 @@ export interface Bartery {
     name: string;
     url: string;
     logo: string;
-}   
+}
 
 export interface WhyAttendCard {
     /** Key referencing the icon component in WhyAttendSection */
     iconKey:
-        | "knowledge"
-        | "networking"
-        | "practice"
-        | "community"
-        | "inspiration";
+    | "knowledge"
+    | "networking"
+    | "practice"
+    | "community"
+    | "inspiration";
     title: string;
     description: string;
     accentColor: string;

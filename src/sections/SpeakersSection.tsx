@@ -1,4 +1,5 @@
-import { motion, type Variants } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence, type Variants } from "framer-motion";
 import { Badge } from "../components/ui/Badge";
 import { speakers, type Speaker } from "../content";
 
@@ -22,13 +23,23 @@ const itemVariants: Variants = {
 };
 
 const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
+  const [hovered, setHovered] = useState(false);
+
+  const firstName = speaker.name.slice(0, speaker.name.indexOf(" ") >>> 0 || undefined);
+  const lastName =
+    speaker.name.indexOf(" ") !== -1
+      ? speaker.name.slice(speaker.name.indexOf(" ") + 1)
+      : null;
+
   return (
     <motion.div
       variants={itemVariants}
       className="group relative w-full h-full perspective-1000"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
-      <div className="h-full border b-[2px] border-[#fd00ff]/50 rounded-lg bg-[#000018] overflow-hidden flex flex-col transition-all duration-300 ">
-        {/* Kontener obrazu - kwadrat 1:1 z pełną widocznością zdjęcia */}
+      <div className="h-full border b-[2px] border-[#fd00ff]/50 rounded-lg bg-[#000018] overflow-hidden flex flex-col transition-all duration-300">
+        {/* Photo — 1:1 square */}
         <div className="relative w-full aspect-square bg-[#0a0614] overflow-hidden flex-shrink-0">
           <img
             src={speaker.image && speaker.image !== "none" ? speaker.image : "/ap.png"}
@@ -36,29 +47,74 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
         </div>
-        {/* Informacje o prelegencie */}
-        <div className="flex-1 p-5 bg-gradient-to-b from-[#000018] to-[#66147a]/20 flex flex-col justify-between border-t border-[#ffffff]/5">
-          <div>
-            <div className="flex justify-between items-start mb-2">
-              <h3 className="text-xl font-bold text-white font-sans">
-                {speaker.name}
-              </h3>
-              <span className="text-[#24ff54] font-display text-sm whitespace-nowrap ml-2">
-                {`// ${speaker.company}`}
-              </span>
+
+        {/* Info area — relative so overlay can sit on top */}
+        <div className="relative flex-1">
+          {/* Default info */}
+          <div className="p-5 bg-gradient-to-b from-[#000018] to-[#66147a]/20 flex flex-col justify-between h-full border-t border-[#ffffff]/5">
+            <div>
+              <div className="flex justify-between items-start mb-2">
+                <h3 className="text-xl font-bold text-white font-sans leading-tight">
+                  {firstName}
+                  {lastName && (
+                    <>
+                      <br />
+                      {lastName}
+                    </>
+                  )}
+                </h3>
+                <span className="text-[#24ff54] font-display text-sm whitespace-nowrap ml-2">
+                  {`// ${speaker.company}`}
+                </span>
+              </div>
+              <p className="text-gray-400 text-sm mb-3 font-sans leading-tight">
+                {speaker.role}
+              </p>
+              <p className="text-white text-sm font-medium border-l-2 border-[#fd00ff] pl-2 line-clamp-2">
+                {speaker.topic}
+              </p>
             </div>
-            <p className="text-gray-400 text-sm mb-3 font-sans leading-tight">
-              {speaker.role}
-            </p>
-            <p className="text-white text-sm font-medium border-l-2 border-[#fd00ff] pl-2 line-clamp-2">
-              "{speaker.topic}"
-            </p>
+            <div className="flex flex-wrap gap-2 mt-3">
+              {speaker.tags.slice(0, 1).map((tag) => (
+                <Badge key={`${speaker.name}-${tag}`}>{tag}</Badge>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-wrap gap-2 mt-3">
-            {speaker.tags.slice(0, 2).map((tag) => (
-              <Badge key={`${speaker.name}-${tag}`}>{tag}</Badge>
-            ))}
-          </div>
+
+          {/* Hover overlay — description (covers info, NOT photo) */}
+          <AnimatePresence>
+            {hovered && speaker.description && (
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: 12 }}
+                transition={{ duration: 0.45, ease: "easeOut" }}
+                className="absolute inset-0 z-10 flex flex-col justify-between p-5 border-t border-[#fd00ff]/60"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(0,0,24,0.97) 0%, rgba(102,20,122,0.35) 100%)",
+                  backdropFilter: "blur(8px)",
+                }}
+              >
+                {/* Scanline decoration */}
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-[0.04]"
+                  style={{
+                    backgroundImage:
+                      "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.08) 2px, rgba(255,255,255,0.08) 4px)",
+                  }}
+                />
+
+                <div className="relative z-10">
+
+                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-display">
+                    {speaker.description}
+                  </p>
+                </div>
+
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
       </div>
     </motion.div>

@@ -57,7 +57,7 @@ export const KolaNaukoweSection = () => {
                             rel="noopener noreferrer"
                             variants={itemVariants}
                             whileHover={{ scale: 1.05, filter: 'brightness(1.15)' }}
-                            className="group relative flex flex-col items-center gap-4 p-5 border border-[#fd00ff]/20 bg-white/5 rounded-xl backdrop-blur-sm hover:border-[#fd00ff]/60 hover:bg-white/10 transition-all duration-300 cursor-pointer"
+                            className="group relative flex flex-col items-center gap-4 p-5 border border-[#fd00ff]/50 bg-white/5 rounded-xl backdrop-blur-sm hover:border-[#fd00ff]/60 hover:bg-white/10 transition-all duration-300 cursor-pointer"
                         >
                             {/* Logo */}
                             <div className={`rounded-lg p-3 flex items-center justify-center transition-all duration-300 group-hover:-translate-y-1 ${kolo.name !== 'Solvro' ? 'bg-white' : ''}`}>

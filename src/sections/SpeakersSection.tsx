@@ -106,7 +106,7 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
                 />
 
                 <div className="relative z-10">
-                  
+
                   <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-display">
                     {speaker.description}
                   </p>

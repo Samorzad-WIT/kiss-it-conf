@@ -69,7 +69,7 @@ export default function App() {
                 <HeroSection/>
                 <WhyAttendSection/>
                 {/* <AgendaSection/> */}
-                <SpeakersSection />
+                {/* <SpeakersSection /> */}
 
                 <PartnersSection />
                 <PatronsSection />

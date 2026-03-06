@@ -126,7 +126,7 @@ export const SpeakersSection = () => {
     <section id="speakers" className="py-24 bg-[#000018] relative scroll-mt-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-[#ffffff]/5 pb-8">
-          <div>
+          <div className="text-left w-full">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 font-sans">
               PRELEGENCI<span className="text-[#fd00ff]">.</span>
             </h2>

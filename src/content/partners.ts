@@ -47,6 +47,12 @@ export const partners: Partner[] = [
         url: "https://www.payeye.com/",
         tier: "other",
     },
+    {
+        name: "WPT",
+        logo: "partners/other/wpt.png",
+        url: "https://www.technologpark.pl",
+        tier: "other",
+    },
 ];
 
 /** Konfiguracja wyświetlania poziomów partnerskich */

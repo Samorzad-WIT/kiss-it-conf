@@ -1,4 +1,3 @@
-import { Hash } from 'lucide-react';
 
 export const Badge = ({ children, color = "purple" }: { children: React.ReactNode; color?: "purple" | "green" }) => {
   const styles = color === "green" 

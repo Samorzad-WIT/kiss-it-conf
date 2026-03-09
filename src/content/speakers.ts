@@ -41,4 +41,54 @@ export const speakers: Speaker[] = [
     tags: ["Data Engineering", "Architecture", "KN Algo"],
     image: "/prelegenci/igor_olewicz.jpg",
   },
+  {
+    name: "Mariusz Rychlicki",
+    role: "Wicelider działu Software",
+    company: "Projekt Scorpio",
+    topic: "Autonomia łazika: architektura i implementacja",
+    description:
+      "Wicelider działu software w legendarnym Projekcie Scorpio oraz jeden z głównych deweloperów systemu autonomii, który pozwala łazikom na samodzielną eksplorację. Poza podbojem kosmosu zajmuje się projektowaniem systemów transmisji audio i wideo.",
+    tags: ["Robotyka", "Autonomia", "Projekt Scorpio"],
+    image: "/prelegenci/Mariusz_Rychlicki.jpg",
+  },
+  {
+    name: "Tymon Drop",
+    role: "Lider projektu EEG2Text",
+    company: "KN Neuron",
+    topic: "Reinforcement learning – czyli czemu DeepSeek pokonał OpenAI",
+    description:
+      "Lider projektu EEG2Text, laureat I stopnia Ogólnopolskiej Olimpiady AI oraz rezerwowy reprezentant Polski na zawody międzynarodowe. Specjalista od 'niemożliwych' wyzwań w uczeniu maszynowym, od niemal roku aktywnie rozwijający innowacyjne rozwiązania w kole naukowym.",
+    tags: ["AI", "Reinforcement Learning", "KN Neuron"],
+    image: "/prelegenci/tympon_drop.jpg",
+  },
+  {
+    name: "Pola Nowak",
+    role: "Studentka kierunku lekarskiego",
+    company: "KN Neuron",
+    topic: "Neuromodulacja: kiedy technologia wchodzi do układu nerwowego",
+    description:
+      "Studentka II roku kierunku lekarskiego na Uniwersytecie Medycznym we Wrocławiu oraz członkini koła naukowego Neuron. Koncentruje się na neurologii i praktycznym wykorzystaniu nowoczesnych technologii w medycynie przyszłości.",
+    tags: ["Medycyna", "Neuromodulacja", "KN Neuron"],
+    image: "/prelegenci/pola_nowak.heif",
+  },
+  {
+    name: "Adam Cal",
+    role: "Ekspert ds. cyberbezpieczeństwa",
+    company: "KN White Hats",
+    topic: "Infrastruktura CTF od kuchni",
+    description:
+      "Ekspert od cyberbezpieczeństwa, który od środka zna mechanizmy hakerskich zmagań. Specjalizuje się w budowaniu bezpiecznych i wydajnych struktur pod wymagające systemy techniczne. Wspólnie z Markiem Tutką pokaże, jak zaprojektować i utrzymać infrastrukturę do zawodów Capture The Flag.",
+    tags: ["Cybersecurity", "CTF", "KN White Hats"],
+    image: "/prelegenci/adam_cal.jpg",
+  },
+  {
+    name: "Marek Tutka",
+    role: "Ekspert ds. cyberbezpieczeństwa",
+    company: "KN White Hats",
+    topic: "Infrastruktura CTF od kuchni",
+    description:
+      "Ekspert od cyberbezpieczeństwa, który od środka zna mechanizmy hakerskich zmagań. Specjalizuje się w budowaniu bezpiecznych i wydajnych struktur pod wymagające systemy techniczne. Wspólnie z Adamem Calem pokaże, jak zaprojektować i utrzymać infrastrukturę do zawodów Capture The Flag.",
+    tags: ["Cybersecurity", "CTF", "KN White Hats"],
+    image: "/prelegenci/marek_tutka.jpg",
+  },
 ];

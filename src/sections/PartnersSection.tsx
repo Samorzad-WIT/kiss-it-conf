@@ -24,7 +24,7 @@ const itemVariants: Variants = {
   visible: {
     y: 0,
     opacity: 1,
-    transition: { type: "spring", stiffness: 100 }
+    transition: { duration: 0.4, ease: "easeOut" }
   }
 };
 
@@ -49,13 +49,13 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
         border ${config.borderColor} border-opacity-20 
         bg-white/5 rounded-xl backdrop-blur-sm 
         hover:border-opacity-60 hover:bg-white/10
-        transition-all duration-300 cursor-pointer
+        transition-colors duration-300 cursor-pointer
         flex flex-col items-center justify-center
         w-fit
       `}
     >
       {partner.logo ? (
-        <div className="bg-white rounded-lg p-3 transition-all duration-300 group-hover:-translate-y-3">
+        <div className="bg-white rounded-lg p-3 transition-transform duration-300 group-hover:-translate-y-3">
           <img
             src={partner.logo}
             alt={`Logo ${partner.name}`}

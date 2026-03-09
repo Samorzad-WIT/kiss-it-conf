@@ -42,7 +42,7 @@ export const partners: Partner[] = [
         tier: "other",
     },
     {
-        name: "Payeye",
+        name: "PayEye",
         logo: "partners/other/payeye.png",
         url: "https://www.payeye.com/",
         tier: "other",

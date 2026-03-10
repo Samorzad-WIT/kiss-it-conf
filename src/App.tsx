@@ -15,12 +15,6 @@ import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";
 
 <link rel="icon" href="/wrss_logo.png" sizes="any" />;
 
-//TODO  Temporary: sections hidden until content is ready
-void AgendaSection;
-
-
-
-
 export default function App() {
   return (
     <div className="min-h-screen bg-[#100c1d] text-white selection:bg-[#fd00ff] selection:text-white font-sans">

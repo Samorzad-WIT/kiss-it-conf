@@ -13,8 +13,8 @@ export const agenda: AgendaDay[] = [
             {
                 time: "09:30",
                 allRooms: {
-                    title: "KISS IT Otwarcie",
-                    speaker: "Komitet Programowy KISS IT",
+                    title: "KISS IT PWr Otwarcie",
+                    speaker: "Igor Buszta",
                     type: "Keynote",
                     description: "Oficjalne otwarcie konferencji KISS IT 2026. Przedstawimy naszą wizję, omówimy, co wydarzy się podczas tego intensywnego dnia oraz jacy prelegenci uświetnią to wydarzenie. Idealny start dla każdego uczestnika!",
                 },

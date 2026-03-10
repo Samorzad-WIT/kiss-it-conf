@@ -5,11 +5,11 @@ import { agenda, type AgendaTimeSlot, type RoomTalk } from "../content";
 
 const ROOM_KEYS = ["s1", "s2", "s3", "s4", "s5", "s6"] as const;
 const ROOM_NAMES: Record<string, string> = {
-    s1: "Sala 1",
-    s2: "Sala 2",
-    s3: "Sala 3",
-    s4: "Sala 4",
-    s5: "Sala 5",
+    s1: "10AC",
+    s2: "10B",
+    s3: "10D",
+    s4: "113",
+    s5: "114",
     s6: "Recepcja",
 };
 
@@ -25,6 +25,14 @@ const typeIcon = (type: RoomTalk["type"]) => {
             return <Users className="w-4 h-4" />;
     }
 };
+
+const SpeechRow = ({ title }: { title: string }) => (
+    <div
+        className="flex items-center gap-3 p-4 border border-dashed border-[#6715ff]/50 bg-[#6715ff]/10 rounded-xl text-gray-300 font-display tracking-wider text-base">
+        <Mic className="w-5 h-5 text-[#fd00ff]/70" />
+        <span className="uppercase tracking-widest">{title}</span>
+    </div>
+);
 
 const BreakRow = ({ title }: { title: string }) => (
     <div
@@ -46,10 +54,7 @@ const RoomsAccordion = ({ slot }: { slot: AgendaTimeSlot }) => {
         return acc;
     }, []);
 
-    // Default expansion to the very first room available in the slot
-    const [expandedId, setExpandedId] = useState<string | null>(
-        talks.length > 0 ? talks[0].id : null,
-    );
+    const [expandedId, setExpandedId] = useState<string | null>(null);
 
     if (talks.length === 0) return null;
 
@@ -74,7 +79,7 @@ const RoomsAccordion = ({ slot }: { slot: AgendaTimeSlot }) => {
                             <div className="flex-1">
                                 <div className="flex items-center gap-2 mb-1">
                                     <span
-                                        className="text-xs font-display text-[#fd00ff] tracking-widest bg-[#fd00ff]/10 px-2 py-0.5 rounded">
+                                        className="text-base font-display text-[#fd00ff] tracking-widest bg-[#fd00ff]/10 px-2 py-0.5 rounded">
                                         {name}
                                     </span>
                                     <span

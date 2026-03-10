@@ -39,6 +39,8 @@ export interface AgendaTimeSlot {
     time: string;
     isBreak?: boolean;
     breakTitle?: string;
+    isSpeech?: boolean;
+    speechTitle?: string;
     /** Talk that spans all rooms (keynotes, panels) */
     allRooms?: RoomTalk;
     s1?: RoomTalk;

@@ -195,7 +195,7 @@ export const speakers: Speaker[] = [
     name: "Bartosz Gotowski",
     role: "Senior Product Engineer",
     company: "TechTree",
-    topic: "Jak wejść do IT?",
+    topic: "Jak zdobyć PIERWSZĄ pracę jako programista?",
     description:
       "Senior Product Engineer z TechTree - startupu rekrutacyjnego, który szuka pracowników dla firm takich jak ElevenLabs czy Klarna. Pomagam ludziom wejść do branży IT od 2023 roku, szkolę ludzi z pisania najlepszych CV’ek i zaciekawienia rekrutera w ciągu 5 sekund, które poświęcają na waszą aplikacje. Wsparłem ponad 15 osób w znalezieniu ich pierwszej pracy i mam nadzieję, że Ty będziesz kolejny/a:)",
     tags: ["TI jobs"],
@@ -203,29 +203,29 @@ export const speakers: Speaker[] = [
   },
   {
     name: "Dawid Linek",
-    role: "Prezes",
+    role: "ExPrezes",
     company: "KN Solvro",
-    topic: "Od pomysłu do aplikacji",
+    topic: "Od pomysłu do rozwiązania, czyli design thinking w praktyce",
     description:
       "Cześć! Od 5 lat łączę doświadczenie zawodowe z energią inicjatyw studenckich, którą rozwijałem m.in. jako prezes KN Solvro. Brałem udział w dziesiątkach projektów, gdzie zobaczyłem, jak przejść drogę od pomysłu do aplikacji. Pokażę Wam realne przypadki, z którymi mierzyłem się w biznesie i projektach studenckich, a potem wspólnie zastosujemy Design Thinking w praktyce.",
     tags: ["TI jobs"],
     image: "/prelegenci/dawid_linek.png",
   },
-  {
-    name: "Jakub Czajkowski",
-    role: "",
-    company: "KN GANGStAS",
-    topic: "Black-box optimization",
-    description:
-      "Cześć! Od 5 lat łączę doświadczenie zawodowe z energią inicjatyw studenckich, którą rozwijałem m.in. jako prezes KN Solvro. Brałem udział w dziesiątkach projektów, gdzie zobaczyłem, jak przejść drogę od pomysłu do aplikacji. Pokażę Wam realne przypadki, z którymi mierzyłem się w biznesie i projektach studenckich, a potem wspólnie zastosujemy Design Thinking w praktyce.",
-    tags: ["TI jobs"],
-    image: "/prelegenci/jakob_czajkowski.jpg",
-  },
+  // {
+  //   name: "Jakub Czajkowski",
+  //   role: "",
+  //   company: "KN GANGStAS",
+  //   topic: "Black-box optimization",
+  //   description:
+  //     "Cześć! Od 5 lat łączę doświadczenie zawodowe z energią inicjatyw studenckich, którą rozwijałem m.in. jako prezes KN Solvro. Brałem udział w dziesiątkach projektów, gdzie zobaczyłem, jak przejść drogę od pomysłu do aplikacji. Pokażę Wam realne przypadki, z którymi mierzyłem się w biznesie i projektach studenckich, a potem wspólnie zastosujemy Design Thinking w praktyce.",
+  //   tags: ["TI jobs"],
+  //   image: "/prelegenci/jakob_czajkowski.jpg",
+  // },
   {
     name: "Julia Farganus",
-    role: "",
+    role: "Czcłonkini",
     company: "KN Solvro",
-    topic: "XAI w wizji komputerowej",
+    topic: "XAI w wizji komputerowej i 3D: Jak zrozumieć decyzje AI?",
     description:
       "Jestem studentką AI II stopnia, w kole ponad 2 lata, biorę udział w projektach researchowych w kole",
     tags: ["Computer Vision"],

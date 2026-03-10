@@ -59,8 +59,8 @@ export default function App() {
 
       <main>
         <HeroSection />
-        <WhyAttendSection />
         <AgendaSection/>
+        <WhyAttendSection />
         <SpeakersSection />
 
         <PartnersSection />

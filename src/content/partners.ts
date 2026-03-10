@@ -18,6 +18,12 @@ export const partners: Partner[] = [
         tier: "diament",
     },
     {
+        name: "BNY",
+        logo: "partners/diamond/bny.png",
+        url: "https://www.bny.com/corporate/pl/pl.html",
+        tier: "diament",
+    },
+    {
         name: "Women in Big Data Poland",
         logo: "partners/other/WIBD.svg",
         url: "https://www.linkedin.com/company/women-in-big-data-poland/",

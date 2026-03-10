@@ -2,6 +2,106 @@ import type { Speaker } from "./types";
 
 export const speakers: Speaker[] = [
   {
+    name: "Aga Światowa",
+    role: "Founder",
+    company: "WIBD",
+    topic: "Jak zbudować swoją markę w IT?",
+    description:
+      "Założycielka Women in Big Data Poland. Liderka z ponad dwudziestoletnim doświadczeniem w globalnych korporacjach i ekspertka w dziedzinie technologii wspierających zarządzanie ludźmi (People Tech). Jako założycielka polskiego oddziału Women in Big Data 🚀, aktywnie wspiera rozwój kobiet w sektorze nowoczesnych technologii.",
+    tags: ["Woman in IT"],
+    image: "/prelegenci/aga_swiatowa.jpg",
+  },
+  {
+    name: "Anton Tustanowski",
+    role: "",
+    company: "WCSS",
+    topic: "Superkomputery w akcji",
+    description:
+      "",
+    tags: ["HPC"],
+    image: "/prelegenci/anton_tustanowski.jpg",
+  },
+  {
+    name: "Radosław Tertel",
+    role: "Analityk",
+    company: "BNY",
+    topic: "Compliance w praktyce",
+    description:
+      "Jestem Analitykiem w BNY, gdzie od września 2025 roku pracuję w zespołach Fund & Investor Solutions oraz Fund Compliance. Moja rola koncentruje się na analizie zgodności portfeli inwestycyjnych funduszy i ETF-ów, dostarczając wniosków, które wzmacniają kontrolę ryzyka i wspierają skuteczny nadzór nad portfelami.",
+    tags: ["Investor Solutions"],
+    image: "none",
+  },
+  {
+    name: "Zuzanna Banasik",
+    role: "Analityk",
+    company: "BNY",
+    topic: "",
+    description:
+      "Jestem Analitykiem w zespole Fund & Investor Solutions w BNY, gdzie pracuję od sierpnia 2024 roku. W swojej roli wspieram operacje funduszy oraz dostarczam analizy, które pomagają w podejmowaniu skutecznych decyzji dla klientów globalnych.",
+    tags: ["Fund Compliance"],
+    image: "none",
+  },
+  {
+    name: "Maciej Małecki",
+    role: "Programista i architekt oprogramowania",
+    company: "Capgemini",
+    topic: "AI w procesie tworzenia oprogramowania",
+    description:
+      "Maciej Małecki jest programistą i architektem oprogramowania z ponad 25-letnim doświadczeniem. Od dwóch lat odpowiada w swojej organizacji za wdrażanie technik sztucznej inteligencji w procesie kodowania. Stoi na stanowisku, że AI nie wolno ignorować - to narzędzie, które nie tylko przyspiesza pracę, ale redefiniuje samą istotę tworzenia oprogramowania.",
+    tags: ["AI"],
+    image: "/prelegenci/maciej_malecki.jpg",
+  },
+  {
+    name: "Jurand Kołodziej",
+    role: "",
+    company: "Capgemini",
+    topic: "Mendix - tworzenie aplikacji dla każdego",
+    description:
+      "",
+    tags: ["Low-code/No-code"],
+    image: "/prelegenci/jurand_kolodziej.jpg",
+  },
+  {
+    name: "Daniel Jarząb",
+    role: "CEO",
+    company: "PayEye",
+    topic: "Trend którego nie da się zatrzymać - Biometrics an unstoppable trend",
+    description:
+      "Opowiem o tym, dlaczego uwierzytelnianie oparte na unikalnych cechach człowieka – ze szczególnym uwzględnieniem biometrii tęczówki oka i twarzy – to nie pieśń przyszłości, ale rewolucja, która dzieje się na naszych oczach.",
+    tags: ["Biometrics"],
+    image: "none",
+  },
+  {
+    name: "Maciej Procyk",
+    role: "Developer",
+    company: "JetBrains",
+    topic: "Efektywne Kotlin Multiplatform",
+    description:
+      "Deweloper w zespole KMP Tooling w JetBrains, absolwent informatyki na MIMUW. Pasjonat języków programowania, IoT i inżynierii sprzętowej. Koncentruje się na projektowaniu funkcjonalnych rozwiązań ułatwiających codzienność, budując autorskie systemy przy użyciu wyszukanych technologii.",
+    tags: ["Biometrics"],
+    image: "prelegenci/maciej_procyk.jpg",
+  },
+  {
+    name: "Konrad Olszewski",
+    role: "Senior Specialist",
+    company: "Microsoft",
+    topic: "Transformacja cyfrowa",
+    description:
+      "Od ponad 20 lat związany jest z branżą IT, gdzie realizuje projekty transformacji cyfrowej i wdraża innowacyjne technologie. Specjalizuje się w rozwiązaniach opartych na sztucznej inteligencji, wspierając klientów w efektywnym wykorzystaniu Microsoft 365 Copilot oraz Copilot Chat.",
+    tags: ["Artificial Intelligence"],
+    image: "prelegenci/konrad_olszewski.jpg",
+  },
+  {
+    name: "Jacek Czeszewski",
+    role: "Specjalista techniczny",
+    company: "Microsoft",
+    topic: "Copilot and AI",
+    description:
+      "Specjalista techniczny rozwiązań Copilot, AI Business Solutions Microsoft Jacek Czeszewski od ponad pięciu lat pracuje w firmie Microsoft, gdzie pełni rolę Technical Specialist w obszarze Copilot i Modern Workplace. Wcześniej zdobywał doświadczenie w międzynarodowej organizacji oraz u integratora IT, wspierając klientów w transformacji cyfrowej i wdrażaniu rozwiązań chmurowych.",
+    tags: ["Copilot"],
+    image: "prelegenci/jacek_czeszewski.jpg",
+  },
+  {
     name: "Bartłomiej Gawryszczuk",
     role: "Inżynier & Prezes",
     company: "TK Games",
@@ -131,105 +231,6 @@ export const speakers: Speaker[] = [
     tags: ["Computer Vision"],
     image: "/prelegenci/julia_farganus.png",
   },
-  {
-    name: "Aga Światowa",
-    role: "Founder",
-    company: "WIBD",
-    topic: "Jak zbudować swoją markę w IT?",
-    description:
-      "Założycielka Women in Big Data Poland. Liderka z ponad dwudziestoletnim doświadczeniem w globalnych korporacjach i ekspertka w dziedzinie technologii wspierających zarządzanie ludźmi (People Tech). Jako założycielka polskiego oddziału Women in Big Data 🚀, aktywnie wspiera rozwój kobiet w sektorze nowoczesnych technologii.",
-    tags: ["Woman in IT"],
-    image: "/prelegenci/aga_swiatowa.jpg",
-  },
-  {
-    name: "Anton Tustanowski",
-    role: "",
-    company: "WCSS",
-    topic: "Superkomputery w akcji",
-    description:
-      "",
-    tags: ["HPC"],
-    image: "/prelegenci/anton_tustanowski.jpg",
-  },
-  {
-    name: "Radosław Tertel",
-    role: "Analityk",
-    company: "BNY",
-    topic: "Compliance w praktyce",
-    description:
-      "Jestem Analitykiem w BNY, gdzie od września 2025 roku pracuję w zespołach Fund & Investor Solutions oraz Fund Compliance. Moja rola koncentruje się na analizie zgodności portfeli inwestycyjnych funduszy i ETF-ów, dostarczając wniosków, które wzmacniają kontrolę ryzyka i wspierają skuteczny nadzór nad portfelami.",
-    tags: ["Investor Solutions"],
-    image: "none",
-  },
-  {
-    name: "Zuzanna Banasik",
-    role: "Analityk",
-    company: "BNY",
-    topic: "",
-    description:
-      "Jestem Analitykiem w zespole Fund & Investor Solutions w BNY, gdzie pracuję od sierpnia 2024 roku. W swojej roli wspieram operacje funduszy oraz dostarczam analizy, które pomagają w podejmowaniu skutecznych decyzji dla klientów globalnych.",
-    tags: ["Fund Compliance"],
-    image: "none",
-  },
-  {
-    name: "Maciej Małecki",
-    role: "Programista i architekt oprogramowania",
-    company: "Capgemini",
-    topic: "AI w procesie tworzenia oprogramowania",
-    description:
-      "Maciej Małecki jest programistą i architektem oprogramowania z ponad 25-letnim doświadczeniem. Od dwóch lat odpowiada w swojej organizacji za wdrażanie technik sztucznej inteligencji w procesie kodowania. Stoi na stanowisku, że AI nie wolno ignorować - to narzędzie, które nie tylko przyspiesza pracę, ale redefiniuje samą istotę tworzenia oprogramowania.",
-    tags: ["AI"],
-    image: "/prelegenci/maciej_malecki.jpg",
-  },
-  {
-    name: "Jurand Kołodziej",
-    role: "",
-    company: "Capgemini",
-    topic: "Mendix - tworzenie aplikacji dla każdego",
-    description:
-      "",
-    tags: ["Low-code/No-code"],
-    image: "/prelegenci/jurand_kolodziej.jpg",
-  },
-  {
-    name: "Daniel Jarząb",
-    role: "CEO",
-    company: "PayEye",
-    topic: "Trend którego nie da się zatrzymać - Biometrics an unstoppable trend",
-    description:
-      "Opowiem o tym, dlaczego uwierzytelnianie oparte na unikalnych cechach człowieka – ze szczególnym uwzględnieniem biometrii tęczówki oka i twarzy – to nie pieśń przyszłości, ale rewolucja, która dzieje się na naszych oczach.",
-    tags: ["Biometrics"],
-    image: "none",
-  },
-  {
-    name: "Maciej Procyk",
-    role: "Developer",
-    company: "JetBrains",
-    topic: "Efektywne Kotlin Multiplatform",
-    description:
-      "Deweloper w zespole KMP Tooling w JetBrains, absolwent informatyki na MIMUW. Pasjonat języków programowania, IoT i inżynierii sprzętowej. Koncentruje się na projektowaniu funkcjonalnych rozwiązań ułatwiających codzienność, budując autorskie systemy przy użyciu wyszukanych technologii.",
-    tags: ["Biometrics"],
-    image: "prelegenci/maciej_procyk.jpg",
-  },
-  {
-    name: "Konrad Olszewski",
-    role: "Senior Specialist",
-    company: "Microsoft",
-    topic: "Transformacja cyfrowa",
-    description:
-      "Od ponad 20 lat związany jest z branżą IT, gdzie realizuje projekty transformacji cyfrowej i wdraża innowacyjne technologie. Specjalizuje się w rozwiązaniach opartych na sztucznej inteligencji, wspierając klientów w efektywnym wykorzystaniu Microsoft 365 Copilot oraz Copilot Chat.",
-    tags: ["Artificial Intelligence"],
-    image: "prelegenci/maciej_procyk.jpg",
-  },
-  {
-    name: "Jacek Czeszewski",
-    role: "Specjalista techniczny",
-    company: "Microsoft",
-    topic: "Copilot and AI",
-    description:
-      "Specjalista techniczny rozwiązań Copilot, AI Business Solutions Microsoft Jacek Czeszewski od ponad pięciu lat pracuje w firmie Microsoft, gdzie pełni rolę Technical Specialist w obszarze Copilot i Modern Workplace. Wcześniej zdobywał doświadczenie w międzynarodowej organizacji oraz u integratora IT, wspierając klientów w transformacji cyfrowej i wdrażaniu rozwiązań chmurowych.",
-    tags: ["Copilot"],
-    image: "prelegenci/maciej_procyk.jpg",
-  },
+  
 
 ];

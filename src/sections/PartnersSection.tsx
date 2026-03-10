@@ -50,8 +50,8 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
         bg-white/5 rounded-xl backdrop-blur-sm 
         hover:border-opacity-60 hover:bg-white/10
         transition-colors duration-300 cursor-pointer
-        flex flex-col items-center justify-center
-        w-fit
+        inline-flex items-center justify-center
+        w-fit h-fit
       `}
     >
       {partner.logo ? (
@@ -75,7 +75,7 @@ const PartnerCard = ({ partner, tier }: PartnerCardProps) => {
 
       {/* Invisible zero-height placeholder in flow — pushes card width to fit the name */}
       {partner.logo && (
-        <div className="invisible h-0 whitespace-nowrap" aria-hidden="true">
+        <div className="invisible h-0 whitespace-nowrap absolute" aria-hidden="true">
           <span className={`${tier === 'other' ? 'text-sm' : 'text-xl'} font-bold`}>{partner.name}</span>
         </div>
       )}

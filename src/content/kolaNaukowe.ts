@@ -14,7 +14,7 @@ export const kolaNaukowe: KoloNaukowe[] = [
     label: "Koło Naukowe",
   },
   {
-    name: "GangStats",
+    name: "KN GANGStAS",
     url: "#",
     logo: "/kola_naukowe/gangstats.png",
     label: "Koło Naukowe",

@@ -3,13 +3,14 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Coffee, MessageSquare, Mic, Users, Wrench, } from "lucide-react";
 import { agenda, type AgendaTimeSlot, type RoomTalk } from "../content";
 
-const ROOM_KEYS = ["s1", "s2", "s3", "s4", "s5"] as const;
+const ROOM_KEYS = ["s1", "s2", "s3", "s4", "s5", "s6"] as const;
 const ROOM_NAMES: Record<string, string> = {
     s1: "Sala 1",
     s2: "Sala 2",
     s3: "Sala 3",
     s4: "Sala 4",
     s5: "Sala 5",
+    s6: "Recepcja",
 };
 
 const typeIcon = (type: RoomTalk["type"]) => {
@@ -22,19 +23,6 @@ const typeIcon = (type: RoomTalk["type"]) => {
             return <MessageSquare className="w-4 h-4" />;
         default:
             return <Users className="w-4 h-4" />;
-    }
-};
-
-const levelColor = (level?: RoomTalk["level"]) => {
-    switch (level) {
-        case "Beginner":
-            return "text-[#24ff54]";
-        case "Intermediate":
-            return "text-yellow-400";
-        case "Advanced":
-            return "text-[#fd00ff]";
-        default:
-            return "text-gray-500";
     }
 };
 
@@ -94,23 +82,16 @@ const RoomsAccordion = ({ slot }: { slot: AgendaTimeSlot }) => {
                                         {typeIcon(talk.type)}
                                         {talk.type}
                                     </span>
-                                    {talk.level && (
-                                        <span
-                                            className={`text-[10px] font-display tracking-wider ${levelColor(talk.level)}`}
-                                        >
-                                            [{talk.level}]
-                                        </span>
-                                    )}
                                 </div>
                                 <h4 className="text-lg md:text-xl font-bold text-white font-sans leading-snug">
                                     {talk.title}
                                 </h4>
                                 {/* Always show speaker if collapsed, maybe hide if expanded? Let's show it always in header or body. */}
                                 {!isExpanded && talk.speaker && (
-                                    <p className="text-sm text-gray-400 mt-2 font-display">
+                                    <p className="text-nm text-gray-400 mt-2 font-display">
                                         {">> "}
                                         <span className="text-[#24ff54]">
-                                            Prelegent: {talk.speaker}
+                                            {id === "s6" ? "Organizator:" : "Prelegent:"} {talk.speaker}
                                         </span>
                                     </p>
                                 )}

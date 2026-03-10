@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 import { Badge } from "../components/ui/Badge";
 import { speakers, type Speaker } from "../content";
 
@@ -24,6 +25,7 @@ const itemVariants: Variants = {
 
 const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
   const [hovered, setHovered] = useState(false);
+  const [expanded, setExpanded] = useState(false);
 
   const firstName = speaker.name.slice(0, speaker.name.indexOf(" ") >>> 0 || undefined);
   const lastName =
@@ -38,7 +40,70 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="h-full border b-[2px] border-[#fd00ff]/50 rounded-lg bg-[#000018] overflow-hidden flex flex-col transition-all duration-300">
+      {/* --- MOBILE: horizontal card (< sm), tap to expand --- */}
+      <div
+        className="sm:hidden border border-[#fd00ff]/50 rounded-lg bg-[#000018] overflow-hidden transition-all duration-300 cursor-pointer"
+        onClick={() => setExpanded((v) => !v)}
+      >
+        <div className="relative overflow-hidden">
+          {/* Photo — absolutely positioned left, crops to text height */}
+          <div className="absolute left-0 top-0 bottom-0 w-28 bg-[#0a0614] overflow-hidden">
+            <img
+              src={speaker.image && speaker.image !== "none" ? speaker.image : "/ap.png"}
+              alt={speaker.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+          {/* Info — text drives height, padded left to clear the photo */}
+          <div className="pl-[7.5rem] p-3 bg-gradient-to-r from-[#000018] to-[#66147a]/20 flex flex-col gap-1">
+            <h3 className="text-base font-bold text-white font-sans leading-tight">
+              {speaker.name}
+            </h3>
+            <span className="text-[#24ff54] font-display text-xs">
+              {`// ${speaker.company}`}
+            </span>
+            <p className="text-gray-400 text-xs font-sans leading-tight">
+              {speaker.role}
+            </p>
+            <p className="text-white text-xs font-medium border-l-2 border-[#fd00ff] pl-2 mt-1">
+              {speaker.topic}
+            </p>
+            <div className="flex items-center gap-1.5 mt-auto pt-1.5">
+              {speaker.tags.slice(0, 1).map((tag) => (
+                <Badge key={`${speaker.name}-${tag}`}>{tag}</Badge>
+              ))}
+              {speaker.description && (
+                <ChevronDown
+                  className={`w-4 h-4 text-[#fd00ff] ml-auto transition-transform duration-300 ${expanded ? "rotate-180" : ""}`}
+                />
+              )}
+            </div>
+          </div>
+        </div>
+
+        {/* Expandable description */}
+        <AnimatePresence>
+          {expanded && speaker.description && (
+            <motion.div
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+              className="overflow-hidden"
+            >
+              <div className="px-3 pb-3 pt-2 border-t border-[#fd00ff]/30">
+                <p className="text-gray-300 text-sm leading-relaxed font-display">
+                  {speaker.description}
+                </p>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+
+      {/* --- DESKTOP: vertical card (sm+) --- */}
+      <div className="hidden sm:flex h-full border border-[#fd00ff]/50 rounded-lg bg-[#000018] overflow-hidden flex-col transition-all duration-300 relative">
         {/* Photo — 1:1 square */}
         <div className="relative w-full aspect-square bg-[#0a0614] overflow-hidden flex-shrink-0">
           <img
@@ -48,9 +113,8 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
           />
         </div>
 
-        {/* Info area — relative so overlay can sit on top */}
-        <div className="relative flex-1">
-          {/* Default info */}
+        {/* Info area */}
+        <div className="flex-1">
           <div className="p-5 bg-gradient-to-b from-[#000018] to-[#66147a]/20 flex flex-col justify-between h-full border-t border-[#ffffff]/5">
             <div>
               <div className="flex justify-between items-start mb-2">
@@ -80,42 +144,44 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
               ))}
             </div>
           </div>
-
-          {/* Hover overlay — description (covers info, NOT photo) */}
-          <AnimatePresence>
-            {hovered && speaker.description && (
-              <motion.div
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 12 }}
-                transition={{ duration: 0.45, ease: "easeOut" }}
-                className="absolute inset-0 z-10 flex flex-col justify-between p-5 border-t border-[#fd00ff]/60"
-                style={{
-                  background:
-                    "linear-gradient(180deg, rgba(0,0,24,0.97) 0%, rgba(102,20,122,0.35) 100%)",
-                  backdropFilter: "blur(8px)",
-                }}
-              >
-                {/* Scanline decoration */}
-                <div
-                  className="pointer-events-none absolute inset-0 opacity-[0.04]"
-                  style={{
-                    backgroundImage:
-                      "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.08) 2px, rgba(255,255,255,0.08) 4px)",
-                  }}
-                />
-
-                <div className="relative z-10">
-
-                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed font-display">
-                    {speaker.description}
-                  </p>
-                </div>
-
-              </motion.div>
-            )}
-          </AnimatePresence>
         </div>
+
+        {/* Hover overlay — covers ENTIRE card (photo + info) */}
+        <AnimatePresence>
+          {hovered && speaker.description && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.45, ease: "easeOut" }}
+              className="absolute inset-0 z-10 flex flex-col justify-center p-6 overflow-y-auto rounded-lg"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(0,0,24,0.95) 0%, rgba(102,20,122,0.4) 100%)",
+                backdropFilter: "blur(8px)",
+              }}
+            >
+              {/* Scanline decoration */}
+              <div
+                className="pointer-events-none absolute inset-0 opacity-[0.04]"
+                style={{
+                  backgroundImage:
+                    "repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.08) 2px, rgba(255,255,255,0.08) 4px)",
+                }}
+              />
+
+              <div className="relative z-10">
+                <h3 className="text-lg font-bold text-white font-sans mb-1">{speaker.name}</h3>
+                <span className="text-[#24ff54] font-display text-sm mb-3 block">
+                  {`// ${speaker.company}`}
+                </span>
+                <p className="text-gray-300 text-base leading-relaxed font-display">
+                  {speaker.description}
+                </p>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.div>
   );
@@ -143,7 +209,7 @@ export const SpeakersSection = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={containerVariants}
-          className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 items-stretch"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 items-stretch"
         >
           {speakers.map((speaker, index) => (
             <SpeakerCard key={speaker.name ?? index} speaker={speaker} />

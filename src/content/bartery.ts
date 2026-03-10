@@ -22,7 +22,7 @@ export const bartery: Bartery[] = [
         logo: "/bartery/familijna.png",
     },
     {
-        name: "Nescafé",
+        name: "Nescafé 3in1",
         url: "https://www.nescafe.com/pl/",
         logo: "/bartery/nescafe.png",
     },

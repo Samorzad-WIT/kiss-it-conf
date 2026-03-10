@@ -32,7 +32,6 @@ export interface RoomTalk {
     title: string;
     speaker?: string;
     type: "Keynote" | "Talk" | "Panel" | "Workshop";
-    level?: "Beginner" | "Intermediate" | "Advanced";
     description?: string;
 }
 
@@ -47,6 +46,8 @@ export interface AgendaTimeSlot {
     s3?: RoomTalk;
     s4?: RoomTalk;
     s5?: RoomTalk;
+    s6?: RoomTalk;
+    
 }
 
 export interface AgendaDay {

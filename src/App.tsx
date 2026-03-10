@@ -16,8 +16,6 @@ import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";
 <link rel="icon" href="/wrss_logo.png" sizes="any" />;
 
 //TODO  Temporary: sections hidden until content is ready
-void SpeakersSection;
-void BarterySection;
 void AgendaSection;
 
 
@@ -68,7 +66,7 @@ export default function App() {
       <main>
         <HeroSection />
         <WhyAttendSection />
-        {/* <AgendaSection/> */}
+        <AgendaSection/>
         <SpeakersSection />
 
         <PartnersSection />

@@ -7,8 +7,8 @@ export const agenda: AgendaDay[] = [
         slots: [
             {
                 time: "09:00",
-                isBreak: true,
-                breakTitle: "Rejestracja",
+                isSpeech: true,
+                speechTitle: "Rejestracja",
             },
             {
                 time: "09:30",
@@ -19,6 +19,7 @@ export const agenda: AgendaDay[] = [
                     description: "Oficjalne otwarcie konferencji KISS IT 2026. Przedstawimy naszą wizję, omówimy, co wydarzy się podczas tego intensywnego dnia oraz jacy prelegenci uświetnią to wydarzenie. Idealny start dla każdego uczestnika!",
                 },
             },
+           
             {
                 time: "10:00",
                 s1: {
@@ -57,6 +58,11 @@ export const agenda: AgendaDay[] = [
                     type: "Workshop",
                     description: "Podczas warsztatów pokażemy, jak w praktyce wygląda praca z superkomputerem. Przejdziemy przez przykładowy workflow zaczynając od logowania na klaster. Uruchomimy między innymi duży model językowy na mocnych kartach graficznych."
                 }
+            },
+            {
+                time: "10:30",
+                isBreak: true,
+                breakTitle: "Przerwa",
             },
             {
                 time: "10:45",
@@ -98,6 +104,11 @@ export const agenda: AgendaDay[] = [
                 }
             },
             {
+                time: "11:15",
+                isBreak: true,
+                breakTitle: "Przerwa",
+            },
+            {
                 time: "11:30",
                 s1: {
                     title: "Efektywne Kotlin Multiplatform: Budowanie aplikacji na wiele platform w 30 minut",
@@ -131,6 +142,11 @@ export const agenda: AgendaDay[] = [
                 }
             },
             {
+                time: "12:00",
+                isBreak: true,
+                breakTitle: "Przerwa obiadowa - Pizza!",
+            },
+            {
                 time: "13:00",
                 s1: {
                     title: "Wpływ Al na rynek IT i rozwój oprogramowania",
@@ -156,6 +172,11 @@ export const agenda: AgendaDay[] = [
                 }
             },
             {
+                time: "13:30",
+                isBreak: true,
+                breakTitle: "Rozdawanie RedBulli",
+            },
+            {
                 time: "13:45",
                 s2: {
                     title: "Houston, mamy problem... czyli gdy komunikacja zawodzi w kosmosie",
@@ -169,6 +190,11 @@ export const agenda: AgendaDay[] = [
                     type: "Talk",
                     description: "KN White Hats"
                 }
+            },
+            {
+                time: "14:15",
+                isBreak: true,
+                breakTitle: "Przerwa",
             },
             {
                 time: "14:30",

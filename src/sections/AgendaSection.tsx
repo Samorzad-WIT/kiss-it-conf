@@ -253,11 +253,13 @@ export const AgendaSection = () => {
                                 <div className="flex-1 w-full min-w-0 pr-2">
                                     {slot.isBreak ? (
                                         <BreakRow title={slot.breakTitle!} />
+                                    ) : slot.isSpeech ? (
+                                        <SpeechRow title={slot.speechTitle ?? ""} />
                                     ) : slot.allRooms ? (
                                         <div className="border border-[#6715ff]/40 bg-[#2d1257] rounded-xl p-5 shadow-[0_0_15px_rgba(103,21,255,0.15)]">
                                             <div className="flex items-center gap-2 mb-2">
-                                                <span className="text-xs font-display text-white bg-gradient-to-r from-[#fd00ff] to-[#6715ff] px-2 py-0.5 rounded tracking-widest uppercase">
-                                                    All Rooms
+                                                <span className="text-ms font-display text-white bg-gradient-to-r from-[#fd00ff] to-[#6715ff] px-2 py-0.5 rounded tracking-widest uppercase">
+                                                    1AC
                                                 </span>
                                                 <span className="flex items-center gap-1 text-xs font-display text-[#24ff54] tracking-wider">
                                                     {typeIcon(slot.allRooms.type)}

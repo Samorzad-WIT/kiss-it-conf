@@ -129,6 +129,11 @@ export const agenda: AgendaDay[] = [
                     endTime: "14:15",
                     description: "Sztuczna inteligencja na stałe zrewolucjonizowała proces wytwarzania oprogramowania, stając się nieodłącznym narzędziem w codziennej pracy zespołów IT. Podczas panelu przeanalizujemy tę transformację – od szans na optymalizację pracy, po zupełnie nowe wyzwania, takie jak rosnący dług kognitywny (Cognitive Debt). Wspólnie zastanowimy się, jak w erze AI ewoluuje rola programisty, w jakim kierunku powinna zmierzać edukacja oraz jak zmieni się krajobraz rynku IT w perspektywie najbliższych 5 lat."
                 },
+                s2: {
+                    title: "mObywatel Europa - jak regulacje prawne definiują projekty i biznes",
+                    speaker: "IDENTT",
+                    description: "Dla współczesnego menedżera dogłębna analiza podstaw prawnych to nie tylko formalność, ale kluczowy, pierwszy etap projektowania innowacyjnego produktu. W dynamicznym świecie cyfrowej tożsamości regulacje przestają być ograniczeniem, a stają się fundamentem, na którym buduje się realną przewagę konkurencyjną. Prelekcja, oparta na projekcie mObywatel Europa, stanowi praktyczne studium przypadku (case study) powstawania największego systemu tożsamości cyfrowej w Europie i Polsce z perspektywy zarządczej. Celem wystąpienia jest pokazanie studentom, że w sektorach BigTech i FinTech prawo bezpośrednio definiuje ramy strategii biznesowej i projektu."
+                },
                 s3: {
                     title: "Od notatek z wykładu do pierwszej pracy - praktyczne zastosowania Microsoft Copilot w życiu studenta",
                     speaker: "Jacek Czeszewski, Konrad Olszewski",
@@ -147,6 +152,11 @@ export const agenda: AgendaDay[] = [
             },
             {
                 time: "13:45",
+                s2: {
+                    title: "Houston, mamy problem... czyli gdy komunikacja zawodzi w kosmosie",
+                    speaker: "Ewa Kasprzak, Maciej Binczarowski",
+                    description: "Prelekcja o błędach w komunikacji satelitarnej przy rzeczywistych misjach kosmicznych. Dorzucone zostaną historie z koła PWr in Space. "
+                },
                 s3: {
                     title: "Infrastruktura CTF od kuchni",
                     speaker: "Adam Cal, Marek Tutka",

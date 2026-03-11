@@ -127,6 +127,7 @@ export const agenda: AgendaDay[] = [
                     title: "Panel dyskusyjny: Wpływ AI na rynek IT i rozwój oprogramowania",
                     speaker: "Igor Buszta",
                     endTime: "14:15",
+                    speakerLabel: "Prowadzący",
                     description: "Sztuczna inteligencja na stałe zrewolucjonizowała proces wytwarzania oprogramowania, stając się nieodłącznym narzędziem w codziennej pracy zespołów IT. Podczas panelu przeanalizujemy tę transformację – od szans na optymalizację pracy, po zupełnie nowe wyzwania, takie jak rosnący dług kognitywny (Cognitive Debt). Wspólnie zastanowimy się, jak w erze AI ewoluuje rola programisty, w jakim kierunku powinna zmierzać edukacja oraz jak zmieni się krajobraz rynku IT w perspektywie najbliższych 5 lat."
                 },
                 s2: {

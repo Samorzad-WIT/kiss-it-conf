@@ -78,6 +78,11 @@ const RoomsAccordion = ({ slot, endTime }: { slot: AgendaTimeSlot; endTime?: str
                                 </div>
                                 <h4 className="text-lg md:text-xl font-bold text-white font-sans leading-snug">
                                     {talk.title}
+                                    {talk.company && (
+                                        <span className="text-[#24ff54] font-display text-sm font-normal ml-2">
+                                            // {talk.company}
+                                        </span>
+                                    )}
                                 </h4>
                                 {/* Always show speaker if collapsed, maybe hide if expanded? Let's show it always in header or body. */}
                                 {!isExpanded && talk.speaker && (

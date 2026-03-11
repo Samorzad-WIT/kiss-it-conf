@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Coffee, ClipboardPen, Mic, } from "lucide-react";
+import { ChevronDown, Coffee, ClipboardPen} from "lucide-react";
 import { agenda, type AgendaTimeSlot, type RoomTalk } from "../content";
 
 const ROOM_KEYS = ["s1", "s2", "s3", "s4", "s5", "s6"] as const;

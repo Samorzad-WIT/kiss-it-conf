@@ -44,7 +44,7 @@ export const agenda: AgendaDay[] = [
                 s5: {
                     title: "Managing up - Zarządzanie swoim szefem",
                     speaker: "Marta Zakierska, Magdalena Skoczek, Jakub Porada",
-                    description: "Managing up - Zarządzanie swoim szefem."
+                    description: "Instrukcja obsługi Twojego PM-a, czyli jak komunikować się skutecznie ze swoim Project Managerem. "
                 },
                 s6: {
                     title: "Wycieczka do serwerowni",
@@ -67,7 +67,7 @@ export const agenda: AgendaDay[] = [
                 s2: {
                     title: "Prelekcja WPT",
                     speaker: "Marta Cinciala",
-                    description: "WPT hub biznesowy"
+                    description: ""
                 },
                 s3: {
                     title: "Black-box optimization: gdy nie znamy wzoru, a musimy znaleźć najlepsze rozwiązanie",

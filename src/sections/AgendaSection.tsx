@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown, Coffee, MessageSquare, Mic, Users, Wrench, } from "lucide-react";
+import { ChevronDown, Coffee, ClipboardPen, Mic, } from "lucide-react";
 import { agenda, type AgendaTimeSlot, type RoomTalk } from "../content";
 
 const ROOM_KEYS = ["s1", "s2", "s3", "s4", "s5", "s6"] as const;
@@ -13,23 +13,11 @@ const ROOM_NAMES: Record<string, string> = {
     s6: "Recepcja",
 };
 
-const typeIcon = (type: RoomTalk["type"]) => {
-    switch (type) {
-        case "Keynote":
-            return <Mic className="w-4 h-4" />;
-        case "Workshop":
-            return <Wrench className="w-4 h-4" />;
-        case "Panel":
-            return <MessageSquare className="w-4 h-4" />;
-        default:
-            return <Users className="w-4 h-4" />;
-    }
-};
 
 const SpeechRow = ({ title }: { title: string }) => (
     <div
         className="flex items-center gap-3 p-4 border border-dashed border-[#6715ff]/50 bg-[#6715ff]/10 rounded-xl text-gray-300 font-display tracking-wider text-base">
-        <Mic className="w-5 h-5 text-[#fd00ff]/70" />
+        <ClipboardPen className="w-5 h-5 text-[#fd00ff]/70" />
         <span className="uppercase tracking-widest">{title}</span>
     </div>
 );
@@ -43,7 +31,7 @@ const BreakRow = ({ title }: { title: string }) => (
 );
 
 // Renders the expandable list of rooms for a single time slot
-const RoomsAccordion = ({ slot }: { slot: AgendaTimeSlot }) => {
+const RoomsAccordion = ({ slot, endTime }: { slot: AgendaTimeSlot; endTime?: string }) => {
     // Extract all existing talks for this slot
     const talks = ROOM_KEYS.reduce<
         { id: string; name: string; talk: RoomTalk }[]
@@ -82,11 +70,11 @@ const RoomsAccordion = ({ slot }: { slot: AgendaTimeSlot }) => {
                                         className="text-base font-display text-[#fd00ff] tracking-widest bg-[#fd00ff]/10 px-2 py-0.5 rounded">
                                         {name}
                                     </span>
-                                    <span
-                                        className="flex items-center gap-1 text-xs font-display text-gray-400 tracking-wider">
-                                        {typeIcon(talk.type)}
-                                        {talk.type}
-                                    </span>
+                                    {endTime && (
+                                        <span className="flex items-center gap-1 text-ms font-display text-gray-400 tracking-wider">
+                                            {slot.time} – {endTime}
+                                        </span>
+                                    )}
                                 </div>
                                 <h4 className="text-lg md:text-xl font-bold text-white font-sans leading-snug">
                                     {talk.title}
@@ -261,10 +249,6 @@ export const AgendaSection = () => {
                                                 <span className="text-ms font-display text-white bg-gradient-to-r from-[#fd00ff] to-[#6715ff] px-2 py-0.5 rounded tracking-widest uppercase">
                                                     1AC
                                                 </span>
-                                                <span className="flex items-center gap-1 text-xs font-display text-[#24ff54] tracking-wider">
-                                                    {typeIcon(slot.allRooms.type)}
-                                                    {slot.allRooms.type}
-                                                </span>
                                             </div>
 
                                             <h4 className="text-xl md:text-2xl font-bold text-white font-sans leading-snug mb-3">
@@ -290,7 +274,7 @@ export const AgendaSection = () => {
                                             )}
                                         </div>
                                     ) : (
-                                        <RoomsAccordion slot={slot} />
+                                        <RoomsAccordion slot={slot} endTime={day?.slots[i + 1]?.time ?? "15:00"} />
                                     )}
                                 </div>
                             </motion.div>

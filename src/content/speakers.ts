@@ -3,7 +3,7 @@ import type { Speaker } from "./types";
 export const speakers: Speaker[] = [
   {
     name: "Aga Światowa",
-    role: "Founder",
+    role: "Założycielka",
     company: "WIBD",
     topic: "Jak zbudować swoją markę w IT?",
     description:
@@ -15,7 +15,7 @@ export const speakers: Speaker[] = [
     name: "Anton Tustanowski",
     role: "",
     company: "WCSS",
-    topic: "Superkomputery w akcji",
+    topic: "",
     description:
       "",
     tags: ["HPC"],
@@ -25,7 +25,7 @@ export const speakers: Speaker[] = [
     name: "Radosław Tertel",
     role: "Analityk",
     company: "BNY",
-    topic: "Compliance w praktyce",
+    topic: "",
     description:
       "Jestem Analitykiem w BNY, gdzie od września 2025 roku pracuję w zespołach Fund & Investor Solutions oraz Fund Compliance. Moja rola koncentruje się na analizie zgodności portfeli inwestycyjnych funduszy i ETF-ów, dostarczając wniosków, które wzmacniają kontrolę ryzyka i wspierają skuteczny nadzór nad portfelami.",
     tags: ["Investor Solutions"],
@@ -83,9 +83,9 @@ export const speakers: Speaker[] = [
   },
   {
     name: "Konrad Olszewski",
-    role: "Senior Specialist",
+    role: "Senior Specialista",
     company: "Microsoft",
-    topic: "Transformacja cyfrowa",
+    topic: "",
     description:
       "Od ponad 20 lat związany jest z branżą IT, gdzie realizuje projekty transformacji cyfrowej i wdraża innowacyjne technologie. Specjalizuje się w rozwiązaniach opartych na sztucznej inteligencji, wspierając klientów w efektywnym wykorzystaniu Microsoft 365 Copilot oraz Copilot Chat.",
     tags: ["Artificial Intelligence"],
@@ -95,7 +95,7 @@ export const speakers: Speaker[] = [
     name: "Jacek Czeszewski",
     role: "Specjalista techniczny",
     company: "Microsoft",
-    topic: "Copilot and AI",
+    topic: "",
     description:
       "Specjalista techniczny rozwiązań Copilot, AI Business Solutions Microsoft Jacek Czeszewski od ponad pięciu lat pracuje w firmie Microsoft, gdzie pełni rolę Technical Specialist w obszarze Copilot i Modern Workplace. Wcześniej zdobywał doświadczenie w międzynarodowej organizacji oraz u integratora IT, wspierając klientów w transformacji cyfrowej i wdrażaniu rozwiązań chmurowych.",
     tags: ["Copilot"],
@@ -223,7 +223,7 @@ export const speakers: Speaker[] = [
   // },
   {
     name: "Julia Farganus",
-    role: "Czcłonkini",
+    role: "Czcłonkini koła",
     company: "KN Solvro",
     topic: "XAI w wizji komputerowej i 3D: Jak zrozumieć decyzje AI?",
     description:

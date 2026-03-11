@@ -31,7 +31,6 @@ export interface Speaker {
 export interface RoomTalk {
     title: string;
     speaker?: string;
-    type: "Keynote" | "Talk" | "Panel" | "Workshop";
     description?: string;
 }
 

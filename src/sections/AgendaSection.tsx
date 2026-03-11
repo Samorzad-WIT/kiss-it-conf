@@ -70,9 +70,9 @@ const RoomsAccordion = ({ slot, endTime }: { slot: AgendaTimeSlot; endTime?: str
                                         className="text-base font-display text-[#fd00ff] tracking-widest bg-[#fd00ff]/10 px-2 py-0.5 rounded">
                                         {name}
                                     </span>
-                                    {endTime && (
+                                    {(talk.endTime ?? endTime) && (
                                         <span className="flex items-center gap-1 text-ms font-display text-gray-400 tracking-wider">
-                                            {slot.time} – {endTime}
+                                            {slot.time} – {talk.endTime ?? endTime}
                                         </span>
                                     )}
                                 </div>
@@ -260,7 +260,7 @@ export const AgendaSection = () => {
                                             {slot.allRooms.speaker && (
                                                 <p className="text-sm font-display tracking-widest mb-3 uppercase">
                                                     <span className="text-gray-400">
-                                                        {">> "}Prelegent:
+                                                        {">> "}{slot.allRooms.speakerLabel ?? "Prelegent"}:
                                                     </span>{" "}
                                                     <span className="text-[#24ff54]">
                                                         {slot.allRooms.speaker}

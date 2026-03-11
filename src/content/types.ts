@@ -31,7 +31,9 @@ export interface Speaker {
 export interface RoomTalk {
     title: string;
     speaker?: string;
+    speakerLabel?: string;
     description?: string;
+    endTime?: string;
 }
 
 export interface AgendaTimeSlot {

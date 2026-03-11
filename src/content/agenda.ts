@@ -15,6 +15,7 @@ export const agenda: AgendaDay[] = [
                 allRooms: {
                     title: "KISS IT PWr Otwarcie",
                     speaker: "Igor Buszta",
+                    speakerLabel: "Prowadzący",
                     description: "Oficjalne otwarcie konferencji KISS IT PWr 2026. Przedstawienie firm, gości oraz przebiegu wydarzenia.",
                 },
             },
@@ -44,6 +45,7 @@ export const agenda: AgendaDay[] = [
                 s5: {
                     title: "Managing up - Zarządzanie swoim szefem",
                     speaker: "Marta Zakierska, Magdalena Skoczek, Jakub Porada",
+                    endTime: "11:15",
                     description: "Instrukcja obsługi Twojego PM-a, czyli jak komunikować się skutecznie ze swoim Project Managerem. "
                 },
                 s6: {
@@ -77,12 +79,8 @@ export const agenda: AgendaDay[] = [
                 s4: {
                     title: "Mendix - tworzenie aplikacji dla każdego",
                     speaker: "Jurand Kołodziej",
+                    endTime: "12:00",
                     description: "Na warsztatach pokażemy, jak w szybki i prosty sposób stworzyć działającą aplikację w platformie Mendix. Uczestnicy poznają podstawy tworzenia modelu danych (domain model), budowania ekranów aplikacji oraz konfiguracji ról użytkowników i uprawnień. Omówimy też, jak wykorzystać gotowe moduły z Marketplace, które przyspieszają tworzenie funkcjonalności. Warsztaty pokażą, że do budowania aplikacji nie potrzeba lat doświadczenia programistycznego — najważniejsze są logiczne myślenie, zrozumienie procesu i umiejętne korzystanie z narzędzi low-code."
-                },
-                s5: {
-                    title: "Od pomysłu do rozwiązania, czyli design thinking w praktyce",
-                    speaker: "Dawid Linek",
-                    description: "Większość aplikacji upada, bo rozwiązują problemy, których nikt nie ma. Podczas warsztatów sprawdzisz w praktyce, jak narzędzia Design Thinking pomagają wyjść z bańki własnych założeń i zbudować produkt, który zachwyci użytkowników. Wyjdziesz z konkretnym zestawem umiejętności, gotowym do wdrożenia w Twoim następnym projekcie."
                 },
                 s6: {
                     title: "Wycieczka do serwerowni",
@@ -113,9 +111,9 @@ export const agenda: AgendaDay[] = [
                     description: "Na rynku, gdzie tysiące świetnych inżynierów walczy o te same stanowiska, same twarde kompetencje nie wystarczą. W Google, Microsoft, czy Amazon nie awansuje ten, kto najlepiej pisze kod – awansuje ten, kto jest widoczny, rozpoznawalny i zapraszany do stołu, przy którym zapadają decyzje. Podczas tej 30-minutowej prelekcji dowiesz się: Dlaczego 'siedzenie cicho i robienie swoje' to najgorsza strategia kariery w międzynarodowej korporacji. Jak sprawić, żeby menedżerowie z USA, Niemiec czy Singapuru zapamiętali Twoje nazwisko – nawet jeśli pracujesz zdalnie z Wrocławia. Gdzie i jak pokazywać swoją ekspertyzę, żeby to Ty byłeś pierwszą osobą, którą pomyślą obsadzić przy prestiżowym projekcie. Konkretne narzędzia i platformy, które działają w globalnym techu – bez wstydu, bez nachalności, za to z efektem. To nie jest kolejna pogadanka o 'byciu sobą' i 'pasji'. To konkretna, 30-minutowa dawka strategii dla ludzi, którzy chcą, żeby ich kod, ich pomysły i ich kariera zostały zauważone na globalnym poziomie. Przyjdź, jeśli myślisz o karierze w międzynarodowym techu i nie chcesz być kolejnym anonimowym programistą w korporacyjnym tłumie."
                 },
                 s5: {
-                    title: "Neuromodulacja: kiedy technologia wchodzi do układu nerwowego",
-                    speaker: "Pola Nowak",
-                    description: "Nasz układ nerwowy komunikuje się za pomocą impulsów elektrycznych – a co, jeśli nauka nauczyła się je delikatnie korygować? Neuromodulacja wykorzystuje bodźce, takie jak prąd elektryczny i pole magnetyczne, aby wspierać leczenie różnych zaburzeń. Brzmi jak koncept z filmów science fiction?"
+                    title: "Od pomysłu do rozwiązania, czyli design thinking w praktyce",
+                    speaker: "Dawid Linek",
+                    description: "Większość aplikacji upada, bo rozwiązują problemy, których nikt nie ma. Podczas warsztatów sprawdzisz w praktyce, jak narzędzia Design Thinking pomagają wyjść z bańki własnych założeń i zbudować produkt, który zachwyci użytkowników. Wyjdziesz z konkretnym zestawem umiejętności, gotowym do wdrożenia w Twoim następnym projekcie."
                 },
                 s6: {
                     title: "Wycieczka do serwerowni organizowana przez WCSS",
@@ -133,12 +131,8 @@ export const agenda: AgendaDay[] = [
                 s1: {
                     title: "Wpływ Al na rynek IT i rozwój oprogramowania",
                     speaker: "Igor Buszta",
+                    endTime: "14:15",
                     description: "Sztuczna inteligencja na stałe zrewolucjonizowała proces wytwarzania oprogramowania, stając się nieodłącznym narzędziem w codziennej pracy zespołów IT. Podczas panelu przeanalizujemy tę transformację – od szans na optymalizację pracy, po zupełnie nowe wyzwania, takie jak rosnący dług kognitywny (Cognitive Debt). Wspólnie zastanowimy się, jak w erze AI ewoluuje rola programisty, w jakim kierunku powinna zmierzać edukacja oraz jak zmieni się krajobraz rynku IT w perspektywie najbliższych 5 lat."
-                },
-                s2: {
-                    title: "mObywatel Europa - jak regulacje prawne definiują projekty i biznes",
-                    speaker: "IDENTT",
-                    description: "Dla współczesnego menedżera dogłębna analiza podstaw prawnych to nie tylko formalność, ale kluczowy, pierwszy etap projektowania innowacyjnego produktu. W dynamicznym świecie cyfrowej tożsamości regulacje przestają być ograniczeniem, a stają się fundamentem, na którym buduje się realną przewagę konkurencyjną. Prelekcja, oparta na projekcie mObywatel Europa, stanowi praktyczne studium przypadku (case study) powstawania największego systemu tożsamości cyfrowej w Europie i Polsce z perspektywy zarządczej. Celem wystąpienia jest pokazanie studentom, że w sektorach BigTech i FinTech prawo bezpośrednio definiuje ramy strategii biznesowej i projektu."
                 },
                 s3: {
                     title: "Od notatek z wykładu do pierwszej pracy - praktyczne zastosowania Microsoft Copilot w życiu studenta",
@@ -158,16 +152,16 @@ export const agenda: AgendaDay[] = [
             },
             {
                 time: "13:45",
-                s2: {
-                    title: "Houston, mamy problem... czyli gdy komunikacja zawodzi w kosmosie",
-                    speaker: "Ewa Kasprzak, Maciej Binczarowski",
-                    description: "Prelekcja o błędach w komunikacji satelitarnej przy rzeczywistych misjach kosmicznych. Dorzucone zostaną historie z koła PWr in Space. "
-                },
                 s3: {
                     title: "Infrastruktura CTF od kuchni",
                     speaker: "Adam Cal, Marek Tutka",
                     description: "KN White Hats od kilku lat zajmuje się organizacją Break The Syntax CTF - jednego z największych podobnych turniejów w Polsce. Członkowie Koła opowiedzą o wydarzeniu od strony technicznej i przedstawią swoją historię: od początkowych zmagań do platformy obługującej 4000 graczy."
-                }
+                },
+                s5: {
+                    title: "Neuromodulacja: kiedy technologia wchodzi do układu nerwowego",
+                    speaker: "Pola Nowak",
+                    description: "Nasz układ nerwowy komunikuje się za pomocą impulsów elektrycznych – a co, jeśli nauka nauczyła się je delikatnie korygować? Neuromodulacja wykorzystuje bodźce, takie jak prąd elektryczny i pole magnetyczne, aby wspierać leczenie różnych zaburzeń. Brzmi jak koncept z filmów science fiction?"
+                },
             },
             {
                 time: "14:15",

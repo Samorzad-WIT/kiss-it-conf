@@ -32,6 +32,7 @@ export interface RoomTalk {
     title: string;
     speaker?: string;
     speakerLabel?: string;
+    company?: string;
     description?: string;
     endTime?: string;
 }

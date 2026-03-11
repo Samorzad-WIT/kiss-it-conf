@@ -13,7 +13,7 @@ export const agenda: AgendaDay[] = [
             {
                 time: "09:30",
                 allRooms: {
-                    title: "KISS IT PWr Otwarcie",
+                    title: "Sesja Otwierająca KISS IT PWr",
                     speaker: "Igor Buszta",
                     speakerLabel: "Prowadzący",
                     description: "Oficjalne otwarcie konferencji KISS IT PWr 2026. Przedstawienie firm, gości oraz przebiegu wydarzenia.",
@@ -124,7 +124,7 @@ export const agenda: AgendaDay[] = [
             {
                 time: "13:00",
                 s1: {
-                    title: "Wpływ Al na rynek IT i rozwój oprogramowania",
+                    title: "Panel dyskusyjny: Wpływ AI na rynek IT i rozwój oprogramowania",
                     speaker: "Igor Buszta",
                     endTime: "14:15",
                     description: "Sztuczna inteligencja na stałe zrewolucjonizowała proces wytwarzania oprogramowania, stając się nieodłącznym narzędziem w codziennej pracy zespołów IT. Podczas panelu przeanalizujemy tę transformację – od szans na optymalizację pracy, po zupełnie nowe wyzwania, takie jak rosnący dług kognitywny (Cognitive Debt). Wspólnie zastanowimy się, jak w erze AI ewoluuje rola programisty, w jakim kierunku powinna zmierzać edukacja oraz jak zmieni się krajobraz rynku IT w perspektywie najbliższych 5 lat."

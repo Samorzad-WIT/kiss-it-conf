@@ -49,7 +49,7 @@ export const agenda: AgendaDay[] = [
                 s5: {
                     title: "Managing up - Zarządzanie swoim szefem",
                     speaker: "Marta Zakierska, Magdalena Skoczek, Jakub Porada",
-                    company: "BNY",
+                    company: "KN PM Group",
                     endTime: "11:15",
                     description: "Instrukcja obsługi Twojego PM-a, czyli jak komunikować się skutecznie ze swoim Project Managerem. "
                 },
@@ -162,7 +162,7 @@ export const agenda: AgendaDay[] = [
                     title: "Wycieczka do serwerowni",
                     speaker: "WCSS",
                     company: "WCSS",
-                    description: "Podczas warsztatów pokażemy, jak w praktyce wygląda praca z superkomputerem. Przejdziemy przez przykładowy workflow zaczynając od logowania na klaster. Uruchomimy między innymi duży model językowy na mocnych kartach graficznych."
+                    description: "Zapraszamy na wyjątkowe zwiedzanie serwerowni Wrocławskiego Centrum Sieciowo-Superkomputerowego (WCSS) w ramach wydarzenia KISS-IT. Podczas wycieczki zobaczysz z bliska superkomputer Lem oraz innowacyjny komputer kwantowy Odra 5. Dowiesz się, jak te potężne maszyny napędzają polską naukę i na czym polega przełomowa technologia kwantowa. To niepowtarzalna okazja, by zajrzeć do serca cyfrowej infrastruktury Dolnego Śląska. Liczba miejsc jest ograniczona, więc zachęcamy do rejestracji podczas wydarzenia przy stoisku WCSS!"
                 }
             },
             {
@@ -213,7 +213,7 @@ export const agenda: AgendaDay[] = [
                 s3: {
                     title: "Jak zdobyć PIERWSZĄ pracę jako programista?",
                     speaker: "Bartosz Gotowski",
-                    company: "TechTree",
+                    company: "KN Solvro",
                     description: "Masz problem ze znalezieniem pracy w IT i wysyłanie CV nic nie daje? W tej prelekcji pokazuję konkretne metody, które pomogły 6 studentom zdobyć pracę mimo trudnego rynku dla juniorów (także przez AI): cold DM-y do founderów, skuteczne rozmowy rekrutacyjne i sensowne follow-upy, gdy rekruterzy milczą."
                 },
                 s4: {

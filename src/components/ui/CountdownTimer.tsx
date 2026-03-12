@@ -82,6 +82,46 @@ const Separator: React.FC = () => (
   </div>
 );
 
+const LiveBadge: React.FC = () => (
+  <motion.div
+    className="flex flex-col items-center gap-6"
+    initial={{ opacity: 0, scale: 0.8 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.6, type: "spring" }}
+  >
+    {/* LIVE pill */}
+    <motion.div
+      className="flex items-center gap-3 px-8 py-3 rounded-full border border-[#fd00ff]/60 bg-[#fd00ff]/10"
+      animate={{ boxShadow: ["0 0 12px #fd00ff40", "0 0 36px #fd00ff80", "0 0 12px #fd00ff40"] }}
+      transition={{ duration: 1.8, repeat: Infinity }}
+    >
+      <motion.span
+        className="w-4 h-4 rounded-full bg-[#fd00ff]"
+        animate={{ opacity: [1, 0.2, 1] }}
+        transition={{ duration: 1, repeat: Infinity }}
+      />
+      <span className="font-display text-xl tracking-[0.3em] text-[#fd00ff] uppercase">Live</span>
+    </motion.div>
+
+    {/* Main message */}
+    <motion.p
+      className="font-display text-5xl sm:text-6xl md:text-7xl tracking-widest uppercase"
+      style={{ color: "#24ff54" }}
+      animate={{ textShadow: ["0 0 12px #24ff5460", "0 0 40px #24ff54cc", "0 0 12px #24ff5460"] }}
+      transition={{ duration: 2, repeat: Infinity }}
+    >
+      Konferencja trwa!
+    </motion.p>
+
+    {/* Sub-label */}
+    <p className="font-display text-base tracking-[0.35em] text-white/40 uppercase">
+      KISS IT PWr 2026 &mdash; 17.03.2026
+    </p>
+  </motion.div>
+);
+
+const isZero = (t: TimeLeft) => t.days === 0 && t.hours === 0 && t.minutes === 0 && t.seconds === 0;
+
 export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>(() =>
     calculateTimeLeft(targetDate)
@@ -94,6 +134,10 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate }) =>
 
     return () => clearInterval(timer);
   }, [targetDate]);
+
+  if (isZero(timeLeft)) {
+    return <LiveBadge />;
+  }
 
   return (
     <div className="flex items-center justify-center gap-2 sm:gap-3 md:gap-4 px-2">

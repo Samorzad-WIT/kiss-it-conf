@@ -17,7 +17,7 @@ export const speakers: Speaker[] = [
     company: "WCSS",
     topic: "Tu liczy się wszystko: Wprowadzenie do komputerów dużej mocy",
     description:
-      "",
+      "IT Specialist i HPC Engineer w WCSS. Odpowiada za utrzymanie infrastruktury klastra, systemy Linux oraz pionierskie rozwiązania dla AI large model training. Specjalizuje się w dostarczaniu zasobów obliczeniowych dużej mocy oraz automatyzacji procesów wdrożeniowych.",
     tags: ["HPC"],
     image: "/prelegenci/anton_tustanowski.jpg",
   },
@@ -230,6 +230,16 @@ export const speakers: Speaker[] = [
       "Jestem studentką AI II stopnia, w kole ponad 2 lata, biorę udział w projektach researchowych w kole",
     tags: ["Computer Vision"],
     image: "/prelegenci/julia_farganus.png",
+  },
+  {
+    name: "Dominik Galus",
+    role: "Członek koła",
+    company: "KN Solvro",
+    topic: "XAI w wizji komputerowej i 3D: Jak zrozumieć decyzje AI?",
+    description:
+      "student 3 roku informatyki algorytmicznej (inżynierka), członek w kole naukowym Solvro przy uczeniu maszynowym od roku. Zaangażowany w projekty researchowe",
+    tags: ["Computer Vision"],
+    image: "/prelegenci/dominik_galus.jpg",
   },
   
 

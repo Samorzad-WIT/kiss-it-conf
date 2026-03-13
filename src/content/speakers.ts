@@ -57,7 +57,7 @@ export const speakers: Speaker[] = [
     company: "Capgemini",
     topic: "Low-code/No-code - skrót do świata aplikacji",
     description:
-      "",
+      "Jurand Kołodziej - Ekspert w obszarze technologii low-code i no-code. Pokazuje, że do budowania aplikacji wspierających realne procesy kluczowe są logiczne myślenie i komunikacja, a nie lata nauki programowania.",
     tags: ["Low-code/No-code"],
     image: "/prelegenci/jurand_kolodziej.jpg",
   },
@@ -100,6 +100,16 @@ export const speakers: Speaker[] = [
       "Specjalista techniczny rozwiązań Copilot, AI Business Solutions Microsoft Jacek Czeszewski od ponad pięciu lat pracuje w firmie Microsoft, gdzie pełni rolę Technical Specialist w obszarze Copilot i Modern Workplace. Wcześniej zdobywał doświadczenie w międzynarodowej organizacji oraz u integratora IT, wspierając klientów w transformacji cyfrowej i wdrażaniu rozwiązań chmurowych.",
     tags: ["Copilot"],
     image: "prelegenci/jacek_czeszewski.jpg",
+  },
+  {
+    name: "Jan Goleński",
+    role: "Project Manager",
+    company: "IDENTT",
+    topic: "mObywatel Europa - jak regulacje prawne definiują projekty i biznes",
+    description:
+      "Project Manager w firmie IDENTT oraz audytor wewnętrzny ISO 27001. Prowadzi projekty wdrożeniowe weryfikacji tożsamości dla sektora telekomunikacyjnego i finansowego, wykorzystując rozwiązania oparte na biometrii, eID oraz aplikacji mObywatel.",
+    tags: ["Law & Tech"],
+    image: "/prelegenci/jan_golenski.jpg",
   },
   {
     name: "Bartłomiej Gawryszczuk",
@@ -241,6 +251,34 @@ export const speakers: Speaker[] = [
     tags: ["Computer Vision"],
     image: "/prelegenci/dominik_galus.jpg",
   },
-  
-
+  {
+    name: "Jakub Porada",
+    role: "Student",
+    company: "KN PM Group",
+    topic: "Managing up - Zarządzanie swoim szefem",
+    description:
+      "Student III roku Informatyki Stosowanej na Politechnice Wrocławskiej. Członek sekcji Partnerów i Kontaktów w KN PMG, gdzie szuka połączeń między światem akademickim a biznesem. Swoje zacięcie trenerskie w obszarze kompetencji miękkich rozwija w organizacji 4S.",
+    tags: ["Soft Skills"],
+    image: "/prelegenci/jakub_porada.jpg",
+  },
+  {
+    name: "Magdalena Skoczek",
+    role: "Wiceprezes",
+    company: "KN PM Group",
+    topic: "Managing up - Zarządzanie swoim szefem",
+    description:
+      "Studentka III roku Zarządzania na Politechnice Wrocławskiej i Wiceprezes KN PMG. Jako Koordynator Główny największej konferencji z dziedziny project managementu na Wydziale Zarządzania, przeprowadziła zespół przez pełen cykl życia projektu. Doświadczenie wykorzystuje w pracy jako Junior Project Assistant.",
+    tags: ["Soft Skills"],
+    image: "/prelegenci/magdalena_skoczek.jpg",
+  },
+  {
+    name: "Marta Zakierska",
+    role: "Koordynator",
+    company: "KN PM Group",
+    topic: "Managing up - Zarządzanie swoim szefem",
+    description:
+      "Studentka III roku Zarządzania na Politechnice Wrocławskiej i Koordynator Sekcji Finansów i Logistyki w KN PMG. Na co dzień pełni rolę Wsparcia Projektowego, łącząc zaangażowanie akademickie z praktyką w realizacji złożonych zadań oraz doskonaleniem umiejętności miękkich.",
+    tags: ["Soft Skills"],
+    image: "/prelegenci/marta_zakierska.jpg",
+  },
 ];

@@ -17,7 +17,7 @@ export const speakers: Speaker[] = [
     company: "WCSS",
     topic: "Tu liczy się wszystko: Wprowadzenie do komputerów dużej mocy",
     description:
-      "",
+      "IT Specialist i HPC Engineer w WCSS. Odpowiada za utrzymanie infrastruktury klastra, systemy Linux oraz pionierskie rozwiązania dla AI large model training. Specjalizuje się w dostarczaniu zasobów obliczeniowych dużej mocy oraz automatyzacji procesów wdrożeniowych.",
     tags: ["HPC"],
     image: "/prelegenci/anton_tustanowski.jpg",
   },
@@ -241,8 +241,6 @@ export const speakers: Speaker[] = [
     tags: ["Computer Vision"],
     image: "/prelegenci/julia_farganus.png",
   },
-<<<<<<< Updated upstream
-=======
   {
     name: "Dominik Galus",
     role: "Członek koła",
@@ -283,7 +281,4 @@ export const speakers: Speaker[] = [
     tags: ["Soft Skills"],
     image: "/prelegenci/marta_zakierska.jpg",
   },
->>>>>>> Stashed changes
-  
-
 ];

@@ -49,7 +49,7 @@ export const agenda: AgendaDay[] = [
                 s5: {
                     title: "Managing up - Zarządzanie swoim szefem",
                     speaker: "Marta Zakierska, Magdalena Skoczek, Jakub Porada",
-                    company: "BNY",
+                    company: "KN PM Group",
                     endTime: "11:15",
                     description: "Instrukcja obsługi Twojego PM-a, czyli jak komunikować się skutecznie ze swoim Project Managerem. "
                 },
@@ -115,7 +115,7 @@ export const agenda: AgendaDay[] = [
                 s3: {
                     title: "Jak zbudować swoją markę osobistą w globalnym korporacyjnym świecie technologii?",
                     speaker: "Aga Światowa",
-                    company: "WIBD",
+                    company: "Women in Big Data",
                     description: "Na rynku, gdzie tysiące świetnych inżynierów walczy o te same stanowiska, same twarde kompetencje nie wystarczą. W Google, Microsoft, czy Amazon nie awansuje ten, kto najlepiej pisze kod – awansuje ten, kto jest widoczny, rozpoznawalny i zapraszany do stołu, przy którym zapadają decyzje. Podczas tej 30-minutowej prelekcji dowiesz się: Dlaczego 'siedzenie cicho i robienie swoje' to najgorsza strategia kariery w międzynarodowej korporacji. Jak sprawić, żeby menedżerowie z USA, Niemiec czy Singapuru zapamiętali Twoje nazwisko – nawet jeśli pracujesz zdalnie z Wrocławia. Gdzie i jak pokazywać swoją ekspertyzę, żeby to Ty byłeś pierwszą osobą, którą pomyślą obsadzić przy prestiżowym projekcie. Konkretne narzędzia i platformy, które działają w globalnym techu – bez wstydu, bez nachalności, za to z efektem. To nie jest kolejna pogadanka o 'byciu sobą' i 'pasji'. To konkretna, 30-minutowa dawka strategii dla ludzi, którzy chcą, żeby ich kod, ich pomysły i ich kariera zostały zauważone na globalnym poziomie. Przyjdź, jeśli myślisz o karierze w międzynarodowym techu i nie chcesz być kolejnym anonimowym programistą w korporacyjnym tłumie."
                 },
                 s5: {
@@ -144,11 +144,11 @@ export const agenda: AgendaDay[] = [
                     company: "KISS IT",
                     endTime: "14:15",
                     speakerLabel: "Prowadzący",
-                    description: "Sztuczna inteligencja na stałe zrewolucjonizowała proces wytwarzania oprogramowania, stając się nieodłącznym narzędziem w codziennej pracy zespołów IT. Podczas panelu przeanalizujemy tę transformację – od szans na optymalizację pracy, po zupełnie nowe wyzwania, takie jak rosnący dług kognitywny (Cognitive Debt). Wspólnie zastanowimy się, jak w erze AI ewoluuje rola programisty, w jakim kierunku powinna zmierzać edukacja oraz jak zmieni się krajobraz rynku IT w perspektywie najbliższych 5 lat."
+                    description: "Sztuczna inteligencja na stałe zrewolucjonizowała proces wytwarzania oprogramowania, stając się nieodłącznym narzędziem w codziennej pracy zespołów IT. Podczas panelu przeanalizujemy tę transformację – od szans na optymalizację pracy, po zupełnie nowe wyzwania, takie jak rosnący dług kognitywny (Cognitive Debt). Wspólnie zastanowimy się, jak w erze AI ewoluuje rola programisty, w jakim kierunku powinna zmierzać edukacja oraz jak zmieni się krajobraz rynku IT w perspektywie najbliższych 5 lat. \n \nIgor Buszta - Prowadzący panel, \nMaciej Koszarek - Capgemini, \nKrzysztof Raszczuk - InsERT, \ndr inż. Piotr Syga - Identt, \ndr hab. inż. Adrianna Kozierkiewicz, \nWiktor Sadowy - doktorant, \nJulia Kapuścińska - studentka, była Wiceprezes KN Neuron"
                 },
                 s2: {
                     title: "mObywatel Europa - jak regulacje prawne definiują projekty i biznes",
-                    speaker: "IDENTT",
+                    speaker: "Jan Goleński",
                     company: "IDENTT",
                     description: "Dla współczesnego menedżera dogłębna analiza podstaw prawnych to nie tylko formalność, ale kluczowy, pierwszy etap projektowania innowacyjnego produktu. W dynamicznym świecie cyfrowej tożsamości regulacje przestają być ograniczeniem, a stają się fundamentem, na którym buduje się realną przewagę konkurencyjną. Prelekcja, oparta na projekcie mObywatel Europa, stanowi praktyczne studium przypadku (case study) powstawania największego systemu tożsamości cyfrowej w Europie i Polsce z perspektywy zarządczej. Celem wystąpienia jest pokazanie studentom, że w sektorach BigTech i FinTech prawo bezpośrednio definiuje ramy strategii biznesowej i projektu."
                 },
@@ -162,7 +162,7 @@ export const agenda: AgendaDay[] = [
                     title: "Wycieczka do serwerowni",
                     speaker: "WCSS",
                     company: "WCSS",
-                    description: "Podczas warsztatów pokażemy, jak w praktyce wygląda praca z superkomputerem. Przejdziemy przez przykładowy workflow zaczynając od logowania na klaster. Uruchomimy między innymi duży model językowy na mocnych kartach graficznych."
+                    description: "Zapraszamy na wyjątkowe zwiedzanie serwerowni Wrocławskiego Centrum Sieciowo-Superkomputerowego (WCSS) w ramach wydarzenia KISS-IT. Podczas wycieczki zobaczysz z bliska superkomputer Lem oraz innowacyjny komputer kwantowy Odra 5. Dowiesz się, jak te potężne maszyny napędzają polską naukę i na czym polega przełomowa technologia kwantowa. To niepowtarzalna okazja, by zajrzeć do serca cyfrowej infrastruktury Dolnego Śląska. Liczba miejsc jest ograniczona, więc zachęcamy do rejestracji podczas wydarzenia przy stoisku WCSS!"
                 }
             },
             {
@@ -184,15 +184,18 @@ export const agenda: AgendaDay[] = [
                     company: "KN White Hats",
                     description: "KN White Hats od kilku lat zajmuje się organizacją Break The Syntax CTF - jednego z największych podobnych turniejów w Polsce. Członkowie Koła opowiedzą o wydarzeniu od strony technicznej i przedstawią swoją historię: od początkowych zmagań do platformy obługującej 4000 graczy."
                 },
-<<<<<<< Updated upstream
-=======
                 s4: {
                     title: "Tu liczy się wszystko: Wprowadzenie do komputerów dużej mocy",
                     speaker: "Anton Tustanowski",
                     company: "WCSS",
                     description: "Podczas warsztatów pokażemy, jak w praktyce wygląda praca z superkomputerem. Przejdziemy przez przykładowy workflow zaczynając od logowania na klaster. Uruchomimy między innymi duży model językowy na mocnych kartach graficznych. \n Zapisy na stoisku wcss miejsca ograniczone."
                 },
->>>>>>> Stashed changes
+                s4: {
+                    title: "u liczy się wszystko: Wprowadzenie do komputerów dużej mocy",
+                    speaker: "Anton Tustanowski",
+                    company: "WCSS",
+                    description: "Podczas warsztatów pokażemy, jak w praktyce wygląda praca z superkomputerem. Przejdziemy przez przykładowy workflow zaczynając od logowania na klaster. Uruchomimy między innymi duży model językowy na mocnych kartach graficznych. \n Zapisy na stoisku wcss miejsca ograniczone"
+                },
                 s5: {
                     title: "Neuromodulacja: kiedy technologia wchodzi do układu nerwowego",
                     speaker: "Pola Nowak",
@@ -222,7 +225,7 @@ export const agenda: AgendaDay[] = [
                 s3: {
                     title: "Jak zdobyć PIERWSZĄ pracę jako programista?",
                     speaker: "Bartosz Gotowski",
-                    company: "TechTree",
+                    company: "KN Solvro",
                     description: "Masz problem ze znalezieniem pracy w IT i wysyłanie CV nic nie daje? W tej prelekcji pokazuję konkretne metody, które pomogły 6 studentom zdobyć pracę mimo trudnego rynku dla juniorów (także przez AI): cold DM-y do founderów, skuteczne rozmowy rekrutacyjne i sensowne follow-upy, gdy rekruterzy milczą."
                 },
                 s4: {

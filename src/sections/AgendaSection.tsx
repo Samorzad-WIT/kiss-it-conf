@@ -122,7 +122,7 @@ const RoomsAccordion = ({ slot, endTime }: { slot: AgendaTimeSlot; endTime?: str
                                         )}
 
                                         {talk.description ? (
-                                            <p className="text-gray-300 text-sm md:text-base leading-relaxed font-sans">
+                                            <p className="text-gray-300 text-sm md:text-base leading-relaxed font-sans whitespace-pre-line">
                                                 {talk.description}
                                             </p>
                                         ) : (
@@ -252,7 +252,7 @@ export const AgendaSection = () => {
                                         <div className="border border-[#6715ff]/40 bg-[#2d1257] rounded-xl p-5 shadow-[0_0_15px_rgba(103,21,255,0.15)]">
                                             <div className="flex items-center gap-2 mb-2">
                                                 <span className="text-ms font-display text-white bg-gradient-to-r from-[#fd00ff] to-[#6715ff] px-2 py-0.5 rounded tracking-widest uppercase">
-                                                    1AC
+                                                    10AC
                                                 </span>
                                             </div>
 
@@ -273,7 +273,7 @@ export const AgendaSection = () => {
                                                 </p>
                                             )}
                                             {slot.allRooms.description && (
-                                                <p className="text-gray-300 text-sm md:text-base leading-relaxed font-sans mt-2">
+                                                <p className="text-gray-300 text-sm md:text-base leading-relaxed font-sans mt-2 whitespace-pre-line">
                                                     {slot.allRooms.description}
                                                 </p>
                                             )}

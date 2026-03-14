@@ -190,12 +190,6 @@ export const agenda: AgendaDay[] = [
                     company: "WCSS",
                     description: "Podczas warsztatów pokażemy, jak w praktyce wygląda praca z superkomputerem. Przejdziemy przez przykładowy workflow zaczynając od logowania na klaster. Uruchomimy między innymi duży model językowy na mocnych kartach graficznych. \n Zapisy na stoisku wcss miejsca ograniczone."
                 },
-                s4: {
-                    title: "u liczy się wszystko: Wprowadzenie do komputerów dużej mocy",
-                    speaker: "Anton Tustanowski",
-                    company: "WCSS",
-                    description: "Podczas warsztatów pokażemy, jak w praktyce wygląda praca z superkomputerem. Przejdziemy przez przykładowy workflow zaczynając od logowania na klaster. Uruchomimy między innymi duży model językowy na mocnych kartach graficznych. \n Zapisy na stoisku wcss miejsca ograniczone"
-                },
                 s5: {
                     title: "Neuromodulacja: kiedy technologia wchodzi do układu nerwowego",
                     speaker: "Pola Nowak",

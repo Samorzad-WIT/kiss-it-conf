@@ -32,14 +32,24 @@ export const speakers: Speaker[] = [
     image: "none",
   },
   {
-    name: "Zuzanna Banasik",
-    role: "Analityk",
+    name: "Zuzanna Banaś",
+    role: "Analityczka",
     company: "BNY",
     topic: "Soft Skills for Hard Engineers: Komunikacja w globalnych projektach technologicznych",
     description:
       "Jestem Analitykiem w zespole Fund & Investor Solutions w BNY, gdzie pracuję od sierpnia 2024 roku. W swojej roli wspieram operacje funduszy oraz dostarczam analizy, które pomagają w podejmowaniu skutecznych decyzji dla klientów globalnych.",
     tags: ["Fund Compliance"],
     image: "none",
+  },
+  {
+    name: "Anna Kordiał-Paradowska",
+    role: "",
+    company: "WPT",
+    topic: "Wrocławski Park Technologiczny. Zobacz, jak wspieramy biznes.",
+    description:
+      "Przedstawienie pełnej oferty WPT, ze szczególnym uwzględnieniem Inkubatorów Przedsiębiorczości WPT oraz Strefy Informacji Biznesowej, czyli nasze wsparcie dla Start Up-ów.",
+    tags: ["WPT"],
+    image: "/prelegenci/anna_kordial_paradowska.png",
   },
   {
     name: "Maciej Małecki",
@@ -52,7 +62,7 @@ export const speakers: Speaker[] = [
     image: "/prelegenci/maciej_malecki.jpg",
   },
   {
-    name: "Jurand Kołodziej",
+    name: "Jurand Kołodziej", 
     role: "",
     company: "Capgemini",
     topic: "Low-code/No-code - skrót do świata aplikacji",
@@ -69,7 +79,7 @@ export const speakers: Speaker[] = [
     description:
       "Opowiem o tym, dlaczego uwierzytelnianie oparte na unikalnych cechach człowieka – ze szczególnym uwzględnieniem biometrii tęczówki oka i twarzy – to nie pieśń przyszłości, ale rewolucja, która dzieje się na naszych oczach.",
     tags: ["Biometrics"],
-    image: "none",
+    image: "/prelegenci/daniel_jarzab.jpeg",
   },
   {
     name: "Maciej Procyk",

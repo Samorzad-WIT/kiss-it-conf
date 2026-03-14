@@ -63,15 +63,15 @@ export const agenda: AgendaDay[] = [
                 time: "10:45",
                 s1: {
                     title: "Soft Skills for Hard Engineers: Komunikacja w globalnych projektach technologicznych",
-                    speaker: "Zuzanna Banas, Radoslaw Tertel",
+                    speaker: "Zuzanna Banaś, Radoslaw Tertel",
                     company: "BNY",
                     description: "Technologia łączy nas w ułamku sekundy, ale to różnice kulturowe często decydują o sukcesie projektów. Podczas prelekcji dowiecie się, dlaczego komunikacja w globalnych, rozproszonych zespołach IT wciąż sprawia trudności. Pokażemy, jak budować porozumienie, trafnie odczytywać intencje biznesu i skutecznie 'czytać atmosferę' w międzynarodowym środowisku technologicznym."
                 },
                 s2: {
-                    title: "Prelekcja WPT",
-                    speaker: "Marta Cinciala",
+                    title: "Wrocławski Park Technologiczny. Zobacz, jak wspieramy biznes.",
+                    speaker: "Anna Kordiał-Paradowska",
                     company: "WPT",
-                    description: ""
+                    description: "Przedstawienie pełnej oferty WPT, ze szczególnym uwzględnieniem Inkubatorów Przedsiębiorczości WPT oraz Strefy Informacji Biznesowej, czyli nasze wsparcie dla Start Up-ów."
                 },
                 s3: {
                     title: "Black-box optimization: gdy nie znamy wzoru, a musimy znaleźć najlepsze rozwiązanie",

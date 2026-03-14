@@ -154,7 +154,7 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.45, ease: "easeOut" }}
-              className="absolute inset-0 z-10 flex flex-col justify-center p-6 overflow-y-auto rounded-lg"
+              className="absolute inset-0 z-10 flex flex-col p-6 overflow-hidden rounded-lg"
               style={{
                 background:
                   "linear-gradient(180deg, rgba(0,0,24,0.95) 0%, rgba(102,20,122,0.4) 100%)",
@@ -170,7 +170,7 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
                 }}
               />
 
-              <div className="relative z-10">
+              <div className="relative z-10 my-auto overflow-y-auto scrollbar-hide" style={{ scrollbarWidth: "none" }}>
                 <h3 className="text-lg font-bold text-white font-sans mb-1">{speaker.name}</h3>
                 <span className="text-[#24ff54] font-display text-sm mb-3 block">
                   {`// ${speaker.company}`}

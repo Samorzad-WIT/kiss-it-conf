@@ -281,4 +281,24 @@ export const speakers: Speaker[] = [
     tags: ["Soft Skills"],
     image: "/prelegenci/marta_zakierska.jpg",
   },
+  {
+    name: "Ewa Kasprzak",
+    role: "Wiceprezes ds. biznesu i zasobów ludzkich",
+    company: "PWr In Space",
+    topic: "Houston, mamy problem... czyli gdy komunikacja zawodzi w kosmosie",
+    description:
+      "Nazywam się Ewa Kasprzak. W Kole Naukowym PWr in Space pełnię funkcję wiceprezesa ds. biznesu i zasobów ludzkich. Dodatkowo realizuję się technicznie jako lider projektu ASTRA, projektu hamulców aerodynamicznych zintegrowanych z algorytmem predykcji apogeum, który umożliwia precyzyjne osiągnięcie założonej wysokości lotu rakiety. Działam również w dziale Elektroniki i Software’u, gdzie zajmuję się tworzeniem aplikacji do komunikacji między stacją naziemną a rakietą oraz oprogramowaniem dla modułu pitot, odpowiedzialnego za zbieranie danych aerodynamicznych w celu określania wysokości i prędkości rakiety. Na co dzień studiuję na Politechnice Wrocławskiej na kierunku Informatyczne Systemy Automatyki oraz pracuję w firmie CancerCenter.ai, która zajmuje się tworzeniem oprogramowania wspomagającego patomorfologów w analizie obrazów histopatologicznych",
+    tags: ["SpaceTech"],
+    image: "/prelegenci/ewa_kasprzak.jpeg",
+  },
+  {
+    name: "Maciej Binczarowski",
+    role: "Członek koła",
+    company: "PWr In Space",
+    topic: "Houston, mamy problem... czyli gdy komunikacja zawodzi w kosmosie",
+    description:
+      "Nazywam się Maciej Binczarowski. Jestem członkiem działu Elektroniki i Software’u w Kole Naukowym PWr in Space. Aktualnie zajmuję się projektowaniem systemu zdalnego programowania płytek elektronicznych na launch padzie oraz monitorowania ich pracy. Współtworzę również system autonomicznej anteny śledzącej rakietę, którego celem jest optymalizacja komunikacji pomiędzy stacją naziemną a rakietą podczas lotu. Poza działalnością w kole studiuję na drugim stopniu studiów na kierunku Informatyczne Systemy Automatyki na Politechnice Wrocławskiej. Prywatnie dużo biegam, uprawiam różne sporty oraz hobbystycznie poszerzam swoją wiedzę na temat ludzkiego mózgu.",
+    tags: ["Software Dev"],
+    image: "/prelegenci/maciej_binczarowski.jpeg",
+  },
 ];

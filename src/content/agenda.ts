@@ -84,7 +84,7 @@ export const agenda: AgendaDay[] = [
                     speaker: "Jurand Kołodziej",
                     company: "Capgemini",
                     endTime: "12:00",
-                    description: "Na warsztatach pokażemy, jak w szybki i prosty sposób stworzyć działającą aplikację w platformie Mendix. Uczestnicy poznają podstawy tworzenia modelu danych (domain model), budowania ekranów aplikacji oraz konfiguracji ról użytkowników i uprawnień. Omówimy też, jak wykorzystać gotowe moduły z Marketplace, które przyspieszają tworzenie funkcjonalności. Warsztaty pokażą, że do budowania aplikacji nie potrzeba lat doświadczenia programistycznego — najważniejsze są logiczne myślenie, zrozumienie procesu i umiejętne korzystanie z narzędzi low-code."
+                    description: "Na warsztatach pokażemy, jak w szybki i prosty sposób stworzyć działającą aplikację w platformie Mendix. Uczestnicy poznają podstawy tworzenia modelu danych (domain model), budowania ekranów aplikacji oraz konfiguracji ról użytkowników i uprawnień. Omówimy też, jak wykorzystać gotowe moduły z Marketplace, które przyspieszają tworzenie funkcjonalności. Warsztaty pokażą, że do budowania aplikacji nie potrzeba lat doświadczenia programistycznego — najważniejsze są logiczne myślenie, zrozumienie procesu i umiejętne korzystanie z narzędzi low-code. \n\n Prerequisit: \n- Laptop \n- Mendix 10.24.15"
                 },
                 s6: {
                     title: "Wycieczka do serwerowni",

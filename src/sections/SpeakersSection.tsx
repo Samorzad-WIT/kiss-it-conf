@@ -134,7 +134,7 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
               <p className="text-gray-400 text-sm mb-3 font-sans leading-tight">
                 {speaker.role}
               </p>
-              <p className="text-white text-sm font-medium border-l-2 border-[#fd00ff] pl-2 line-clamp-2">
+              <p className="text-white text-sm font-medium border-l-2 border-[#fd00ff] pl-2">
                 {speaker.topic}
               </p>
             </div>

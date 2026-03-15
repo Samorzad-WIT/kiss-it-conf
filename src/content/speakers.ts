@@ -218,7 +218,7 @@ export const speakers: Speaker[] = [
     topic: "Jak zdobyć PIERWSZĄ pracę jako programista?",
     description:
       "Senior Product Engineer z TechTree - startupu rekrutacyjnego, który szuka pracowników dla firm takich jak ElevenLabs czy Klarna. Pomagam ludziom wejść do branży IT od 2023 roku, szkolę ludzi z pisania najlepszych CV’ek i zaciekawienia rekrutera w ciągu 5 sekund, które poświęcają na waszą aplikacje. Wsparłem ponad 15 osób w znalezieniu ich pierwszej pracy i mam nadzieję, że Ty będziesz kolejny/a:)",
-    tags: ["TI jobs"],
+    tags: ["IT jobs"],
     image: "/prelegenci/bartosz_gotowski.jpeg",
   },
   {

@@ -161,7 +161,7 @@ export const agenda: AgendaDay[] = [
                 s4: {
                     title: "\"It's not a bug, it's a feature\": O regularyzacji niejawnej",
                     speaker: "Dominik Jur",
-                    company: "Nokia",
+                    company: "KN Gauss",
                     description: "Prezentacja omawia niejawna regularyzację - zjawisko, w którym algorytmy optymalizacyjne, bez jawnego członu regularyzującego, preferują pewne rozwiązania, które lepiej generalizują.\n\nW Gradient Descent dyskretyzacja kroku jest równoważna dodaniu członu karzącego duże normy gradientu. Algorytm unika stromych regionów, co wyjaśnia lepszą generalizację przy większych krokach.\n\nW Stochastic Gradient Descent pojawia się dodatkowy człon regularyzujący, proporcjonalny do wariancji gradientów batcha. SGD wybiera minima, w których dane są stabilne, co sprzyja lepszej generalizacji.\n\nSłowa kluczowe:\n- Uczenie Maszynowe\n- Sieci Neuronowe\n- Optymalizacja"
                 },
                 s6: {

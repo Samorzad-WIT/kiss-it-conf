@@ -49,4 +49,10 @@ export const kolaNaukowe: KoloNaukowe[] = [
     logo: "/kola_naukowe/whitehats.png",
     label: "Koło Naukowe",
   },
+  {
+    name: "PWr In Space",
+    url: "https://pwrinspace.pwr.edu.pl/",
+    logo: "/kola_naukowe/pwr-in-space.png",
+    label: "Koło Naukowe",
+  },
 ];

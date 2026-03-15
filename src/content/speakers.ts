@@ -262,6 +262,16 @@ export const speakers: Speaker[] = [
     image: "/prelegenci/dominik_galus.jpg",
   },
   {
+    name: "Dominik Jur",
+    role: "Prezes Koła \"GAUSS\", Inżynier Danych",
+    company: "GAUSS",
+    topic: "\"It's not a bug, it's a feature\": O regularyzacji niejawnej",
+    description:
+      "Jestem studentem 1 stopnia Matematyki Stosowanej i Prezesem Koła \"GAUSS\". Pracuję w Nokii jako Inżynier Danych i prowadzę badania w Center for C-SPAN Scholarship & Engagement dotyczące Polaryzacji w USA",
+    tags: ["Data Engineering"],
+    image: "/prelegenci/dominik_jur.jpg",
+  },
+  {
     name: "Jakub Porada",
     role: "Student",
     company: "KN PM Group",

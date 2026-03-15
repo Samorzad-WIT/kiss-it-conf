@@ -158,6 +158,12 @@ export const agenda: AgendaDay[] = [
                     company: "Microsoft",
                     description: "Generatywna sztuczna inteligencja może dziś wspierać studentów nie tylko w nauce, ale również w przygotowaniu do wejścia na rynek pracy. Podczas tej sesji pokażemy, jak Microsoft Copilot może pełnić rolę osobistego asystenta studenta – pomagając w: analizie materiałów dydaktycznych i notatek z zajęć, przygotowaniu prezentacji i raportów projektowych, streszczaniu artykułów naukowych i dokumentacji, tworzeniu profesjonalnego CV i listu motywacyjnego, przygotowaniu do rozmów rekrutacyjnych, wyszukiwaniu ofert pracy i dopasowaniu kompetencji do wymagań pracodawców. \n Na praktycznych przykładach zobaczysz, jak wykorzystać AI do pracy indywidualnej i zespołowej oraz jak świadomie budować swoją przewagę konkurencyjną jeszcze w trakcie studiów."
                 },
+                s4: {
+                    title: "\"It's not a bug, it's a feature\": O regularyzacji niejawnej",
+                    speaker: "Dominik Jur",
+                    company: "Nokia",
+                    description: "Prezentacja omawia niejawna regularyzację - zjawisko, w którym algorytmy optymalizacyjne, bez jawnego członu regularyzującego, preferują pewne rozwiązania, które lepiej generalizują.\n\nW Gradient Descent dyskretyzacja kroku jest równoważna dodaniu członu karzącego duże normy gradientu. Algorytm unika stromych regionów, co wyjaśnia lepszą generalizację przy większych krokach.\n\nW Stochastic Gradient Descent pojawia się dodatkowy człon regularyzujący, proporcjonalny do wariancji gradientów batcha. SGD wybiera minima, w których dane są stabilne, co sprzyja lepszej generalizacji.\n\nSłowa kluczowe:\n- Uczenie Maszynowe\n- Sieci Neuronowe\n- Optymalizacja"
+                },
                 s6: {
                     title: "Wycieczka do serwerowni",
                     speaker: "WCSS",
@@ -188,6 +194,7 @@ export const agenda: AgendaDay[] = [
                     title: "Tu liczy się wszystko: Wprowadzenie do komputerów dużej mocy",
                     speaker: "Anton Tustanowski",
                     company: "WCSS",
+                    endTime: "15:00",
                     description: "Podczas warsztatów pokażemy, jak w praktyce wygląda praca z superkomputerem. Przejdziemy przez przykładowy workflow zaczynając od logowania na klaster. Uruchomimy między innymi duży model językowy na mocnych kartach graficznych. \n Zapisy na stoisku wcss miejsca ograniczone."
                 },
                 s5: {

@@ -59,6 +59,12 @@ export const partners: Partner[] = [
         url: "https://www.technologpark.pl",
         tier: "other",
     },
+    {
+        name: "PPG",
+        logo: "partners/other/ppg.png",
+        url: "https://www.ppg.com/pl-PL",
+        tier: "other",
+    },
 ];
 
 /** Konfiguracja wyświetlania poziomów partnerskich */

@@ -264,7 +264,7 @@ export const speakers: Speaker[] = [
   {
     name: "Dominik Jur",
     role: "Prezes Koła \"GAUSS\", Inżynier Danych",
-    company: "GAUSS",
+    company: "KN GAUSS",
     topic: "\"It's not a bug, it's a feature\": O regularyzacji niejawnej",
     description:
       "Jestem studentem 1 stopnia Matematyki Stosowanej i Prezesem Koła \"GAUSS\". Pracuję w Nokii jako Inżynier Danych i prowadzę badania w Center for C-SPAN Scholarship & Engagement dotyczące Polaryzacji w USA",

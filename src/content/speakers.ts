@@ -29,7 +29,7 @@ export const speakers: Speaker[] = [
     description:
       "Jestem Analitykiem w BNY, gdzie od września 2025 roku pracuję w zespołach Fund & Investor Solutions oraz Fund Compliance. Moja rola koncentruje się na analizie zgodności portfeli inwestycyjnych funduszy i ETF-ów, dostarczając wniosków, które wzmacniają kontrolę ryzyka i wspierają skuteczny nadzór nad portfelami.",
     tags: ["Investor Solutions"],
-    image: "none",
+    image: "/prelegenci/radoslaw_tertel.jpg",
   },
   {
     name: "Zuzanna Banaś",
@@ -39,7 +39,7 @@ export const speakers: Speaker[] = [
     description:
       "Jestem Analitykiem w zespole Fund & Investor Solutions w BNY, gdzie pracuję od sierpnia 2024 roku. W swojej roli wspieram operacje funduszy oraz dostarczam analizy, które pomagają w podejmowaniu skutecznych decyzji dla klientów globalnych.",
     tags: ["Fund Compliance"],
-    image: "none",
+    image: "/prelegenci/zuzanna_banas.jpg",
   },
   {
     name: "Anna Kordiał-Paradowska",

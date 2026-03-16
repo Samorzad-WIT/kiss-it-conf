@@ -44,7 +44,7 @@ export const agenda: AgendaDay[] = [
                     title: "XAI w wizji komputerowej i 3D: Jak zrozumieć decyzje AI?",
                     speaker: "Julia Farganus, Dominik Galus",
                     company: "KN Solvro",
-                    description: "Jak zaufać 'czarnej skrzynce', gdy modele stają się coraz bardziej złożone? Podczas warsztatu przyjrzymy się technikom wyjaśnialnej sztucznej inteligencji (XAI), które pozwalają zajrzeć w głąb sieci neuronowych. Uczestnicy zobaczą, jak metody te sprawdzają się w analizie obrazu oraz w nowoczesnym modelowaniu 3D, w tym w chmurach punktów i Gaussian Splattingu."
+                    description: "Jak zaufać 'czarnej skrzynce', gdy modele stają się coraz bardziej złożone? Podczas warsztatu przyjrzymy się technikom wyjaśnialnej sztucznej inteligencji (XAI), które pozwalają zajrzeć w głąb sieci neuronowych. Uczestnicy zobaczą, jak metody te sprawdzają się w analizie obrazu oraz w nowoczesnym modelowaniu 3D, w tym w chmurach punktów i Gaussian Splattingu. n\n\Mile widziany na warsztatach jest własny laptop."
                 },
                 s5: {
                     title: "Managing up - Zarządzanie swoim szefem",
@@ -77,7 +77,7 @@ export const agenda: AgendaDay[] = [
                     title: "Black-box optimization: gdy nie znamy wzoru, a musimy znaleźć najlepsze rozwiązanie",
                     speaker: "Jakub Czajkowski, Piotr Zatwarnicki, Konrad Waszczuk, Alik Stepaniuk",
                     company: "KN GANGStAS",
-                    description: "Podczas zajęć pokażemy, czym są problemy typu black box, w których nie znamy wzoru funkcji celu i możemy jedynie testować rozwiązania (np. w symulacji, eksperymencie lub systemie produkcyjnym). Uczestnicy dowiedzą się, dlaczego klasyczne metody optymalizacji wtedy zawodzą oraz jak algorytmy ewolucyjne potrafią efektywnie przeszukiwać zarówno przestrzenie ciągłe, jak i dyskretne. Na prostym przykładzie pokażemy intuicję działania selekcji, mutacji i uczenia się struktury problemu."
+                    description: "Podczas zajęć pokażemy, czym są problemy typu black box, w których nie znamy wzoru funkcji celu i możemy jedynie testować rozwiązania (np. w symulacji, eksperymencie lub systemie produkcyjnym). Uczestnicy dowiedzą się, dlaczego klasyczne metody optymalizacji wtedy zawodzą oraz jak algorytmy ewolucyjne potrafią efektywnie przeszukiwać zarówno przestrzenie ciągłe, jak i dyskretne. Na prostym przykładzie pokażemy intuicję działania selekcji, mutacji i uczenia się struktury problemu. n\n\Prerequisit: \n- Laptop lub telefon"
                 },
                 s4: {
                     title: "Mendix - tworzenie aplikacji dla każdego",
@@ -233,7 +233,7 @@ export const agenda: AgendaDay[] = [
                     title: "Workflow w 30 minut: Pierwsze kroki z automatyzacją w n8n",
                     speaker: "Mateusz Andrzejewski, Jakub Dobrzański, Igor Olewicz",
                     company: "KN Algo",
-                    description: "Naucz się jak za pomocą n8n zautomatyzować codzienne zadania."
+                    description: "Naucz się jak za pomocą n8n zautomatyzować codzienne zadania. Prerequisit: \n- Laptop \n- Doker Desktop n\- Konto Discord" 
                 },
                 s5: {
                     title: "Reinforcement learning - czyli czemu deepseek pokonał OpenAI",

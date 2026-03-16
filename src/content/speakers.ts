@@ -3,7 +3,7 @@ import type { Speaker } from "./types";
 export const speakers: Speaker[] = [
   {
     name: "Aga Światowa",
-    role: "Założycielka",
+    role: "Założycielka Women in Big Data Poland",
     company: "WIBD",
     topic: "Jak zbudować swoją markę osobistą w globalnym korporacyjnym świecie technologii?",
     description:
@@ -48,7 +48,7 @@ export const speakers: Speaker[] = [
     topic: "Wrocławski Park Technologiczny. Zobacz, jak wspieramy biznes.",
     description:
       "Przedstawienie pełnej oferty WPT, ze szczególnym uwzględnieniem Inkubatorów Przedsiębiorczości WPT oraz Strefy Informacji Biznesowej, czyli nasze wsparcie dla Start Up-ów.",
-    tags: ["WPT"],
+    tags: [""],
     image: "/prelegenci/anna_kordial_paradowska.png",
   },
   {
@@ -148,7 +148,7 @@ export const speakers: Speaker[] = [
     topic: "Workflow w 30 minut: Pierwsze kroki z automatyzacją w n8n",
     description:
       "Student II stopnia Informatyki Technicznej, zainteresowany nowoczesnymi technologiami, sztuczną inteligencją oraz zastosowaniami druku 3D. Koncentruje się na projektowaniu funkcjonalnych rozwiązań, łącząc software z praktycznym podejściem inżynierskim.",
-    tags: ["3D Printing"],
+    tags: ["Automation"],
     image: "/prelegenci/mateusz_andrzejewski.jpeg",
   },
   {
@@ -228,7 +228,7 @@ export const speakers: Speaker[] = [
     topic: "Od pomysłu do rozwiązania, czyli design thinking w praktyce",
     description:
       "Cześć! Od 5 lat łączę doświadczenie zawodowe z energią inicjatyw studenckich, którą rozwijałem m.in. jako prezes KN Solvro. Brałem udział w dziesiątkach projektów, gdzie zobaczyłem, jak przejść drogę od pomysłu do aplikacji. Pokażę Wam realne przypadki, z którymi mierzyłem się w biznesie i projektach studenckich, a potem wspólnie zastosujemy Design Thinking w praktyce.",
-    tags: ["TI jobs"],
+    tags: ["IT jobs"],
     image: "/prelegenci/dawid_linek.png",
   },
   // {

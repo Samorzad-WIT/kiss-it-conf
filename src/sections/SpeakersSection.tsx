@@ -70,7 +70,7 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
               {speaker.topic}
             </p>
             <div className="flex items-center gap-1.5 mt-auto pt-1.5">
-              {speaker.tags.slice(0, 1).map((tag) => (
+              {speaker.tags.filter(t => t).slice(0, 1).map((tag) => (
                 <Badge key={`${speaker.name}-${tag}`}>{tag}</Badge>
               ))}
               {speaker.description && (
@@ -139,7 +139,7 @@ const SpeakerCard = ({ speaker }: { speaker: Speaker }) => {
               </p>
             </div>
             <div className="flex flex-wrap gap-2 mt-3">
-              {speaker.tags.slice(0, 1).map((tag) => (
+              {speaker.tags.filter(t => t).slice(0, 1).map((tag) => (
                 <Badge key={`${speaker.name}-${tag}`}>{tag}</Badge>
               ))}
             </div>

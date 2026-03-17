@@ -190,13 +190,6 @@ export const agenda: AgendaDay[] = [
                     company: "KN White Hats",
                     description: "KN White Hats od kilku lat zajmuje się organizacją Break The Syntax CTF - jednego z największych podobnych turniejów w Polsce. Członkowie Koła opowiedzą o wydarzeniu od strony technicznej i przedstawią swoją historię: od początkowych zmagań do platformy obługującej 4000 graczy."
                 },
-                s4: {
-                    title: "Tu liczy się wszystko: Wprowadzenie do komputerów dużej mocy",
-                    speaker: "Anton Tustanowski",
-                    company: "WCSS",
-                    endTime: "15:00",
-                    description: "Podczas warsztatów pokażemy, jak w praktyce wygląda praca z superkomputerem. Przejdziemy przez przykładowy workflow zaczynając od logowania na klaster. Uruchomimy między innymi duży model językowy na mocnych kartach graficznych. \n Zapisy na stoisku wcss miejsca ograniczone."
-                },
                 s5: {
                     title: "Neuromodulacja: kiedy technologia wchodzi do układu nerwowego",
                     speaker: "Pola Nowak",

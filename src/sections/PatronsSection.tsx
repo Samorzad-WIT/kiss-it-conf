@@ -8,7 +8,7 @@ export const PatronsSection = () => {
     >
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 font-sans">
-          PATRONI
+          POPRZEDNI PATRONI
         </h2>
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-stretch">

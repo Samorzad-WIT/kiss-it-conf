@@ -104,6 +104,6 @@ export const partnerCta = {
 
 /** Nagłówek sekcji */
 export const partnersSectionHeader = {
-    title: "PARTNERZY WYDARZENIA",
+    title: "POPRZEDNI PARTNERZY WYDARZENIA",
     subtitle: "Wspólnie tworzymy wyjątkowe doświadczenie dla społeczności IT",
 };

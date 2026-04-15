@@ -8,7 +8,7 @@ export const BarterySection = () => {
         >
             <div className="max-w-7xl mx-auto px-6 text-center">
                 <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 font-sans">
-                    WSPÓŁPRACE BARTEROWE
+                    POPRZEDNIE WSPÓŁPRACE BARTEROWE
                 </h2>
 
                 <div className="grid grid-cols-[repeat(auto-fit,11rem)] md:grid-cols-[repeat(auto-fit,12rem)] justify-center gap-8">

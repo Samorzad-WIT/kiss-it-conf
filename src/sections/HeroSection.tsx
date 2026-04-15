@@ -2,7 +2,7 @@ import { motion, type Variants } from 'framer-motion';
 import { Calendar, MapPin } from 'lucide-react';
 import { NeonButton } from '../components/ui/NeonButton';
 import { GlitchHeader } from '../components/ui/GlitchHeader';
-import { CountdownTimer } from '../components/ui/CountdownTimer';
+
 import { RetroShapes } from '../components/ui/RetroShapes';
 import { heroData } from '../content';
 
@@ -28,8 +28,6 @@ const itemVariants: Variants = {
 };
 
 export const HeroSection = () => {
-  const conferenceDate = new Date(heroData.conferenceDate);
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#000018] pt-20">
       {/* Siatka z przekątnym rozmyciem przez całą siatkę */}
@@ -74,16 +72,13 @@ export const HeroSection = () => {
           <div className="flex items-center gap-3"><MapPin className="text-[#24ff54] w-6 h-6" /><span className="text-lg">{heroData.location}</span></div>
         </motion.div>
 
-        {/* Countdown Timer */}
         <motion.div variants={itemVariants} className="mb-12">
-          <p className="font-display text-s uppercase tracking-[0.3em] text-white/50 mb-4">
-            {/* if not live, when live remove it */}
-            {conferenceDate > new Date() ? "Do startu pozostało" : ""}
+          <p className="font-display text-2xl uppercase tracking-[0.3em] text-white/50">
+            POPRZEDNIA EDYCJA
           </p>
-          <CountdownTimer targetDate={conferenceDate} />
         </motion.div>
 
-        <motion.div variants={itemVariants}><NeonButton href={heroData.ctaLink}>{heroData.cta}</NeonButton></motion.div>
+        {/* <motion.div variants={itemVariants}><NeonButton href={heroData.ctaLink}>{heroData.cta}</NeonButton></motion.div> */}
       </motion.div>
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#000018] to-transparent" />
     </section>

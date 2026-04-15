@@ -4,7 +4,7 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { ParticlesBackground } from "./components/ui/ParticlesBackground";
 import { HeroSection } from "./sections/HeroSection";
-import { AgendaSection } from "./sections/AgendaSection";
+
 import { SpeakersSection } from "./sections/SpeakersSection";
 import { VenueSection } from "./sections/VenueSection";
 import { PartnersSection } from "./sections/PartnersSection";
@@ -12,6 +12,7 @@ import { KolaNaukoweSection } from "./sections/KolaNaukoweSection";
 import { BarterySection } from "./sections/BarterySection.tsx";
 import { PatronsSection } from "./sections/PatronsSection";
 import { WhyAttendSection } from "./sections/WhyAttendSection.tsx";
+import { PhotosSection } from "./sections/PhotosSection";
 
 <link rel="icon" href="/wrss_logo.png" sizes="any" />;
 
@@ -59,8 +60,8 @@ export default function App() {
 
       <main>
         <HeroSection />
-        <AgendaSection/>
         <WhyAttendSection />
+        <PhotosSection />
         <SpeakersSection />
 
         <PartnersSection />

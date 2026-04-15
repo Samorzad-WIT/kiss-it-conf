@@ -26,3 +26,4 @@ export { bartery } from "./bartery";
 export { whyAttendCards } from "./whyAttend";
 export { navLinks } from "./navbar";
 export { footerData } from "./footer";
+export { photos } from "./photos";

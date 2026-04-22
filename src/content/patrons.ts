@@ -2,6 +2,11 @@ import type { Patron } from "./types";
 
 export const patrons: Patron[] = [
     {
+        name: "Patronat Honorowy Ministerstwa Cyfryzacji",
+        url: "https://www.gov.pl/web/cyfryzacja",
+        image: "/patrons/m_cyfryzacji.png",
+    },
+    {
         name: "Patronat Honorowy Wojewody Dolnośląskiego",
         url: "https://www.gov.pl/web/dolnoslaski-uw/anna-zabska",
         image: "/patrons/wojewoda.png",

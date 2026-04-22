@@ -98,8 +98,8 @@ export const tierOrder: PartnerTier[] = ["diament", "other"];
 export const partnerCta = {
     title: "Chcesz zostać przyszłym partnerem?",
     description: "Wspieraj lokalną społeczność IT i pokaż się setkom inżynierów.",
-    linkText: "POBIERZ OFERTĘ PARTNERSKĄ",
-    linkHref: "/oferta_partnerska_1_web.pdf",
+    linkText: "Napisz do nas",
+    linkHref: "mailto:kiss-it@pwr.edu.pl",
 };
 
 /** Nagłówek sekcji */

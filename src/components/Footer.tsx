@@ -36,7 +36,7 @@ export const Footer = () => (
     <div id="footer"></div>
     <div className="max-w-7xl mx-auto px-6">
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 font-sans text-center">
-        Kontakt
+        Kontakt do byłych organizatorów
       </h2>
 
       <div className="flex flex-col md:grid md:grid-cols-2 lg:flex lg:flex-row lg:justify-between gap-8 mb-16">

@@ -249,7 +249,7 @@ export const WhyAttendSection = () => {
         >
           <Badge color="purple">MISSION BRIEFING</Badge>
           <h2 className="text-4xl md:text-5xl font-bold text-white mt-4 mb-4 font-sans">
-            DLACZEGO WARTO SIĘ POJAWIĆ<span className="text-[#fd00ff]">?</span>
+            DLACZEGO WARTO BYŁO SIĘ POJAWIĆ<span className="text-[#fd00ff]">?</span>
           </h2>
         </motion.div>
 

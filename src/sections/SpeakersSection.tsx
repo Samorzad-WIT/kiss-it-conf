@@ -194,7 +194,7 @@ export const SpeakersSection = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-[#ffffff]/5 pb-8">
           <div className="text-left w-full">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 font-sans">
-              PRELEGENCI<span className="text-[#fd00ff]">.</span>
+              POPRZEDNI PRELEGENCI<span className="text-[#fd00ff]">.</span>
             </h2>
             <p className="text-gray-400 font-display text-xl">
               {">>>"} LOAD_SPEAKERS_MODULE()

@@ -37,7 +37,7 @@ export const KolaNaukoweSection = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 font-sans">
-                        KOŁA NAUKOWE
+                        POPRZEDNIE KOŁA NAUKOWE
                     </h2>
                 </motion.div>
 

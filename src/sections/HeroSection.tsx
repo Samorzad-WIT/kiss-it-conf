@@ -76,6 +76,9 @@ export const HeroSection = () => {
           <p className="font-display text-2xl uppercase tracking-[0.3em] text-white/50">
             POPRZEDNIA EDYCJA
           </p>
+          <p className="font-display text-2xl uppercase tracking-[0.3em] text-white/50">
+            Zobacz jak było
+          </p>
         </motion.div>
 
         {/* <motion.div variants={itemVariants}><NeonButton href={heroData.ctaLink}>{heroData.cta}</NeonButton></motion.div> */}

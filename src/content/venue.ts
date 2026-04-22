@@ -3,7 +3,7 @@ import type { VenueInfo } from "./types";
 export const venueData: VenueInfo = {
     sectionTitle: "LOKALIZACJA",
     description:
-        "Spotykamy się w samym sercu kampusu Politechniki Wrocławskiej. Budynek D-20 to nowoczesne centrum studenckie, które na jeden dzień zamieni się w centrum polskiego IT.",
+        "Spotkaliśmy się w samym sercu kampusu Politechniki Wrocławskiej. Budynek D-20 to nowoczesne centrum studenckie, które na jeden dzień zamieniło się w centrum polskiego IT.",
     address: {
         street: "ul. Janiszewskiego 8",
         city: "50-372 Wrocław, Budynek D-20",

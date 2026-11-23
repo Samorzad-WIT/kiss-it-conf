@@ -1,0 +1,109 @@
+import type { Partner, PartnerTier } from "./types";
+
+/**
+ * Partnerzy wydarzenia - łatwe do edycji i rozszerzenia
+ * Aby dodać nowego partnera, wystarczy dodać obiekt do tablicy
+ */
+export const partners: Partner[] = [
+    {
+        name: "Capgemini",
+        logo: "partners/diamond/Capgemini_Primary logo_Capgemini Blue_RGB.svg",
+        url: "https://www.capgemini.com/pl-pl/",
+        tier: "diament",
+    },
+    {
+        name: "JetBrains",
+        logo: "partners/diamond/jetbrains.png",
+        url: "https://www.jetbrains.com/",
+        tier: "diament",
+    },
+    {
+        name: "BNY",
+        logo: "partners/diamond/bny.png",
+        url: "https://www.bny.com/corporate/pl/pl.html",
+        tier: "diament",
+    },
+    {
+        name: "Women in Big Data Poland",
+        logo: "partners/other/WIBD.svg",
+        url: "https://www.linkedin.com/company/women-in-big-data-poland/",
+        tier: "other",
+    },
+    {
+        name: "IDENTT",
+        logo: "partners/other/identt.png",
+        url: "https://www.facebook.com/Identt",
+        tier: "other",
+    },
+    {
+        name: "WCSS",
+        logo: "partners/other/wcss.png",
+        url: "https://wcss.pl/",
+        tier: "other",
+    },
+    {
+        name: "InsERT",
+        logo: "partners/other/insert.png",
+        url: "https://www.insert.com.pl/index.html",
+        tier: "other",
+    },
+    {
+        name: "PayEye",
+        logo: "partners/other/payeye.png",
+        url: "https://www.payeye.com/",
+        tier: "other",
+    },
+    {
+        name: "WPT",
+        logo: "partners/other/wpt.png",
+        url: "https://www.technologpark.pl",
+        tier: "other",
+    },
+    {
+        name: "PPG",
+        logo: "partners/other/ppg.png",
+        url: "https://www.ppg.com/pl-PL",
+        tier: "other",
+    },
+];
+
+/** Konfiguracja wyświetlania poziomów partnerskich */
+export const tierConfig: Record<
+    PartnerTier,
+    {
+        label: string;
+        logoSize: string;
+        borderColor: string;
+        glowColor: string;
+    }
+> = {
+    diament: {
+        label: "Partnerzy Diamantowi",
+        logoSize: "h-20 md:h-24 max-w-48 md:max-w-56",
+        borderColor: "border-[#fd00ff]/50",
+        glowColor: "hover:shadow-[0_0_30px_rgba(0,238,255,0.23)]",
+    },
+    other: {
+        label: "Partnerzy",
+        logoSize: "h-14 md:h-16 max-w-32 md:max-w-40",
+        borderColor: "border-[#fd00ff]/50",
+        glowColor: "hover:shadow-[0_0_25px_rgba(255,215,0,0.25)]",
+    },
+};
+
+/** Kolejność wyświetlania poziomów */
+export const tierOrder: PartnerTier[] = ["diament", "other"];
+
+/** CTA sekcji partnerskiej */
+export const partnerCta = {
+    title: "Chcesz dołączyć do grona partnerów kolejnej edycji?",
+    description: "Wspieraj lokalną społeczność IT i pokaż się setkom inżynierów.",
+    linkText: "Napisz do nas",
+    linkHref: "mailto:kiss-it@pwr.edu.pl",
+};
+
+/** Nagłówek sekcji */
+export const partnersSectionHeader = {
+    title: "PARTNERZY WYDARZENIA 2026",
+    subtitle: "Wspólnie tworzymy wyjątkowe doświadczenie dla społeczności IT",
+};

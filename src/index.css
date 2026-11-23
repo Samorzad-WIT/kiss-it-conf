@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Inter:wght@300;400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------ */
+/* Globalne style – zgodne z makietą Figma "KISS IT PWr 2027"          */
+/* ------------------------------------------------------------------ */
+
+:root {
+  --kiss-bg: #000018;
+  --kiss-page: #100c1d;
+  --kiss-surface: #020210;
+  --kiss-footer: #050510;
+  --kiss-accent: #24ff54;
+  --kiss-purple: #6715ff;
+  --kiss-pink: #fd00ff;
+  --kiss-lavender: #d2aeff;
+  --kiss-ice: #f6ecff;
+  --kiss-text-muted: #9ca3af;
+  --kiss-text-soft: #d1d5db;
+  --kiss-radius-card: 24px;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--kiss-bg);
+}
+
+body {
+  margin: 0;
+  background-color: var(--kiss-page);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--kiss-pink);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--kiss-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--kiss-accent);
+  border-radius: 4px;
+}
+
+
+@layer components {
+  /*
+   * "Liquid glass" z makiety (efekt GLASS w Figmie: rozmycie 8, światło -45°, skos 1 px).
+   * Wizualnie to subtelny kafelek: tło #f6ecff @5% (ok. #0e0e1c na #020210),
+   * bez koloru obramowania – tylko cienki szary połysk na krawędzi.
+   * Używane przez kafelki partnerów, patronów, barterów, kół naukowych i karty lokalizacji.
+   */
+  .kiss-liquid-glass {
+    position: relative;
+    isolation: isolate;
+    border-radius: var(--kiss-radius-card);
+    background-color: rgb(246 236 255 / 0.05);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    /* Własna warstwa kompozytowa: stabilne próbkowanie tła przy powiększeniu po najechaniu,
+       bez artefaktów na sąsiednich kafelkach (animujemy wyłącznie transform / tło). */
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    transition: background-color 0.3s;
+  }
+
+  /* Krawędź specular: jaśniejsza u góry-lewo, słabsza u dołu-prawo */
+  .kiss-liquid-glass::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: inherit;
+    pointer-events: none;
+    padding: 1px;
+    background: linear-gradient(135deg, rgb(255 255 255 / 0.28) 0%, rgb(255 255 255 / 0.04) 35%, rgb(255 255 255 / 0.04) 65%, rgb(255 255 255 / 0.12) 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+    mask-composite: exclude;
+  }
+
+  .kiss-liquid-glass:hover {
+    background-color: rgb(246 236 255 / 0.08);
+  }
+}

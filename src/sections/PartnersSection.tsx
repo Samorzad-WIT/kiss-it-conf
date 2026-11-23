@@ -201,10 +201,9 @@ export const PartnersSection = () => {
           <a
             href={partnerCta.linkHref}
             download
-            className="inline-flex items-center gap-2 text-[#24ff54] font-display text-lg hover:underline tracking-widest transition-all hover:gap-4"
+            className="inline-block rounded-card bg-[#F6ECFF] px-8 py-1 text-[black] font-display text-lg hover:underline tracking-widest transition-all hover:gap-4"
           >
-            <span>{'>>>'}</span>
-            <span>{partnerCta.linkText}</span>
+            {partnerCta.linkText}
           </a>
         </motion.div>
       </div>

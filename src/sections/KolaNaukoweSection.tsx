@@ -92,7 +92,7 @@ export const KolaNaukoweSection = () => {
                                         whileHover={{ scale: 1.05 }}
                                         className="group relative flex flex-col items-center justify-center gap-4 min-h-[163px] px-4 py-5 kiss-liquid-glass hover:z-10 cursor-pointer"
                                     >
-                                        <div className="h-[88px] flex items-center justify-center rounded-lg bg-white overflow-hidden">
+                                        <div className="h-[88px] flex items-center justify-center rounded-lg bg-white p-1 overflow-hidden">
                                             <img
                                                 src={kolo.logo}
                                                 alt={`Logo ${kolo.name}`}
